@@ -2,7 +2,7 @@ import Dev from "./pages/Dev";
 import Home from "./pages/Home";
 import React from "react";
 import theme from "./theme";
-import { CssBaseline, ThemeProvider } from "@material-ui/core";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import { Route, BrowserRouter as Router } from "react-router-dom";
 
 function App() {

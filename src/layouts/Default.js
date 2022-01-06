@@ -1,20 +1,11 @@
 import Logo from "../components/Logo";
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import { AppBar, Container, Toolbar } from "@material-ui/core";
-
-export const useStyles = makeStyles(() => ({
-  appbar: {
-    background: "#323a40",
-  },
-}));
+import { AppBar, Container, Toolbar } from "@mui/material";
 
 function Default(props) {
-  const classes = useStyles();
-
   return (
     <>
-      <AppBar position="static" className={classes.appbar}>
+      <AppBar position="static" sx={{ bgcolor: "#323a40" }}>
         <Toolbar>
           <Logo />
         </Toolbar>

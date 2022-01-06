@@ -1,6 +1,6 @@
 import Logo from "../components/Logo";
 import React from "react";
-import { Grid, Paper } from "@material-ui/core";
+import { Grid, Paper } from "@mui/material";
 
 const style = { height: 300, width: 300 };
 
