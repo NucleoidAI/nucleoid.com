@@ -1,14 +1,20 @@
-import { Box, Container, Grid, Pagination, Typography } from "@mui/material";
-import { makeStyles } from "@mui/styles";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import Default from "../layouts/Default";
-import iceCreamImage from "../images/199699445.jpeg";
+import aiImage from "../images/007-AI.png";
 import cubeImage from "../images/019-cube.png";
 import databaseImage from "../images/019-database-5.png";
-import aiImage from "../images/007-AI.png";
+import iceCreamImage from "../images/199699445.jpeg";
+import { makeStyles } from "@mui/styles";
+import { Box, Container, Fab, Grid, Paper, Typography } from "@mui/material";
 
-export const useStyles = makeStyles(() => ({
+export const useStyles = makeStyles((theme) => ({
   banner: {
     background: "#FFFFFF",
+  },
+  install: {
+    padding: theme.spacing(2),
+    backgroundColor: "red",
   },
 }));
 
@@ -19,7 +25,7 @@ function Column({ image, title, description }) {
         height={400}
         sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
       >
-        <img src={image} width={100} />
+        <img src={image} width={100} alt={" "} />
         <br />
         <Typography variant={"h4"}>{title}</Typography>
         <br />
@@ -48,7 +54,7 @@ function Home() {
             </Box>
             <Box width={75} />
             <Box>
-              <img src={iceCreamImage} height={500} />
+              <img src={iceCreamImage} alt={"Ice Cream"} height={500} />
             </Box>
           </Box>
         </Container>
@@ -63,7 +69,24 @@ function Home() {
             alignItems={"center"}
             height={150}
           >
-            <Box>npm i nucleoidjs</Box>
+            <Paper className={classes.install}>
+              <Box
+                width={400}
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <ArrowForwardIosIcon />
+                <Typography fontFamily={"Trebuchet MS"} variant={"h5"}>
+                  npm install nucleoidjs
+                </Typography>
+                <Fab>
+                  <ContentCopyIcon />
+                </Fab>
+              </Box>
+            </Paper>
           </Grid>
           <Grid container item xs={4} justifyContent={"center"}>
             <Column
