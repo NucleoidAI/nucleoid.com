@@ -1,8 +1,10 @@
 import Logo from "../components/Logo";
 import React from "react";
-import { AppBar, Container, Toolbar } from "@mui/material";
+import { AppBar, Box, Container, Toolbar } from "@mui/material";
 
-function Default(props) {
+function Default({ container, children }) {
+  container = container === undefined ? true : container;
+
   return (
     <>
       <AppBar position="static" sx={{ bgcolor: "#323a40" }}>
@@ -10,8 +12,8 @@ function Default(props) {
           <Logo />
         </Toolbar>
       </AppBar>
-      <br />
-      <Container>{props.children}</Container>
+      {container && <Container>{children}</Container>}
+      {!container && <Box>{children}</Box>}
     </>
   );
 }
