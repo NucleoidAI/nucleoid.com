@@ -1,13 +1,13 @@
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import Default from "../layouts/Default";
+import Gist from "react-gist";
 import aiImage from "../images/007-AI.png";
 import cubeImage from "../images/019-cube.png";
 import databaseImage from "../images/019-database-5.png";
-import iceCreamImage from "../images/199699445.jpeg";
+import iceCreamImage from "../images/ice-cream.jpeg";
 import { makeStyles } from "@mui/styles";
 import { Box, Container, Fab, Grid, Paper, Typography } from "@mui/material";
-import Gist from "react-gist";
 
 export const useStyles = makeStyles((theme) => ({
   banner: {
@@ -138,9 +138,9 @@ function Home() {
           </Grid>
           <Grid container item xs={4} alignItems={"center"}>
             <Typography>
-              &#129321; Easy Peasy! Since Nucleoid runtime tracks JavaScript
-              state, it makes the necessary adjustments in the state, and
-              organically reduces numbers of code lines needed.
+              &#129321; Easy Peasy! Since Nucleoid runtime tracks the JavaScript
+              state, it makes the necessary adjustments in the state, and &nbsp;
+              <u>organically</u> reduces numbers of code lines needed.
             </Typography>
           </Grid>
           <Grid item xs={8}>
