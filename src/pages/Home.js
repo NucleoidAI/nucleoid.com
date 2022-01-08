@@ -46,7 +46,7 @@ function Home() {
             <Box sx={{ display: "flex", alignItems: "center" }}>
               <Box width={550}>
                 <Typography fontSize={52} textAlign={"center"}>
-                  Data Store with
+                  Data Storage with
                   <br />
                   Vanilla JavaScript
                 </Typography>
@@ -100,9 +100,9 @@ function Home() {
           <Grid container item xs={4} justifyContent={"center"}>
             <Column
               image={aiImage}
-              title={"Organic Low-code"}
+              title={"Low-code"}
               description={
-                "Control flow is defined based on formal logic instead of explicit steps; it enables writing codes with building blocks with less code lines."
+                "Organic Low-code Control flow is defined based on formal logic instead of explicit steps; it enables writing codes with building blocks with less code lines."
               }
             />
           </Grid>

@@ -1,16 +1,13 @@
+import { Box, Typography } from "@mui/material";
 import React from "react";
 
 function Logo(props) {
   return (
-    <div>
-      <font face="Segoe UI" color="#28a745" style={{ fontSize: "22px" }}>
+    <Box sx={{ display: "flex", alignItems: "center", paddingBottom: 1 }}>
+      <Typography fontFamily={"Segoe UI"} fontSize={"22px"} color={"#28a745"}>
         Nucleoid
-      </font>
-      <font face="Segoe UI" color="#bfbfbf" style={{ fontSize: "18px" }}>
-        &nbsp;
-        {props.title}
-      </font>
-    </div>
+      </Typography>
+    </Box>
   );
 }
 
