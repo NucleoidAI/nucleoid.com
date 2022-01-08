@@ -92,7 +92,6 @@ function Default({ container, children }) {
           <Box
             sx={{
               display: "flex",
-              flexGrow: 0,
               justifyContent: "space-between",
               alignItems: "center",
             }}
@@ -110,16 +109,15 @@ function Default({ container, children }) {
                 window.open("https://twitter.com/NucleoidJS", "_blank")
               }
             >
-              <TwitterIcon style={{ fill: "#e0e0e0" }} />
+              <TwitterIcon style={{ fill: "#ffffff" }} />
             </IconButton>
-            <Fab
-              size={"small"}
+            <IconButton
               onClick={() =>
                 window.open("https://github.com/NucleoidJS/Nucleoid", "_blank")
               }
             >
-              <GitHubIcon />
-            </Fab>
+              <GitHubIcon style={{ fill: "#ffffff" }} />
+            </IconButton>
           </Box>
         </Toolbar>
       </AppBar>
