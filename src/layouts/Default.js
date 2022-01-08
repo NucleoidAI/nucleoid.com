@@ -1,6 +1,8 @@
+import { ReactComponent as DiscordIcon } from "../images/discord.svg";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Logo from "../components/Logo";
 import MenuIcon from "@mui/icons-material/Menu";
+import TwitterIcon from "@mui/icons-material/Twitter";
 import React from "react";
 import {
   AppBar,
@@ -87,8 +89,35 @@ function Default({ container, children }) {
               </Button>
             ))}
           </Box>
-          <Box sx={{ flexGrow: 0 }}>
-            <Fab size={"small"}>
+          <Box
+            sx={{
+              display: "flex",
+              flexGrow: 0,
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+            width={120}
+          >
+            <IconButton
+              onClick={() =>
+                window.open("https://discord.gg/b6THyxKd", "_blank")
+              }
+            >
+              <DiscordIcon />
+            </IconButton>
+            <IconButton
+              onClick={() =>
+                window.open("https://twitter.com/NucleoidJS", "_blank")
+              }
+            >
+              <TwitterIcon style={{ fill: "#e0e0e0" }} />
+            </IconButton>
+            <Fab
+              size={"small"}
+              onClick={() =>
+                window.open("https://github.com/NucleoidJS/Nucleoid", "_blank")
+              }
+            >
               <GitHubIcon />
             </Fab>
           </Box>
