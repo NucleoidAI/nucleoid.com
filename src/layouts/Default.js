@@ -2,14 +2,15 @@ import { ReactComponent as DiscordIcon } from "../images/discord.svg";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Logo from "../components/Logo";
 import MenuIcon from "@mui/icons-material/Menu";
-import TwitterIcon from "@mui/icons-material/Twitter";
 import React from "react";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import WeekCalendar from "../components/WeekCalendar";
+import { makeStyles } from "@mui/styles";
 import {
   AppBar,
   Box,
   Button,
   Container,
-  Fab,
   IconButton,
   Menu,
   MenuItem,
@@ -17,10 +18,23 @@ import {
   Typography,
 } from "@mui/material";
 
+const useStyles = makeStyles((theme) => ({
+  footer: {
+    color: "#a9a9a9",
+    fontSize: 14,
+    padding: theme.spacing(2),
+    background: "#343e48",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  },
+}));
+
 const pages = ["Home", "Get Started", "Learn", "Blog"];
 
 function Default({ container, children }) {
   container = container === undefined ? true : container;
+  const classes = useStyles();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -123,6 +137,12 @@ function Default({ container, children }) {
       </AppBar>
       {container && <Container>{children}</Container>}
       {!container && <Box>{children}</Box>}
+      <footer>
+        <Box className={classes.footer}>
+          <WeekCalendar />
+          Nucleoid
+        </Box>
+      </footer>
     </>
   );
 }

@@ -11,7 +11,7 @@ import { Box, Container, Fab, Grid, Paper, Typography } from "@mui/material";
 
 export const useStyles = makeStyles((theme) => ({
   banner: {
-    background: "#FFFFFF",
+    background: "#ffffff",
   },
   install: {
     padding: theme.spacing(2),
