@@ -7,6 +7,7 @@ import databaseImage from "../images/019-database-5.png";
 import iceCreamImage from "../images/199699445.jpeg";
 import { makeStyles } from "@mui/styles";
 import { Box, Container, Fab, Grid, Paper, Typography } from "@mui/material";
+import Gist from "react-gist";
 
 export const useStyles = makeStyles((theme) => ({
   banner: {
@@ -22,7 +23,6 @@ function Column({ image, title, description }) {
   return (
     <>
       <Box
-        height={400}
         sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
       >
         <img src={image} width={100} alt={" "} />
@@ -114,6 +114,37 @@ function Home() {
                 "The programming runtime persists each statement so that it doesn't require external data storage like traditional RDBMS."
               }
             />
+          </Grid>
+          <Grid item xs={12}>
+            <Typography variant={"h4"}>&nbsp;Hello World</Typography>
+          </Grid>
+          <Grid item xs={6}>
+            <Gist id={"92261e1b17c81f85dd1288d7e0fb0c0f"} />
+          </Grid>
+          <Grid container item xs={6} alignItems={"center"}>
+            <Typography>
+              &#128077; This is pretty much it, you successfully persisted your
+              first object with this!
+              <br />
+              <br />
+              Nucleoid is a state-based data storage as writing just like any
+              other codes in Node.js, it rerenders the same JavaScript codes and
+              makes the necessary adjustments in the state as well as stores on
+              the disk.
+            </Typography>
+          </Grid>
+          <Grid container item xs={12} justifyContent={"end"}>
+            <Typography variant={"h4"}>...and CRUD ops</Typography>
+          </Grid>
+          <Grid container item xs={4} alignItems={"center"}>
+            <Typography>
+              &#129321; Easy Peasy! Since Nucleoid runtime tracks JavaScript
+              state, it makes the necessary adjustments in the state, and
+              organically reduces numbers of code lines needed.
+            </Typography>
+          </Grid>
+          <Grid item xs={8}>
+            <Gist id={"cfa2726aedaa5f090c52becd837e0a0c"} />
           </Grid>
         </Grid>
       </Container>
