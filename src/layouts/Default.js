@@ -21,7 +21,7 @@ import {
 const useStyles = makeStyles((theme) => ({
   footer: {
     color: "#a9a9a9",
-    fontSize: 14,
+    fontSize: 16,
     padding: theme.spacing(2),
     background: "#343e48",
     display: "flex",
@@ -30,7 +30,24 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const pages = ["Home", "Get Started", "Learn", "Blog"];
+const pages = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "Get Started",
+    link: "/get-started",
+  },
+  {
+    name: "Learn",
+    link: "/learn",
+  },
+  {
+    name: "Blog",
+    link: "https://dev.to/nucleoid",
+  },
+];
 
 function Default({ container, children }) {
   container = container === undefined ? true : container;
@@ -77,9 +94,9 @@ function Default({ container, children }) {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+              {pages.map(({ name }) => (
+                <MenuItem key={name} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -93,13 +110,13 @@ function Default({ container, children }) {
               paddingLeft: 2,
             }}
           >
-            {pages.map((page) => (
+            {pages.map(({ name, link }) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+                key={name}
+                onClick={() => (window.location = link)}
                 sx={{ my: 2, color: "#9a9da0", display: "block" }}
               >
-                {page}
+                {name}
               </Button>
             ))}
           </Box>
