@@ -82,7 +82,11 @@ function Home() {
                 <Typography fontFamily={"Trebuchet MS"} variant={"h5"}>
                   npm install nucleoidjs
                 </Typography>
-                <Fab>
+                <Fab
+                  onClick={() => {
+                    navigator.clipboard.writeText("npm install nucleoidjs");
+                  }}
+                >
                   <ContentCopyIcon />
                 </Fab>
               </Box>
