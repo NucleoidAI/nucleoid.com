@@ -115,10 +115,8 @@ function Home() {
               }
             />
           </Grid>
-          <Grid item xs={12}>
-            <Typography variant={"h4"}>&nbsp;Hello World</Typography>
-          </Grid>
           <Grid item xs={6}>
+            <Typography variant={"h4"}>&nbsp;Hello World</Typography>
             <Gist id={"92261e1b17c81f85dd1288d7e0fb0c0f"} />
           </Grid>
           <Grid container item xs={6} alignItems={"center"}>
@@ -133,9 +131,6 @@ function Home() {
               the disk.
             </Typography>
           </Grid>
-          <Grid container item xs={12} justifyContent={"end"}>
-            <Typography variant={"h4"}>...and CRUD ops</Typography>
-          </Grid>
           <Grid container item xs={4} alignItems={"center"}>
             <Typography>
               &#129321; Easy Peasy! Since Nucleoid runtime tracks the JavaScript
@@ -144,6 +139,7 @@ function Home() {
             </Typography>
           </Grid>
           <Grid item xs={8}>
+            <Typography variant={"h4"}>...and CRUD ops</Typography>
             <Gist id={"cfa2726aedaa5f090c52becd837e0a0c"} />
           </Grid>
         </Grid>
