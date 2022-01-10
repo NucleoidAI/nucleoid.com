@@ -1,0 +1,24 @@
+a:link {
+  text-decoration: none;
+  color: green;
+}
+
+a:visited {
+  text-decoration: none;
+  color: green;
+}
+
+a:hover {
+  text-decoration: none;
+  color: hotpink;
+}
+
+a:active {
+  text-decoration: none;
+  color: red;
+}
+
+ul {
+  padding-left: 0;
+  list-style-type: none;
+}
