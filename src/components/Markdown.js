@@ -1,6 +1,8 @@
 import "highlight.js/styles/github.css";
 import ReactMarkdown from "react-markdown";
+import emojione from "emojione";
 import rehypeHighlight from "rehype-highlight";
+import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 import { Children, createElement, useEffect, useState } from "react";
 
@@ -24,14 +26,15 @@ function Markdown({ path }) {
     fetch(path)
       .then((res) => res.text())
       .then((text) => {
-        setText(text);
+        const emojified = emojione.shortnameToImage(text);
+        setText(emojified);
       });
   }, [path]);
 
   return (
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}
-      rehypePlugins={[rehypeHighlight]}
+      rehypePlugins={[rehypeRaw, rehypeHighlight]}
       components={{
         h1: HeadingRenderer,
         h2: HeadingRenderer,
