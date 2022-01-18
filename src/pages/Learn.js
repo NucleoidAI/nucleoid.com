@@ -23,7 +23,18 @@ function Learn() {
           <Markdown path={learnMD} />
         </Grid>
       </Grid>
-      <Paper sx={{ position: "fixed", top: 200, right: 15, width: 350 }}>
+      <Paper
+        sx={{
+          position: "fixed",
+          top: 200,
+          right: 15,
+          width: 350,
+          display: {
+            xs: "none",
+            lg: "block",
+          },
+        }}
+      >
         <Box sx={{ margin: 5 }}>
           <ReactMarkdownHeading
             markdown={text}
