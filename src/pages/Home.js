@@ -54,19 +54,16 @@ function Home() {
           <Box
             sx={{
               display: { xs: "flex", lg: "none" },
+              justifyContent: "center",
+              alignItems: "center",
               textShadow: "2px 3px gray",
+              height: 400,
             }}
           >
-            <Typography fontSize={52}>
-              Data
+            <Typography fontSize={52} textAlign={"center"}>
+              Data Storage
               <br />
-              Storage
-              <br />
-              with
-              <br />
-              Vanilla
-              <br />
-              JS
+              with Vanilla JavaScript
               <br />
               <Emojify style={{ height: 64, width: 64 }}>:icecream:</Emojify>
             </Typography>
