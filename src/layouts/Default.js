@@ -133,7 +133,7 @@ function Default({ container, children }) {
           >
             <IconButton
               onClick={() =>
-                window.open("https://discord.gg/b6THyxKd", "_blank")
+                window.open("https://discord.gg/eWXFCCuU5y", "_blank")
               }
             >
               <DiscordIcon />

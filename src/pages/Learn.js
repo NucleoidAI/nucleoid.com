@@ -19,7 +19,7 @@ function Learn() {
   return (
     <Default>
       <Grid container>
-        <Grid item xs={9}>
+        <Grid item xs={12} lg={9}>
           <Markdown path={learnMD} />
         </Grid>
       </Grid>

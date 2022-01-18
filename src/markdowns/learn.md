@@ -1,4 +1,4 @@
-# Nucleoid [![NPM](https://img.shields.io/npm/l/nucleoidjs)](https://www.apache.org/licenses/LICENSE-2.0) [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/nucleoidjs/nucleoid/Test)](https://github.com/NucleoidJS/Nucleoid/actions/workflows/test.yml) [![npm](https://img.shields.io/npm/v/nucleoidjs)](https://www.npmjs.com/package/nucleoidjs) [![Discord](https://img.shields.io/discord/848931276559482900)](https://discord.gg/b6THyxKd)
+# Nucleoid [![NPM](https://img.shields.io/npm/l/nucleoidjs)](https://www.apache.org/licenses/LICENSE-2.0) [![npm](https://img.shields.io/npm/v/nucleoidjs)](https://www.npmjs.com/package/nucleoidjs)
 
 ## What is Nucleoid?
 
@@ -13,7 +13,7 @@ rather than business logic. Declarative runtimes like Nucleoid can organically r
 
 ### Nucleoid in a nutshell
 
-![Look! Up in the sky!](https://drive.google.com/uc?export=view&id=1bNaHtwcxrKSTjlJw4RAVRw-ImkC86juX)
+<img src="https://drive.google.com/uc?export=view&id=1bNaHtwcxrKSTjlJw4RAVRw-ImkC86juX" alt="Look! Up in the sky!" width="350"/>
 
 ## Hello World
 
@@ -75,7 +75,7 @@ app.delete("/users/:id", (req) => delete User[req.params.id]);
 
 Nucleoid also opens terminal channel at `8448` port for queries like in SQL, so that you can write code snippet for data operations
 
-![Terminal](https://media.giphy.com/media/aGQyuZ4ggB4SaPRc1g/giphy.gif)
+<img src="https://media.giphy.com/media/aGQyuZ4ggB4SaPRc1g/giphy.gif" alt="Terminal" width="350"/>
 
 In the meanwhile, you can still call underlying Express APIs for non-Nucleoidic functions
 

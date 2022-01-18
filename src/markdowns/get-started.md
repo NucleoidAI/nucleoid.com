@@ -4,7 +4,7 @@ Nucleoid runtime is embedded inside Node.js and as writing just any other codes 
 JavaScript codes and makes the necessary adjustments in the state as well as stores on the disk, so that your
 application doesn't require external database.
 
-[![npm](https://img.shields.io/npm/v/nucleoidjs)](https://www.npmjs.com/package/nucleoidjs) [![Discord](https://img.shields.io/discord/848931276559482900)](https://discord.gg/b6THyxKd)
+[![npm](https://img.shields.io/npm/v/nucleoidjs)](https://www.npmjs.com/package/nucleoidjs) [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/nucleoidjs/nucleoid/Test)](https://github.com/NucleoidJS/Nucleoid/actions/workflows/test.yml)
 
 ```
 npm install nucleoidjs
