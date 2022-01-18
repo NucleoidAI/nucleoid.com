@@ -1,6 +1,7 @@
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import Default from "../layouts/Default";
+import Emojify from "react-emojione";
 import Gist from "react-gist";
 import aiImage from "../images/007-AI.png";
 import cubeImage from "../images/019-cube.png";
@@ -35,6 +36,14 @@ function Column({ image, title, description }) {
   );
 }
 
+const CRUDOps = () => (
+  <Typography>
+    &#129321; Easy Peasy! Since Nucleoid runtime tracks the JavaScript state, it
+    makes the necessary adjustments in the state, and &nbsp;
+    <u>organically</u> reduces numbers of code lines needed.
+  </Typography>
+);
+
 function Home() {
   const classes = useStyles();
 
@@ -42,9 +51,29 @@ function Home() {
     <Default container={false}>
       <Box className={classes.banner}>
         <Container>
+          <Box
+            sx={{
+              display: { xs: "flex", lg: "none" },
+              textShadow: "2px 3px gray",
+            }}
+          >
+            <Typography fontSize={52}>
+              Data
+              <br />
+              Storage
+              <br />
+              with
+              <br />
+              Vanilla
+              <br />
+              JS
+              <br />
+              <Emojify style={{ height: 64, width: 64 }}>:icecream:</Emojify>
+            </Typography>
+          </Box>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Box sx={{ display: "flex", alignItems: "center" }}>
-              <Box width={550}>
+              <Box sx={{ display: { xs: "none", lg: "block" } }}>
                 <Typography fontSize={52} textAlign={"center"}>
                   Data Storage with
                   <br />
@@ -53,7 +82,7 @@ function Home() {
               </Box>
             </Box>
             <Box width={75} />
-            <Box>
+            <Box sx={{ display: { xs: "none", lg: "block" } }}>
               <img src={iceCreamImage} alt={"Ice Cream"} height={500} />
             </Box>
           </Box>
@@ -71,9 +100,12 @@ function Home() {
           >
             <Paper className={classes.install}>
               <Box
-                width={400}
                 sx={{
                   display: "flex",
+                  width: {
+                    xs: 350,
+                    lg: 400,
+                  },
                   justifyContent: "space-between",
                   alignItems: "center",
                 }}
@@ -92,7 +124,7 @@ function Home() {
               </Box>
             </Paper>
           </Grid>
-          <Grid container item xs={4} justifyContent={"center"}>
+          <Grid container item xs={12} lg={4} justifyContent={"center"}>
             <Column
               image={cubeImage}
               title={"Declarative"}
@@ -101,7 +133,7 @@ function Home() {
               }
             />
           </Grid>
-          <Grid container item xs={4} justifyContent={"center"}>
+          <Grid container item xs={12} lg={4} justifyContent={"center"}>
             <Column
               image={aiImage}
               title={"Low-code"}
@@ -110,7 +142,7 @@ function Home() {
               }
             />
           </Grid>
-          <Grid container item xs={4} justifyContent={"center"}>
+          <Grid container item xs={12} lg={4} justifyContent={"center"}>
             <Column
               image={databaseImage}
               title={"Persistent"}
@@ -119,11 +151,11 @@ function Home() {
               }
             />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} lg={6}>
             <Typography variant={"h4"}>&nbsp;Hello World</Typography>
             <Gist id={"92261e1b17c81f85dd1288d7e0fb0c0f"} />
           </Grid>
-          <Grid container item xs={6} alignItems={"center"}>
+          <Grid container item xs={12} lg={6} alignItems={"center"}>
             <Typography>
               &#128077; This is pretty much it, you successfully persisted your
               first object with this!
@@ -135,16 +167,27 @@ function Home() {
               the disk.
             </Typography>
           </Grid>
-          <Grid container item xs={4} alignItems={"center"}>
-            <Typography>
-              &#129321; Easy Peasy! Since Nucleoid runtime tracks the JavaScript
-              state, it makes the necessary adjustments in the state, and &nbsp;
-              <u>organically</u> reduces numbers of code lines needed.
-            </Typography>
+          <Grid
+            container
+            item
+            xs={4}
+            sx={{ display: { xs: "none", lg: "block" } }}
+            alignItems={"center"}
+          >
+            <CRUDOps />
           </Grid>
-          <Grid item xs={8}>
+          <Grid item xs={12} lg={8}>
             <Typography variant={"h4"}>...and CRUD ops</Typography>
             <Gist id={"cfa2726aedaa5f090c52becd837e0a0c"} />
+          </Grid>
+          <Grid
+            container
+            item
+            xs={12}
+            sx={{ display: { xs: "block", lg: "none" } }}
+            alignItems={"center"}
+          >
+            <CRUDOps />
           </Grid>
         </Grid>
       </Container>
