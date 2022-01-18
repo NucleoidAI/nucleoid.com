@@ -97,7 +97,7 @@ function Home() {
               image={cubeImage}
               title={"Declarative"}
               description={
-                "The runtime doesn't require database or cache server, which reduces number of elements have to be maintained."
+                "The runtime is embedded inside Node.js and rerenders the very same JavaScript codes and makes the necessary adjustments in the state."
               }
             />
           </Grid>
@@ -106,16 +106,16 @@ function Home() {
               image={aiImage}
               title={"Low-code"}
               description={
-                "Organic Low-code Control flow is defined based on formal logic instead of explicit steps; it enables writing codes with building blocks with less code lines."
+                "Bringing data storage inside the runtime organically lowers number of codes since the runtime cuts out all technical code lines needed for data."
               }
             />
           </Grid>
           <Grid container item xs={4} justifyContent={"center"}>
             <Column
               image={databaseImage}
-              title={"Persistency"}
+              title={"Persistent"}
               description={
-                "The programming runtime persists each statement so that it doesn't require external data storage like traditional RDBMS."
+                "The runtime tracks and persists each statement so that it doesn't require external data storage like traditional RDBMS."
               }
             />
           </Grid>
