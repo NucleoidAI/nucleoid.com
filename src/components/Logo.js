@@ -7,7 +7,10 @@ function Logo(props) {
       sx={{
         display: "flex",
         alignItems: "center",
-        paddingBottom: 1,
+        paddingBottom: {
+          xs: 0,
+          md: 1,
+        },
         cursor: "pointer",
       }}
       onClick={() => {

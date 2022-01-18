@@ -66,42 +66,45 @@ function Default({ container, children }) {
   return (
     <>
       <AppBar position="static" sx={{ background: "#323a40" }}>
-        <Toolbar>
-          <Logo sx={{ mr: 2, display: { xs: "none", md: "flex" } }} />
-          <Box sx={{ display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorEl}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorEl)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
-              {pages.map(({ name }) => (
-                <MenuItem key={name} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{name}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+        <Toolbar
+          sx={{ display: { display: "flex", justifyContent: "space-between" } }}
+        >
+          <Box sx={{ display: "flex", flexDirection: "row" }}>
+            <Box sx={{ display: { xs: "flex", md: "none" } }}>
+              <IconButton
+                size="large"
+                onClick={handleOpenNavMenu}
+                color="inherit"
+              >
+                <MenuIcon />
+              </IconButton>
+              <Menu
+                id="menu-appbar"
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "left",
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "left",
+                }}
+                open={Boolean(anchorEl)}
+                onClose={handleCloseNavMenu}
+                sx={{
+                  display: { xs: "block", md: "none" },
+                }}
+              >
+                {pages.map(({ name, link }) => (
+                  <MenuItem key={name} onClick={() => (window.location = link)}>
+                    <Typography textAlign="center">{name}</Typography>
+                  </MenuItem>
+                ))}
+              </Menu>
+            </Box>
+            <Logo />
           </Box>
-
           <Box
             sx={{
               flexGrow: 1,
@@ -122,7 +125,7 @@ function Default({ container, children }) {
           </Box>
           <Box
             sx={{
-              display: "flex",
+              display: { xs: "flex", md: "flex" },
               justifyContent: "space-between",
               alignItems: "center",
             }}
