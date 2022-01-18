@@ -15,3 +15,4 @@ jobs:
         aws-region: ${{ secrets.AWS_REGION }}
     - run: npm ci && npm run build
     - run: aws s3 sync ./build/ s3://nucleoid.com --delete
+    - run: aws cloudfront create-invalidation --distribution-id E16QJ9JAP21GVP --paths "/*"
