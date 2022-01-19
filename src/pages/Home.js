@@ -155,7 +155,8 @@ function Home() {
           <Grid container item xs={12} lg={6} alignItems={"center"}>
             <Typography>
               &#128077; This is pretty much it, you successfully persisted your
-              first object with this!
+              first object&nbsp;
+              <u>without installing external database</u>!
               <br />
               <br />
               Nucleoid is a state-based data storage as writing just like any
