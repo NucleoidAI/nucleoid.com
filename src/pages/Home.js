@@ -168,7 +168,7 @@ function Home() {
             container
             item
             xs={4}
-            sx={{ display: { xs: "none", lg: "block" } }}
+            sx={{ display: { xs: "none", lg: "flex" } }}
             alignItems={"center"}
           >
             <CRUDOps />
