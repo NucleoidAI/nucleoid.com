@@ -1,25 +1,29 @@
 a:link {
   text-decoration: none;
   color: #36827f;
-  font-weight: bolder;
+  font-size: 14pt;
+  font-weight: lighter;
 }
 
 a:visited {
   text-decoration: none;
   color: #36827f;
-  font-weight: bolder;
+  font-size: 14pt;
+  font-weight: lighter;
 }
 
 a:hover {
   text-decoration: none;
   color: hotpink;
-  font-weight: bolder;
+  font-size: 14pt;
+  font-weight: lighter;
 }
 
 a:active {
   text-decoration: none;
   color: deeppink;
-  font-weight: bolder;
+  font-size: 14pt;
+  font-weight: lighter;
 }
 
 ul {
