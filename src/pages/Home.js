@@ -4,9 +4,9 @@ import Default from "../layouts/Default";
 import Emojify from "react-emojione";
 import Gist from "react-gist";
 import aiImage from "../images/007-AI.png";
+import astronaut from "../images/astronaut.jpeg";
 import cubeImage from "../images/019-cube.png";
 import databaseImage from "../images/019-database-5.png";
-import iceCreamImage from "../images/ice-cream.jpeg";
 import { makeStyles } from "@mui/styles";
 import { Box, Container, Fab, Grid, Paper, Typography } from "@mui/material";
 
@@ -61,9 +61,11 @@ function Home() {
             }}
           >
             <Typography fontSize={52} textAlign={"center"}>
+              Low-code
+              <br />
               Data Storage
               <br />
-              with Vanilla JavaScript
+              with JS
               <br />
               <Emojify style={{ height: 64, width: 64 }}>:icecream:</Emojify>
             </Typography>
@@ -72,15 +74,15 @@ function Home() {
             <Box sx={{ display: "flex", alignItems: "center" }}>
               <Box sx={{ display: { xs: "none", lg: "block" } }}>
                 <Typography fontSize={52} textAlign={"center"}>
-                  Data Storage with
+                  AI-powered Data Storage
                   <br />
-                  Vanilla JavaScript
+                  for this Century
                 </Typography>
               </Box>
             </Box>
             <Box width={75} />
             <Box sx={{ display: { xs: "none", lg: "block" } }}>
-              <img src={iceCreamImage} alt={"Ice Cream"} height={500} />
+              <img src={astronaut} alt={"Astronaut"} height={500} />
             </Box>
           </Box>
         </Container>
