@@ -44,6 +44,8 @@ const CRUDOps = () => (
   </Typography>
 );
 
+const Space = () => <Grid item xs={12} height={50} />;
+
 function Home() {
   const classes = useStyles();
 
@@ -150,23 +152,19 @@ function Home() {
               }
             />
           </Grid>
+          <Space />
           <Grid item xs={12} lg={6}>
             <Typography variant={"h4"}>&nbsp;Hello World</Typography>
             <Gist id={"92261e1b17c81f85dd1288d7e0fb0c0f"} />
           </Grid>
-          <Grid container item xs={12} lg={6} alignItems={"center"}>
+          <Grid container item xs={12} lg={4} alignItems={"center"}>
             <Typography>
               &#128077; This is pretty much it, you successfully persisted your
               first object&nbsp;
               <u>without installing external database</u>!
-              <br />
-              <br />
-              Nucleoid is a state-based data storage as writing just like any
-              other codes in Node.js, it rerenders the same JavaScript codes and
-              makes the necessary adjustments in the state as well as stores on
-              the disk.
             </Typography>
           </Grid>
+          <Space />
           <Grid
             container
             item
