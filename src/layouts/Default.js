@@ -3,6 +3,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import Logo from "../components/Logo";
 import MenuIcon from "@mui/icons-material/Menu";
 import React from "react";
+import StarBorderIcon from "@mui/icons-material/StarBorder";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import WeekCalendar from "../components/WeekCalendar";
 import { makeStyles } from "@mui/styles";
@@ -123,14 +124,29 @@ function Default({ container, children }) {
               </Button>
             ))}
           </Box>
-          <Box
+          <Button
+            startIcon={<StarBorderIcon />}
+            size={"large"}
             sx={{
-              display: { xs: "flex", md: "flex" },
-              justifyContent: "space-between",
-              alignItems: "center",
+              my: 2,
+              color: "white",
+              textTransform: "none",
             }}
-            width={120}
+            onClick={() =>
+              window.open("https://github.com/NucleoidJS/Nucleoid", "_blank")
+            }
           >
+            Star us on GitHub
+          </Button>
+        </Toolbar>
+      </AppBar>
+      {container && <Container>{children}</Container>}
+      {!container && <Box>{children}</Box>}
+      <footer>
+        <Box className={classes.footer}>
+          <WeekCalendar />
+          Nucleoid
+          <Box>
             <IconButton
               onClick={() =>
                 window.open("https://discord.gg/eWXFCCuU5y", "_blank")
@@ -153,14 +169,6 @@ function Default({ container, children }) {
               <GitHubIcon style={{ fill: "#ffffff" }} />
             </IconButton>
           </Box>
-        </Toolbar>
-      </AppBar>
-      {container && <Container>{children}</Container>}
-      {!container && <Box>{children}</Box>}
-      <footer>
-        <Box className={classes.footer}>
-          <WeekCalendar />
-          Nucleoid
         </Box>
       </footer>
     </>

@@ -36,6 +36,7 @@ function Learn() {
         }}
       >
         <Box sx={{ margin: 5 }}>
+          Contents
           <ReactMarkdownHeading
             markdown={text}
             hyperlink={true}
