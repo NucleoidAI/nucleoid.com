@@ -5,6 +5,7 @@ import Emojify from "react-emojione";
 import Gist from "react-gist";
 import aiImage from "../images/007-AI.png";
 import astronaut from "../images/astronaut.jpeg";
+import codingImage from "../images/coding.png";
 import cubeImage from "../images/019-cube.png";
 import databaseImage from "../images/019-database-5.png";
 import { makeStyles } from "@mui/styles";
@@ -20,13 +21,13 @@ export const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Column({ image, title, description }) {
+function Column({ image, title, description, alt }) {
   return (
     <>
       <Box
         sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
       >
-        <img src={image} width={100} alt={" "} />
+        <img src={image} width={100} alt={alt} />
         <br />
         <Typography variant={"h4"}>{title}</Typography>
         <br />
@@ -75,7 +76,7 @@ function Home() {
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Box sx={{ display: "flex", alignItems: "center" }}>
               <Box sx={{ display: { xs: "none", lg: "block" } }}>
-                <Typography fontSize={52} textAlign={"center"}>
+                <Typography fontSize={56} textAlign={"center"}>
                   AI-powered Data Storage
                   <br />
                   for this Century
@@ -132,6 +133,7 @@ function Home() {
               description={
                 "The runtime is embedded inside Node.js and rerenders the very same JavaScript codes and makes the necessary adjustments in the state."
               }
+              alt={"Cube"}
             />
           </Grid>
           <Grid container item xs={12} lg={4} justifyContent={"center"}>
@@ -141,6 +143,7 @@ function Home() {
               description={
                 "Bringing data storage inside the runtime organically lowers number of codes since the runtime cuts out all technical code lines needed for data."
               }
+              alt={"AI"}
             />
           </Grid>
           <Grid container item xs={12} lg={4} justifyContent={"center"}>
@@ -150,7 +153,26 @@ function Home() {
               description={
                 "The runtime tracks and persists each statement so that it doesn't require external data storage like traditional RDBMS."
               }
+              alt={"Database"}
             />
+          </Grid>
+          <Space />
+          <Grid container item xs={12} justifyContent={"center"}>
+            <img src={codingImage} alt={"Coding"} width={300} height={300} />
+            <Box sx={{ margin: 5 }}>
+              <Typography variant={"h4"}>
+                Build your APIs with JavaScript
+              </Typography>
+              <br />
+              <Box width={500}>
+                <Typography>
+                  Nucleoid is a state-based data storage as writing just like
+                  any other codes in Node.js, it rerenders the same JavaScript
+                  codes and makes the necessary adjustments in the state as well
+                  as stores on the disk.
+                </Typography>
+              </Box>
+            </Box>
           </Grid>
           <Space />
           <Grid item xs={12} lg={6}>
