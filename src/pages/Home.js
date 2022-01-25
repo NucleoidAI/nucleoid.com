@@ -9,6 +9,7 @@ import codingImage from "../images/coding.png";
 import cubeImage from "../images/019-cube.png";
 import databaseImage from "../images/019-database-5.png";
 import { makeStyles } from "@mui/styles";
+import rocketImage from "../images/rocket.png";
 import { Box, Container, Fab, Grid, Paper, Typography } from "@mui/material";
 
 export const useStyles = makeStyles((theme) => ({
@@ -41,7 +42,13 @@ const CRUDOps = () => (
   <Typography>
     &#129321; Easy Peasy! Since Nucleoid runtime tracks the JavaScript state, it
     makes the necessary adjustments in the state, and &nbsp;
-    <u>organically</u> reduces numbers of code lines needed.
+    <u>organically</u> reduces numbers of code lines needed&nbsp;
+    <span
+      style={{ color: "blue", cursor: "pointer" }}
+      onClick={() => (window.location = "/learn")}
+    >
+      Learn more
+    </span>
   </Typography>
 );
 
@@ -76,7 +83,7 @@ function Home() {
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Box sx={{ display: "flex", alignItems: "center" }}>
               <Box sx={{ display: { xs: "none", lg: "block" } }}>
-                <Typography fontSize={56} textAlign={"center"}>
+                <Typography fontSize={54} textAlign={"center"}>
                   AI-powered Data Storage
                   <br />
                   for this Century
@@ -208,6 +215,15 @@ function Home() {
             alignItems={"center"}
           >
             <CRUDOps />
+          </Grid>
+          <Space />
+          <Grid container item xs={12} justifyContent={"center"}>
+            <img
+              src={rocketImage}
+              alt={"Coding"}
+              width={750}
+              style={{ maxWidth: "100%" }}
+            />
           </Grid>
         </Grid>
       </Container>
