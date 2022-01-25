@@ -4,7 +4,7 @@ import Default from "../layouts/Default";
 import Emojify from "react-emojione";
 import Gist from "react-gist";
 import aiImage from "../images/007-AI.png";
-import astronaut from "../images/astronaut.jpeg";
+import astronautImage from "../images/astronaut.jpeg";
 import codingImage from "../images/coding.png";
 import cubeImage from "../images/019-cube.png";
 import databaseImage from "../images/019-database-5.png";
@@ -92,7 +92,7 @@ function Home() {
             </Box>
             <Box width={75} />
             <Box sx={{ display: { xs: "none", lg: "block" } }}>
-              <img src={astronaut} alt={"Astronaut"} height={500} />
+              <img src={astronautImage} alt={"Astronaut"} height={500} />
             </Box>
           </Box>
         </Container>
@@ -166,12 +166,26 @@ function Home() {
           <Space />
           <Grid container item xs={12} justifyContent={"center"}>
             <img src={codingImage} alt={"Coding"} width={300} height={300} />
-            <Box sx={{ margin: 5 }}>
+            <Box sx={{ margin: 5, display: { xs: "none", lg: "block" } }}>
               <Typography variant={"h4"}>
                 Build your APIs with JavaScript
               </Typography>
               <br />
               <Box width={500}>
+                <Typography>
+                  Nucleoid is a state-based data storage as writing just like
+                  any other codes in Node.js, it rerenders the same JavaScript
+                  codes and makes the necessary adjustments in the state as well
+                  as stores on the disk.
+                </Typography>
+              </Box>
+            </Box>
+            <Box sx={{ margin: 5, display: { xs: "block", lg: "none" } }}>
+              <Typography variant={"h4"}>
+                Build your APIs with JavaScript
+              </Typography>
+              <br />
+              <Box>
                 <Typography>
                   Nucleoid is a state-based data storage as writing just like
                   any other codes in Node.js, it rerenders the same JavaScript
