@@ -85,7 +85,6 @@ function Home() {
               display: { xs: "flex", lg: "none" },
               justifyContent: "center",
               alignItems: "center",
-              textShadow: "2px 3px gray",
               height: 400,
             }}
           >
@@ -96,7 +95,7 @@ function Home() {
               <br />
               with JS
               <br />
-              <Emojify style={{ height: 64, width: 64 }}>:icecream:</Emojify>
+              <Emojify style={{ height: 64, width: 64 }}>:rocket:</Emojify>
             </Typography>
           </Box>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
