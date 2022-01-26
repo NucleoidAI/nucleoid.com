@@ -6,11 +6,21 @@ import Gist from "react-gist";
 import aiImage from "../images/007-AI.png";
 import astronautImage from "../images/astronaut.jpeg";
 import codingImage from "../images/coding.png";
+import consoleImage from "../images/console.png";
 import cubeImage from "../images/019-cube.png";
 import databaseImage from "../images/019-database-5.png";
 import { makeStyles } from "@mui/styles";
+import processingImage from "../images/processing.png";
 import rocketImage from "../images/rocket.png";
-import { Box, Container, Fab, Grid, Paper, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  Fab,
+  Grid,
+  Paper,
+  Typography,
+} from "@mui/material";
 
 export const useStyles = makeStyles((theme) => ({
   banner: {
@@ -38,19 +48,28 @@ function Column({ image, title, description, alt }) {
   );
 }
 
-const CRUDOps = () => (
-  <Typography>
-    &#129321; Easy Peasy! Since Nucleoid runtime tracks the JavaScript state, it
-    makes the necessary adjustments in the state, and &nbsp;
-    <u>organically</u> reduces numbers of code lines needed&nbsp;
-    <span
-      style={{ color: "blue", cursor: "pointer" }}
-      onClick={() => (window.location = "/learn")}
-    >
-      Learn more
-    </span>
-  </Typography>
-);
+function Step({ image, title, description, alt }) {
+  return (
+    <>
+      <Box
+        sx={{
+          display: "flex",
+          maxWidth: 750,
+          margin: 1,
+          alignItems: "center",
+        }}
+      >
+        <Box>
+          <img src={image} width={200} alt={alt} />
+        </Box>
+        <Box>
+          <Typography variant={"h4"}>{title}</Typography>
+          <Typography>{description}</Typography>
+        </Box>
+      </Box>
+    </>
+  );
+}
 
 const Space = () => <Grid item xs={12} height={50} />;
 
@@ -133,6 +152,7 @@ function Home() {
               </Box>
             </Paper>
           </Grid>
+          <Space />
           <Grid container item xs={12} lg={4} justifyContent={"center"}>
             <Column
               image={cubeImage}
@@ -165,72 +185,62 @@ function Home() {
           </Grid>
           <Space />
           <Grid container item xs={12} justifyContent={"center"}>
-            <img src={codingImage} alt={"Coding"} width={300} height={300} />
-            <Box sx={{ margin: 5, display: { xs: "none", lg: "block" } }}>
-              <Typography variant={"h4"}>
-                Build your APIs with JavaScript
-              </Typography>
-              <br />
-              <Box width={500}>
-                <Typography>
-                  Nucleoid is a state-based data storage as writing just like
-                  any other codes in Node.js, it rerenders the same JavaScript
-                  codes and makes the necessary adjustments in the state as well
-                  as stores on the disk.
-                </Typography>
-              </Box>
-            </Box>
-            <Box sx={{ margin: 5, display: { xs: "block", lg: "none" } }}>
-              <Typography variant={"h4"}>
-                Build your APIs with JavaScript
-              </Typography>
-              <br />
-              <Box>
-                <Typography>
-                  Nucleoid is a state-based data storage as writing just like
-                  any other codes in Node.js, it rerenders the same JavaScript
-                  codes and makes the necessary adjustments in the state as well
-                  as stores on the disk.
-                </Typography>
-              </Box>
-            </Box>
+            <Typography variant={"h2"}>How it works</Typography>
+          </Grid>
+          <Grid container item xs={12} justifyContent={"center"}>
+            <Step
+              image={codingImage}
+              title={"Write business logic in JS"}
+              description={
+                "Nucleoid runtime accepts business logic in vanilla JS just like any other codes in Node.js but without requiring to install database or anything else."
+              }
+              alt={"Coding"}
+            />
+            <Step
+              image={processingImage}
+              title={"Nucleoid renders JS"}
+              description={
+                "The runtime renders the JavaScript codes just-in-time and makes the necessary adjustments."
+              }
+              alt={"Processing"}
+            />
+            <Step
+              image={consoleImage}
+              title={"Provides API and data storage"}
+              description={
+                "As a result, Nucleoid creates endpoints and runs business logic as well a stores all your statements/data on the disk out-of-box."
+              }
+              alt={"Console"}
+            />
           </Grid>
           <Space />
           <Grid item xs={12} lg={6}>
             <Typography variant={"h4"}>&nbsp;Hello World</Typography>
             <Gist id={"92261e1b17c81f85dd1288d7e0fb0c0f"} />
           </Grid>
-          <Grid container item xs={12} lg={4} alignItems={"center"}>
-            <Typography>
-              &#128077; This is pretty much it, you successfully persisted your
-              first object&nbsp;
-              <u>without installing external database</u>!
-            </Typography>
-          </Grid>
-          <Space />
-          <Grid
-            container
-            item
-            xs={4}
-            sx={{ display: { xs: "none", lg: "flex" } }}
-            alignItems={"center"}
-          >
-            <CRUDOps />
-          </Grid>
-          <Grid item xs={12} lg={8}>
-            <Typography variant={"h4"}>...and CRUD ops</Typography>
-            <Gist id={"cfa2726aedaa5f090c52becd837e0a0c"} />
-          </Grid>
           <Grid
             container
             item
             xs={12}
-            sx={{ display: { xs: "block", lg: "none" } }}
+            lg={6}
+            direction={"column"}
+            justifyContent={"center"}
             alignItems={"center"}
           >
-            <CRUDOps />
+            <Typography fontSize={18}>
+              &#128077; This is pretty much it, you successfully persisted your
+              first object&nbsp;<u>without installing external database</u>!
+            </Typography>
+            <br />
+            <Grid container item justifyContent={"center"}>
+              <Button
+                size={"large"}
+                onClick={() => (window.location = "/learn")}
+              >
+                Learn more
+              </Button>
+            </Grid>
           </Grid>
-          <Space />
           <Grid container item xs={12} justifyContent={"center"}>
             <img
               src={rocketImage}
@@ -239,6 +249,7 @@ function Home() {
               style={{ maxWidth: "100%" }}
             />
           </Grid>
+          <Space />
         </Grid>
       </Container>
     </Default>
