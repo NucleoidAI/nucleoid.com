@@ -226,7 +226,7 @@ function Home() {
             justifyContent={"center"}
             alignItems={"center"}
           >
-            <Typography fontSize={18}>
+            <Typography fontSize={22}>
               &#128077; This is pretty much it, you successfully persisted your
               first object&nbsp;<u>without installing external database</u>!
             </Typography>
