@@ -1,7 +1,6 @@
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import Default from "../layouts/Default";
-import Emojify from "react-emojione";
 import Gist from "react-gist";
 import aiImage from "../images/007-AI.png";
 import astronautImage from "../images/astronaut.jpeg";
@@ -11,6 +10,7 @@ import cubeImage from "../images/019-cube.png";
 import databaseImage from "../images/019-database-5.png";
 import { makeStyles } from "@mui/styles";
 import processingImage from "../images/processing.png";
+import rocketIconImage from "../images/rocket-icon.png";
 import rocketImage from "../images/rocket.png";
 import {
   Box,
@@ -89,20 +89,20 @@ function Home() {
             }}
           >
             <Typography fontSize={52} textAlign={"center"}>
+              AI-powered
+              <br />
               Low-code
               <br />
-              Data Storage
+              for this Century
               <br />
-              with JS
-              <br />
-              <Emojify style={{ height: 64, width: 64 }}>:rocket:</Emojify>
+              <img src={rocketIconImage} alt={"Rocket Icon"} height={100} />
             </Typography>
           </Box>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Box sx={{ display: "flex", alignItems: "center" }}>
               <Box sx={{ display: { xs: "none", lg: "block" } }}>
                 <Typography fontSize={54} textAlign={"center"}>
-                  AI-powered Data Storage
+                  AI-powered Low-code
                   <br />
                   for this Century
                 </Typography>
