@@ -1,4 +1,5 @@
 import Default from "../layouts/Default";
+import { DiscussionEmbed } from "disqus-react";
 import Markdown from "../components/Markdown";
 import ReactMarkdownHeading from "react-markdown-heading";
 import learnMD from "../markdowns/learn.md";
@@ -46,6 +47,13 @@ function Learn() {
           />
         </Box>
       </Paper>
+      <DiscussionEmbed
+        shortname="example"
+        config={{
+          url: "https://nucleoidjs.disqus.com",
+          title: "Nucleoid: Low-code framework for JS",
+        }}
+      />
     </Default>
   );
 }
