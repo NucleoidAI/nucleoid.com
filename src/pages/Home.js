@@ -88,10 +88,10 @@ function Home() {
               height: 400,
             }}
           >
-            <Typography fontSize={52} textAlign={"center"}>
-              AI-powered
-              <br />
+            <Typography fontSize={48} textAlign={"center"}>
               Low-code
+              <br />
+              Framework
               <br />
               for this Century
               <br />
@@ -102,7 +102,7 @@ function Home() {
             <Box sx={{ display: "flex", alignItems: "center" }}>
               <Box sx={{ display: { xs: "none", lg: "block" } }}>
                 <Typography fontSize={54} textAlign={"center"}>
-                  AI-powered Low-code
+                  Low-code Framework
                   <br />
                   for this Century
                 </Typography>
