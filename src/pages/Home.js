@@ -93,7 +93,7 @@ function Home() {
               <br />
               Framework
               <br />
-              for this Century
+              for JavaScript
               <br />
               <img src={rocketIconImage} alt={"Rocket Icon"} height={100} />
             </Typography>
@@ -104,7 +104,7 @@ function Home() {
                 <Typography fontSize={54} textAlign={"center"}>
                   Low-code Framework
                   <br />
-                  for this Century
+                  for JavaScript
                 </Typography>
               </Box>
             </Box>
@@ -165,7 +165,7 @@ function Home() {
           <Grid container item xs={12} lg={4} justifyContent={"center"}>
             <Column
               image={aiImage}
-              title={"Low-code"}
+              title={"AI-powered"}
               description={
                 "Bringing data storage inside the runtime organically lowers number of codes since the runtime cuts out all technical code lines needed for data."
               }
@@ -227,8 +227,9 @@ function Home() {
             alignItems={"center"}
           >
             <Typography fontSize={22}>
-              &#128077; This is pretty much it, you successfully persisted your
-              first object&nbsp;<u>without installing external database</u>!
+              &#128077; This is pretty much it, you successfully saved your
+              first object&nbsp;<u>without installing external database</u> or
+              anything!
             </Typography>
             <br />
             <Grid container item justifyContent={"center"}>

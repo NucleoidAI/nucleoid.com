@@ -9,7 +9,7 @@ function Logo(props) {
         alignItems: "center",
         paddingBottom: {
           xs: 0,
-          md: 1,
+          md: 0.5,
         },
         cursor: "pointer",
       }}
@@ -17,7 +17,7 @@ function Logo(props) {
         window.location = "/";
       }}
     >
-      <Typography fontFamily={"Segoe UI"} fontSize={"22px"} color={"#28a745"}>
+      <Typography fontSize={"22px"} color={"#28a745"}>
         Nucleoid
       </Typography>
     </Box>

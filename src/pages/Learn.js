@@ -51,6 +51,7 @@ function Learn() {
         shortname="example"
         config={{
           url: "https://nucleoidjs.disqus.com",
+          identifier: "learn-1",
           title: "Nucleoid: Low-code framework for JS",
         }}
       />
