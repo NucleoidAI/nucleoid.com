@@ -48,9 +48,8 @@ function Learn() {
         </Box>
       </Paper>
       <DiscussionEmbed
-        shortname="example"
+        shortname="nucleoidjs"
         config={{
-          url: "https://nucleoidjs.disqus.com",
           identifier: "learn-1",
           title: "Nucleoid: Low-code framework for JS",
         }}
