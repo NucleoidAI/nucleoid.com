@@ -3,15 +3,14 @@ import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import Default from "../layouts/Default";
 import Gist from "react-gist";
 import aiImage from "../images/007-AI.png";
-import astronautImage from "../images/astronaut.jpeg";
 import codingImage from "../images/coding.png";
 import consoleImage from "../images/console.png";
 import cubeImage from "../images/019-cube.png";
 import databaseImage from "../images/019-database-5.png";
+import leafImage from "../images/leaf.png";
 import { makeStyles } from "@mui/styles";
 import processingImage from "../images/processing.png";
-import rocketIconImage from "../images/rocket-icon.png";
-import rocketImage from "../images/rocket.png";
+import promptImage from "../images/80553592.png";
 import {
   Box,
   Button,
@@ -24,7 +23,7 @@ import {
 
 export const useStyles = makeStyles((theme) => ({
   banner: {
-    background: "#ffffff",
+    background: "#0094ab",
   },
   install: {
     padding: theme.spacing(2),
@@ -54,24 +53,31 @@ function Step({ image, title, description, alt }) {
       <Box
         sx={{
           display: "flex",
+          flexDirection: {
+            xs: "column",
+            lg: "row",
+          },
           maxWidth: 750,
           margin: 1,
+          justifyContent: "center",
           alignItems: "center",
         }}
       >
-        <Box>
-          <img src={image} width={200} alt={alt} />
+        <Box sx={{ marginRight: 3 }}>
+          <img src={image} width={150} alt={alt} />
         </Box>
         <Box>
-          <Typography variant={"h4"}>{title}</Typography>
+          <Typography fontSize={28}>{title}</Typography>
           <Typography>{description}</Typography>
+          <br />
+          <br />
         </Box>
       </Box>
     </>
   );
 }
 
-const Space = () => <Grid item xs={12} height={50} />;
+const Space = ({ height }) => <Grid item xs={12} height={height || 50} />;
 
 function Home() {
   const classes = useStyles();
@@ -88,20 +94,20 @@ function Home() {
               height: 400,
             }}
           >
-            <Typography fontSize={48} textAlign={"center"}>
+            <Typography fontSize={48} textAlign={"center"} color={"white"}>
               Low-code
               <br />
               Framework
               <br />
               for JavaScript
               <br />
-              <img src={rocketIconImage} alt={"Rocket Icon"} height={100} />
+              <img src={leafImage} alt={"Leaf"} height={100} />
             </Typography>
           </Box>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Box sx={{ display: "flex", alignItems: "center" }}>
               <Box sx={{ display: { xs: "none", lg: "block" } }}>
-                <Typography fontSize={54} textAlign={"center"}>
+                <Typography fontSize={48} textAlign={"center"} color={"white"}>
                   Low-code Framework
                   <br />
                   for JavaScript
@@ -110,13 +116,17 @@ function Home() {
             </Box>
             <Box width={75} />
             <Box sx={{ display: { xs: "none", lg: "block" } }}>
-              <img src={astronautImage} alt={"Astronaut"} height={500} />
+              <img
+                src={promptImage}
+                alt={"Low-code Framework for JavaScript"}
+              />
             </Box>
           </Box>
         </Container>
       </Box>
       <Container>
         <Grid container spacing={2}>
+          <Space height={25} />
           <Grid
             container
             item
@@ -186,6 +196,7 @@ function Home() {
           <Grid container item xs={12} justifyContent={"center"}>
             <Typography variant={"h2"}>How it works</Typography>
           </Grid>
+          <Space height={25} />
           <Grid container item xs={12} justifyContent={"center"}>
             <Step
               image={codingImage}
@@ -228,8 +239,8 @@ function Home() {
           >
             <Typography fontSize={22}>
               &#128077; This is pretty much it, you successfully saved your
-              first object&nbsp;<u>without installing external database</u> or
-              anything!
+              first object without installing <u>external database</u> or
+              anything else!
             </Typography>
             <br />
             <Grid container item justifyContent={"center"}>
@@ -240,14 +251,6 @@ function Home() {
                 Learn more
               </Button>
             </Grid>
-          </Grid>
-          <Grid container item xs={12} justifyContent={"center"}>
-            <img
-              src={rocketImage}
-              alt={"Coding"}
-              width={750}
-              style={{ maxWidth: "100%" }}
-            />
           </Grid>
           <Space />
         </Grid>

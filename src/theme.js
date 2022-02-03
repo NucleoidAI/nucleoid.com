@@ -6,7 +6,7 @@ let theme = createTheme({
       main: "#fe6b8b",
     },
     background: {
-      default: "#f7f7f7",
+      default: "white",
     },
     custom: {
       grey: "rgba(255, 255, 255, 0.7)",
