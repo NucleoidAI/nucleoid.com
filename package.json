@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "prepare": "husky install",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "lint": "eslint --max-warnings 0 --ext .js .",
-    "format": "prettier --check {**/*,*}.{js,json,html,css}"
+    "format": "prettier --check {**/*,*}.{js,json,yml,html,css}"
   },
   "dependencies": {
     "@emotion/react": "^11.7.1",
@@ -33,7 +32,6 @@
   "devDependencies": {
     "eslint": "^7.28.0",
     "eslint-config-prettier": "^8.3.0",
-    "husky": "^6.0.0",
     "prettier": "^2.3.1"
   }
 }
