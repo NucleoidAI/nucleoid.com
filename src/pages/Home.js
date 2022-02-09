@@ -1,16 +1,21 @@
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import Default from "../layouts/Default";
-import Gist from "react-gist";
+import Markdown from "../components/Markdown";
 import aiImage from "../images/007-AI.png";
+import blockchainImage from "../images/blockchain.png";
 import codingImage from "../images/coding.png";
 import consoleImage from "../images/console.png";
 import cubeImage from "../images/019-cube.png";
+import cylinderImage from "../images/database.png";
 import databaseImage from "../images/019-database-5.png";
+import helloWorldMD from "../markdowns/hello-world.md";
 import leafImage from "../images/leaf.png";
 import { makeStyles } from "@mui/styles";
+import networkingImage from "../images/networking.png";
 import processingImage from "../images/processing.png";
 import promptImage from "../images/80553592.png";
+import transactionImage from "../images/cpu.png";
 import {
   Box,
   Button,
@@ -23,7 +28,7 @@ import {
 
 export const useStyles = makeStyles((theme) => ({
   banner: {
-    background: "#0094ab",
+    background: "#0094ab", //#008ba4
   },
   install: {
     padding: theme.spacing(2),
@@ -44,6 +49,38 @@ function Column({ image, title, description, alt }) {
         <Typography>{description}</Typography>
       </Box>
     </>
+  );
+}
+
+function Feature({ image, primary, secondary, justify, xs, lg }) {
+  return (
+    <Grid
+      container
+      xs={12}
+      lg={6}
+      alignContent={"center"}
+      sx={{
+        padding: 4,
+        display: { xs: xs ? "flex" : "none", lg: lg ? "flex" : "none" },
+        justifyContent: { xs: "center", lg: justify },
+      }}
+    >
+      {image && (
+        <>
+          <img src={image} alt={"Sunset"} width={100} />
+          <Box width={10} />
+        </>
+      )}
+      {primary && (
+        <>
+          <Box width={10} />
+          <Box maxWidth={325}>
+            <Typography variant={"h5"}>{primary}</Typography>
+            <Typography>{secondary}</Typography>
+          </Box>
+        </>
+      )}
+    </Grid>
   );
 }
 
@@ -185,7 +222,7 @@ function Home() {
           <Grid container item xs={12} lg={4} justifyContent={"center"}>
             <Column
               image={databaseImage}
-              title={"Persistent"}
+              title={"Persistence"}
               description={
                 "The runtime tracks and persists each statement so that it doesn't require external data storage like traditional RDBMS."
               }
@@ -200,7 +237,7 @@ function Home() {
           <Grid container item xs={12} justifyContent={"center"}>
             <Step
               image={codingImage}
-              title={"Write business logic in JS"}
+              title={"Write your business logic in JavaScript"}
               description={
                 "Nucleoid runtime accepts business logic in vanilla JS just like any other codes in Node.js but without requiring to install database or anything else."
               }
@@ -208,7 +245,7 @@ function Home() {
             />
             <Step
               image={processingImage}
-              title={"Nucleoid renders JS"}
+              title={"Nucleoid renders your JavaScript"}
               description={
                 "The runtime renders the JavaScript codes just-in-time and makes the necessary adjustments."
               }
@@ -226,7 +263,7 @@ function Home() {
           <Space />
           <Grid item xs={12} lg={6}>
             <Typography variant={"h4"}>&nbsp;Hello World</Typography>
-            <Gist id={"92261e1b17c81f85dd1288d7e0fb0c0f"} />
+            <Markdown path={helloWorldMD} />
           </Grid>
           <Grid
             container
@@ -253,7 +290,55 @@ function Home() {
             </Grid>
           </Grid>
           <Space />
+          <Grid container item xs={12} justifyContent={"center"}>
+            <Grid container item xs={12} justifyContent={"center"}>
+              <Typography variant={"h2"}>Features</Typography>
+            </Grid>
+            <Feature image={networkingImage} justify={"end"} xs lg />
+            <Feature
+              primary={"Immediately start writing business logic"}
+              secondary={
+                "All the technical parts are taken care of by low-code framework, so that developers can focus on the business logic."
+              }
+              xs
+              lg
+              justify={"start"}
+            />
+            <Feature image={cylinderImage} justify={"start"} xs />
+            <Feature
+              primary={"Internal Data Management"}
+              secondary={
+                "Nucleoid runtime comes with own data storage, but you also can export or stream your data to external storage system."
+              }
+              justify={"end"}
+              xs
+              lg
+            />
+            <Feature image={cylinderImage} justify={"start"} lg />
+            <Feature image={blockchainImage} justify={"end"} xs lg />
+            <Feature
+              primary={"All you need is JavaScript"}
+              secondary={
+                "Nucleoid runtime lets you code entire backend including data ops only with JavaScript, and no SQL or anything else needed."
+              }
+              justify={"start"}
+              xs
+              lg
+            />
+            <Feature image={transactionImage} justify={"start"} xs />
+            <Feature
+              primary={"Lighting fast"}
+              secondary={
+                "Since data and logic in the same box, you get extreme speed without requiring tuning like connection pools, transaction manager etc."
+              }
+              justify={"end"}
+              xs
+              lg
+            />
+            <Feature image={transactionImage} justify={"start"} lg />
+          </Grid>
         </Grid>
+        <Space />
       </Container>
     </Default>
   );
