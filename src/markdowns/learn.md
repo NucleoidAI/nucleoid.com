@@ -21,10 +21,11 @@ rather than business logic. Declarative runtimes like Nucleoid can organically r
 const nucleoid = require("nucleoidjs");
 const app = nucleoid();
 
-class User {}
+class User {constructor(name){this.name = name}}
 nucleoid.register(User);
 
-app.post("/users", () => new User());
+// 👇 This is it!
+app.post("/users", () => new User("Daphne"));
 
 app.listen(3000);
 ```

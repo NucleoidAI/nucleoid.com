@@ -245,7 +245,7 @@ function Home() {
             />
             <Step
               image={processingImage}
-              title={"Nucleoid renders your JavaScript"}
+              title={"Nucleoid renders your code"}
               description={
                 "The runtime renders the JavaScript codes just-in-time and makes the necessary adjustments."
               }
