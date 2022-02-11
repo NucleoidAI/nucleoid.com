@@ -6,6 +6,7 @@ import React from "react";
 import theme from "./theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { Redirect, Route, BrowserRouter as Router } from "react-router-dom";
+import API from "./pages/API";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path={["/home"]} component={Home} />
         <Route path={["/get-started"]} component={GetStarted} />
         <Route path={["/learn"]} component={Learn} />
+        <Route path={["/api"]} component={API} />
         <Route path={["/dev"]} component={Dev} />
       </Router>
     </ThemeProvider>

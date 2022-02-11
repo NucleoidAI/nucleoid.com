@@ -59,3 +59,14 @@ img.emojione {
 
 code.hljs {
 }
+
+table,
+th,
+td {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+}

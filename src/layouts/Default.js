@@ -45,6 +45,10 @@ const pages = [
     link: "/learn",
   },
   {
+    name: "API",
+    link: "/api",
+  },
+  {
     name: "Blog",
     link: "https://dev.to/nucleoid",
   },
