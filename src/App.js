@@ -1,3 +1,4 @@
+import API from "./pages/API";
 import Dev from "./pages/Dev";
 import GetStarted from "./pages/GetStarted";
 import Home from "./pages/Home";
@@ -6,7 +7,6 @@ import React from "react";
 import theme from "./theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { Redirect, Route, BrowserRouter as Router } from "react-router-dom";
-import API from "./pages/API";
 
 function App() {
   return (
