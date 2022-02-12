@@ -265,7 +265,7 @@ function Home() {
             />
           </Grid>
           <Space />
-          <Grid item xs={12} lg={6}>
+          <Grid item xs={12} lg={6} sx={{ padding: { lg: 5 } }}>
             <Typography variant={"h4"}>&nbsp;Hello World</Typography>
             <Markdown path={helloWorldMD} />
           </Grid>
