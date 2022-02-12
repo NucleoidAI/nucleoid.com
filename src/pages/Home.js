@@ -1,6 +1,7 @@
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import Default from "../layouts/Default";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import Markdown from "../components/Markdown";
 import aiImage from "../images/007-AI.png";
 import blockchainImage from "../images/blockchain.png";
@@ -342,6 +343,22 @@ function Home() {
             />
             <Feature image={transactionImage} justify={"start"} lg />
           </Grid>
+        </Grid>
+        <Space />
+        <Grid container item xs={12} justifyContent={"center"}>
+          <Button
+            startIcon={<GitHubIcon />}
+            size={"large"}
+            variant={"outlined"}
+            sx={{
+              p: 3,
+            }}
+            onClick={() =>
+              window.open("https://github.com/NucleoidJS/Nucleoid", "_blank")
+            }
+          >
+            Star us on GitHub
+          </Button>
         </Grid>
         <Space />
         <Divider />
