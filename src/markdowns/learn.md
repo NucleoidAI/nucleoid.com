@@ -11,17 +11,17 @@ in the state as well as stores on the disk, so that your application doesn't req
 Even simple applications today require lots of coding, libraries, tuning etc., and majority of them are technical codes
 rather than business logic. Declarative runtimes like Nucleoid can organically reduce numbers of code lines needed.
 
-### Nucleoid in a nutshell
-
-<img src="https://drive.google.com/uc?export=view&id=1bNaHtwcxrKSTjlJw4RAVRw-ImkC86juX" alt="Look! Up in the sky!" width="350"/>
-
 ## Hello World
 
 ```javascript
 const nucleoid = require("nucleoidjs");
 const app = nucleoid();
 
-class User {constructor(name){this.name = name}}
+class User {
+  constructor(name) {
+    this.name = name;
+  }
+}
 nucleoid.register(User);
 
 // 👇 This is it!

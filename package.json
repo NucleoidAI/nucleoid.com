@@ -25,7 +25,7 @@
     "react-markdown-heading": "^1.4.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
-    "rehype-highlight": "^5.0.2",
+    "react-syntax-highlighter": "^15.4.5",
     "rehype-raw": "^6.1.1",
     "remark-gfm": "^3.0.1"
   },

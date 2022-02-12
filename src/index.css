@@ -70,3 +70,10 @@ td {
 table {
   border-collapse: collapse;
 }
+
+pre {
+  padding: 10px;
+  border: 1px solid #474949;
+  border-radius: 10px;
+  background: #474949;
+}

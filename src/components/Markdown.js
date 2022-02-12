@@ -1,7 +1,7 @@
-import "highlight.js/styles/github.css";
 import ReactMarkdown from "react-markdown";
+import SyntaxHighlighter from "react-syntax-highlighter";
 import emojione from "emojione";
-import rehypeHighlight from "rehype-highlight";
+import { rainbow as hljs } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 import { Children, createElement, useEffect, useState } from "react";
@@ -34,11 +34,25 @@ function Markdown({ path }) {
   return (
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}
-      rehypePlugins={[rehypeRaw, rehypeHighlight]}
+      rehypePlugins={[rehypeRaw]}
       components={{
         h1: HeadingRenderer,
         h2: HeadingRenderer,
         h3: HeadingRenderer,
+        code({ inline, className, children, ...props }) {
+          return !inline ? (
+            <SyntaxHighlighter
+              children={String(children).slice(0, -1)}
+              style={hljs}
+              PreTag={"div"}
+              {...props}
+            />
+          ) : (
+            <code className={className} {...props}>
+              {children}
+            </code>
+          );
+        },
       }}
     >
       {text}
