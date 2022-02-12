@@ -20,6 +20,7 @@ import nucleoidImage from "../images/113933331.png";
 import processingImage from "../images/processing.png";
 import promptImage from "../images/80553592.png";
 import transactionImage from "../images/cpu.png";
+import { useState } from "react";
 import {
   Box,
   Button,
@@ -28,6 +29,7 @@ import {
   Fab,
   Grid,
   Paper,
+  Tooltip,
   Typography,
 } from "@mui/material";
 
@@ -124,6 +126,7 @@ const Space = ({ height }) => <Grid item xs={12} height={height || 50} />;
 
 function Home() {
   const classes = useStyles();
+  const [copied, setCopied] = useState(false);
 
   return (
     <Default container={false}>
@@ -194,13 +197,20 @@ function Home() {
                 <Typography fontFamily={"Trebuchet MS"} variant={"h5"}>
                   npm install nucleoidjs
                 </Typography>
-                <Fab
-                  onClick={() => {
-                    navigator.clipboard.writeText("npm install nucleoidjs");
-                  }}
+                <Tooltip
+                  title={copied ? "Copied" : ""}
+                  leaveDelay={1000}
+                  onClose={() => setCopied(false)}
                 >
-                  <ContentCopyIcon />
-                </Fab>
+                  <Fab
+                    onClick={() => {
+                      navigator.clipboard.writeText("npm install nucleoidjs");
+                      setCopied(true);
+                    }}
+                  >
+                    <ContentCopyIcon />
+                  </Fab>
+                </Tooltip>
               </Box>
             </Paper>
           </Grid>
