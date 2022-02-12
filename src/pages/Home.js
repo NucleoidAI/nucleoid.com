@@ -346,7 +346,7 @@ function Home() {
         <Divider />
         <Space />
         <Grid container item justifyContent={"center"}>
-          <Box maxWidth={600}>
+          <Box maxWidth={600} bgcolor={"#f9f9f9"}>
             <Typography variant={"h6"}>
               Under the hood: Declarative Runtime Environment
             </Typography>
@@ -370,7 +370,11 @@ function Home() {
             <img
               src={logicalDiagramImage}
               alt={"Logical Diagram"}
-              style={{ float: "right", margin: 10 }}
+              style={{
+                float: "right",
+                margin: 10,
+                border: "1px solid #a0a0a0",
+              }}
               width={225}
             />
             <p>
