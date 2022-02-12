@@ -2,26 +2,16 @@ import Default from "../layouts/Default";
 import { DiscussionEmbed } from "disqus-react";
 import Markdown from "../components/Markdown";
 import ReactMarkdownHeading from "react-markdown-heading";
-import learnMD from "../markdowns/learn.md";
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import learnMD from "!!raw-loader!../markdowns/learn.md";
 import { Box, Grid, Paper } from "@mui/material";
-import { useEffect, useState } from "react";
 
 function Learn() {
-  const [text, setText] = useState("");
-
-  useEffect(() => {
-    fetch(learnMD)
-      .then((res) => res.text())
-      .then((text) => {
-        setText(text);
-      });
-  }, []);
-
   return (
     <Default>
       <Grid container>
         <Grid item xs={12} lg={9}>
-          <Markdown path={learnMD} />
+          <Markdown content={learnMD} />
         </Grid>
       </Grid>
       <Paper
@@ -39,7 +29,7 @@ function Learn() {
         <Box sx={{ margin: 5 }}>
           Contents
           <ReactMarkdownHeading
-            markdown={text}
+            markdown={learnMD}
             hyperlink={true}
             ulClassName={"tocUl"}
             liClassName={"tocLi"}

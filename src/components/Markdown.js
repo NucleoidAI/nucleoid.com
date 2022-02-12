@@ -4,7 +4,7 @@ import emojione from "emojione";
 import { rainbow as hljs } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
-import { Children, createElement, useEffect, useState } from "react";
+import { Children, createElement } from "react";
 
 function flatten(text, child) {
   return typeof child === "string"
@@ -19,18 +19,7 @@ function HeadingRenderer(props) {
   return createElement("h" + props.level, { id: slug }, props.children);
 }
 
-function Markdown({ path }) {
-  const [text, setText] = useState();
-
-  useEffect(() => {
-    fetch(path)
-      .then((res) => res.text())
-      .then((text) => {
-        const emojified = emojione.shortnameToImage(text);
-        setText(emojified);
-      });
-  }, [path]);
-
+function Markdown({ content }) {
   return (
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}
@@ -55,7 +44,7 @@ function Markdown({ path }) {
         },
       }}
     >
-      {text}
+      {emojione.shortnameToImage(content)}
     </ReactMarkdown>
   );
 }

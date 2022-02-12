@@ -9,7 +9,8 @@ import consoleImage from "../images/console.png";
 import cubeImage from "../images/019-cube.png";
 import cylinderImage from "../images/database.png";
 import databaseImage from "../images/019-database-5.png";
-import helloWorldMD from "../markdowns/hello-world.md";
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import helloWorldMD from "!!raw-loader!../markdowns/hello-world.md";
 import leafImage from "../images/leaf.png";
 import logicalDiagramImage from "../images/logical-diagram.png";
 import { makeStyles } from "@mui/styles";
@@ -267,7 +268,7 @@ function Home() {
           <Space />
           <Grid item xs={12} lg={6} sx={{ padding: { lg: 5 } }}>
             <Typography variant={"h4"}>&nbsp;Hello World</Typography>
-            <Markdown path={helloWorldMD} />
+            <Markdown content={helloWorldMD} />
           </Grid>
           <Grid
             container

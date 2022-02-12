@@ -1,5 +1,4 @@
 import API from "./pages/API";
-import Dev from "./pages/Dev";
 import GetStarted from "./pages/GetStarted";
 import Home from "./pages/Home";
 import Learn from "./pages/Learn";
@@ -18,7 +17,6 @@ function App() {
         <Route path={["/get-started"]} component={GetStarted} />
         <Route path={["/learn"]} component={Learn} />
         <Route path={["/api"]} component={API} />
-        <Route path={["/dev"]} component={Dev} />
       </Router>
     </ThemeProvider>
   );

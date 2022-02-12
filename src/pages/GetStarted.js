@@ -1,11 +1,12 @@
 import Default from "../layouts/Default";
 import Markdown from "../components/Markdown";
-import getStartedMD from "../markdowns/get-started.md";
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import getStartedMD from "!!raw-loader!../markdowns/get-started.md";
 
 function GetStarted() {
   return (
     <Default>
-      <Markdown path={getStartedMD} />
+      <Markdown content={getStartedMD} />
     </Default>
   );
 }

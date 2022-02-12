@@ -1,11 +1,12 @@
 import Default from "../layouts/Default";
 import Markdown from "../components/Markdown";
-import apiMD from "../markdowns/api.md";
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import apiMD from "!!raw-loader!../markdowns/api.md";
 
 function API() {
   return (
     <Default>
-      <Markdown path={apiMD} />
+      <Markdown content={apiMD} />
     </Default>
   );
 }
