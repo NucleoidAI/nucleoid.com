@@ -374,7 +374,7 @@ function Home() {
         <Divider />
         <Space />
         <Grid container item justifyContent={"center"}>
-          <Box maxWidth={600} bgcolor={"#f9f9f9"}>
+          <Box maxWidth={625} bgcolor={"#f9f9f9"} padding={2}>
             <Typography variant={"h6"}>
               Under the hood: Declarative Runtime Environment
             </Typography>
