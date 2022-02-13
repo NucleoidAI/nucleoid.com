@@ -361,7 +361,7 @@ function Home() {
             size={"large"}
             variant={"outlined"}
             sx={{
-              p: 3,
+              p: 2,
             }}
             onClick={() =>
               window.open("https://github.com/NucleoidJS/Nucleoid", "_blank")
