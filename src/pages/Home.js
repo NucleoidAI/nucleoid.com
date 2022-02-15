@@ -220,7 +220,7 @@ function Home() {
               image={cubeImage}
               title={"Declarative"}
               description={
-                "The runtime is embedded inside Node.js and rerenders the very same JavaScript codes and makes the necessary adjustments in the state."
+                "Nucleoid is embedded inside Node.js and renders the very same JavaScript codes and makes the necessary adjustments in the state."
               }
               alt={"Cube"}
             />
@@ -230,7 +230,7 @@ function Home() {
               image={aiImage}
               title={"AI-powered"}
               description={
-                "Bringing data storage inside the runtime organically lowers number of codes since the runtime cuts out all technical code lines needed for data."
+                "Nucleoid runtime builds the network of statements and adjusts connections as receives more entries so that it lowers number of codes needed."
               }
               alt={"AI"}
             />
@@ -240,7 +240,7 @@ function Home() {
               image={databaseImage}
               title={"Persistence"}
               description={
-                "The runtime tracks and persists each statement so that it doesn't require external data storage like traditional RDBMS."
+                "The runtime tracks and persists each statement so that it doesn't require external data storage like relational DB or NoSQL."
               }
               alt={"Database"}
             />
