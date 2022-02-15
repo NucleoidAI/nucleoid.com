@@ -32,6 +32,7 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material";
+import Space from "../components/Space";
 
 export const useStyles = makeStyles((theme) => ({
   banner: {
@@ -121,8 +122,6 @@ function Step({ image, title, description, alt }) {
     </>
   );
 }
-
-const Space = ({ height }) => <Grid item xs={12} height={height || 50} />;
 
 function Home() {
   const classes = useStyles();
