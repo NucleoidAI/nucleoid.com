@@ -3,6 +3,7 @@ import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import Default from "../layouts/Default";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Markdown from "../components/Markdown";
+import Space from "../components/Space";
 import aiImage from "../images/007-AI.png";
 import blockchainImage from "../images/blockchain.png";
 import codingImage from "../images/coding.png";
@@ -32,7 +33,6 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material";
-import Space from "../components/Space";
 
 export const useStyles = makeStyles((theme) => ({
   banner: {

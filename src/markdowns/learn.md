@@ -2,9 +2,9 @@
 
 ## What is Nucleoid?
 
-Nucleoid is a state-based data storage with vanilla JavaScript. Nucleoid runtime is embedded inside Node.js and as
-writing just any other codes in Node.js, it rerenders the same JavaScript codes and makes the necessary adjustments
-in the state as well as stores on the disk, so that your application doesn't require external database.
+Nucleoid is a low-code framework for JavaScript and embedded inside Node.js. As writing just any other codes in
+Node.js, it rerenders the very same JavaScript codes and makes the necessary adjustments in the state as well as stores
+on the disk, so that your application doesn't require external database or anything else.
 
 ### ...but why?
 
