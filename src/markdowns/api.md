@@ -1,6 +1,6 @@
 # API
 
-## nucleoid()
+## `const app = nucleoid ( )`
 
 Creates application
 
@@ -9,7 +9,11 @@ const nucleoid = require("nucleoidjs");
 const app = nucleoid();
 ```
 
-### get, post put, delete ( path, fn )
+<br/>
+<hr/>
+<br/>
+
+### `app . get, post put, delete ( path , fn )`
 
 Creates routes
 
@@ -26,7 +30,26 @@ app.post("/orders", () => new Order("SKU-123"));
 app.get("/users/:id", (req) => User[req.params.id]);
 ```
 
-### run ( fn, scope )
+<br/>
+<hr/>
+<br/>
+
+### `app.listen ( port , callback )`
+
+| Argument | Description                                   | Required |
+| -------- | --------------------------------------------- | -------- |
+| port     | The path that the application routes to.      | Yes      |
+| callback | The function that Nucleoid renders.<br/><br/> | Yes      |
+
+```javascript
+app.listen(3000);
+```
+
+<br/>
+<hr/>
+<br/>
+
+## `nucleoid.run ( fn , scope )`
 
 Runs function with scope
 
@@ -42,24 +65,17 @@ const scope = { userId: 1 };
 const user = nucleoid.run((scope) => new User(scope.userId), scope);
 ```
 
-### express ()
+<br/>
+<hr/>
+<br/>
+
+### `const express = app.express ( )`
 
 It gives an direct access to underlying Express.js libraries
 
 ```javascript
 const express = app.express();
 express.get("/test", (req, res) => res.send("Hello"));
-```
-
-### listen ( port, callback )
-
-| Argument | Description                                   | Required |
-| -------- | --------------------------------------------- | -------- |
-| port     | The path that the application routes to.      | Yes      |
-| callback | The function that Nucleoid renders.<br/><br/> | Yes      |
-
-```javascript
-app.listen(3000);
 ```
 
 <br/>
