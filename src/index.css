@@ -76,4 +76,5 @@ pre {
   border: 1px solid #474949;
   border-radius: 10px;
   background: #474949;
+  max-width: 800px;
 }
