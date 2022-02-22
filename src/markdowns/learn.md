@@ -127,21 +127,12 @@ app.post("/test", () => new Order("SKU-123", 3));
 }
 ```
 
-This will retrieve the created object
+> :bulb: `id` of object is always the same to its global `var` so that either can be used to retrieve the object like
+> `Order["order0"]` and `order0`.
 
-```javascript
-app.get("/test", () => order0);
-```
+<br/>
 
-```json
-{
-  "id": "order0",
-  "sku": "SKU-123",
-  "qty": 1
-}
-```
-
-if object created and assigned to either `let` or `const`, the runtime will create `var` variable along with `id`
+if object assigned to either `let` or `const`, the runtime will create `var` variable the same as its `id`
 
 ```javascript
 app.post("/orders", () => {
@@ -176,6 +167,8 @@ app.post("/test", () => {
 });
 ```
 
+<br/>
+
 or it can be part of `let` or `const`
 
 ```javascript
@@ -186,7 +179,7 @@ app.post("/test", () => {
 });
 ```
 
-It will be part of JSON when retrieve
+It will be part of JSON when retrieved as in standard JSON
 
 ```javascript
 app.get("/test", () => order1);
@@ -229,10 +222,10 @@ class User {
 }
 nucleoid.register(User);
 
-// Retrieves active users
+// Retrieves active users    👇
 app.get("/users", () => User.filter((u) => u.active == true));
 
-// Retrieves the student with username canmingir
+// Retrieves the student     👇
 app.get("/users", () => User.find((u) => u.username == "canmingir"));
 ```
 

@@ -2,10 +2,10 @@ import Default from "../layouts/Default";
 import { DiscussionEmbed } from "disqus-react";
 import Markdown from "../components/Markdown";
 import ReactMarkdownHeading from "react-markdown-heading";
+import Space from "../components/Space";
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import learnMD from "!!raw-loader!../markdowns/learn.md";
 import { Box, Button, Grid, Paper } from "@mui/material";
-import Space from "../components/Space";
 
 function Learn() {
   return (
