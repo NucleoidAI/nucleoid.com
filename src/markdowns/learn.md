@@ -62,18 +62,21 @@ As defined in JavaScript, variables of `var`, `let` and `const` can be used, but
 in meanwhile, `let` and `const` are temporary to its block
 
 ```javascript
-app.get("/test", () => {
+app.post("/test", () => {
+  var a = 1;
   return a;
 });
 
-app.post("/test", () => {
-  return (a = 1);
+app.get("/test", () => {
+  return a;
 });
 ```
 
+> :bulb: Variable definitions without identifier like `a = 1` are upsert operation, also automatically stored.
+
 ## Class
 
-Classes require to be registered before used:
+Classes require to be registered before used in Nucleoid:
 
 ```javascript
 class Order {
@@ -88,7 +91,7 @@ nucleoid.register(Order);
 
 ## Objects
 
-The same thing for objects, once initiated and assigned to the `var` variable, it stores.
+The same thing for objects, once initiated and assigned to the `var` variable as well as it stored.
 
 ```javascript
 app.post("/orders", () => {
@@ -152,7 +155,7 @@ app.post("/orders", () => {
 Now, it can use its `id` as `var` in order to retrieve the object
 
 ```javascript
-app.get("/test", () => order0);
+app.get("/test", () => order1);
 ```
 
 ## Properties
@@ -179,7 +182,9 @@ app.post("/test", () => {
 });
 ```
 
-It will be part of JSON when retrieved as in standard JSON
+<br/>
+
+They will be part of JSON when retrieved as in standard JavaScript
 
 ```javascript
 app.get("/test", () => order1);
@@ -260,7 +265,7 @@ nucleoid.register(User);
 
 app.post("/users", (req) => new User(req.body.name));
 
-app.get("/users", (req) => User.filter((user) => user.name == req.query.name));
+app.get("/users", (req) => User.filter((u) => u.name == req.query.name));
 
 app.get("/users/:user", (req) => User[req.params.user]);
 ```
@@ -273,7 +278,7 @@ Nucleoid also opens terminal channel at `8448` port for queries like in SQL, so 
 
 ## Express.js
 
-In the meanwhile, you can still call underlying Express APIs for non-Nucleoidic functions
+In the meanwhile, you can still access underlying Express APIs for non-Nucleoidic functions
 
 ```javascript
 const app = nucleoid();
