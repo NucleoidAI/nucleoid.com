@@ -1,52 +1,40 @@
-import ReactMarkdown from "react-markdown";
+import MarkDown from "markdown-to-jsx";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import emojione from "emojione";
-import { rainbow as hljs } from "react-syntax-highlighter/dist/cjs/styles/hljs";
-import rehypeRaw from "rehype-raw";
-import remarkGfm from "remark-gfm";
-import { Children, createElement } from "react";
+import { rainbow } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
-function flatten(text, child) {
-  return typeof child === "string"
-    ? text + child
-    : Children.toArray(child.props.children).reduce(flatten, text);
-}
-
-function HeadingRenderer(props) {
-  const children = Children.toArray(props.children);
-  const text = children.reduce(flatten, "");
-  const slug = text.replace(/\W/g, "-");
-  return createElement("h" + props.level, { id: slug }, props.children);
-}
-
-function Markdown({ content }) {
+const CodeBlock = ({ className, children }) => {
+  let lang = "javascript"; // default monospaced text
+  if (className && className.startsWith("lang-")) {
+    lang = className.replace("lang-", "");
+  }
   return (
-    <ReactMarkdown
-      remarkPlugins={[remarkGfm]}
-      rehypePlugins={[rehypeRaw]}
-      components={{
-        h1: HeadingRenderer,
-        h2: HeadingRenderer,
-        h3: HeadingRenderer,
-        code({ inline, className, children, ...props }) {
-          return !inline ? (
-            <SyntaxHighlighter
-              children={String(children).slice(0, -1)}
-              style={hljs}
-              PreTag={"div"}
-              {...props}
-            />
-          ) : (
-            <code className={className} {...props}>
-              {children}
-            </code>
-          );
+    <SyntaxHighlighter language={lang} style={rainbow}>
+      {children}
+    </SyntaxHighlighter>
+  );
+};
+
+const PreBlock = ({ children, ...rest }) => {
+  if ("type" in children && children["type"] === "code") {
+    return CodeBlock(children["props"]);
+  }
+  return <pre {...rest}>{children}</pre>;
+};
+
+const MarkDownComponent = (props) => {
+  const { content } = props;
+
+  return (
+    <MarkDown
+      options={{
+        overrides: {
+          pre: PreBlock,
         },
       }}
     >
-      {emojione.shortnameToImage(content)}
-    </ReactMarkdown>
+      {content}
+    </MarkDown>
   );
-}
+};
 
-export default Markdown;
+export default MarkDownComponent;
