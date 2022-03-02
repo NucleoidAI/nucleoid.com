@@ -80,8 +80,8 @@ Classes require to be registered before used in Nucleoid:
 
 ```javascript
 class Order {
-  constructor(sku, qty) {
-    this.sku = sku;
+  constructor(item, qty) {
+    this.item = item;
     this.qty = qty;
   }
 }
@@ -95,7 +95,7 @@ The same thing for objects, once initiated and assigned to the `var` variable as
 
 ```javascript
 app.post("/orders", () => {
-  var order = new Order("SKU-123", 3);
+  var order = new Order("ITEM-123", 3);
   return order;
 });
 ```
@@ -111,7 +111,7 @@ app.get("/orders", () => {
 ```json
 {
   "id": "order0",
-  "sku": "SKU-123",
+  "item": "ITEM-123",
   "qty": 1
 }
 ```
@@ -119,13 +119,13 @@ app.get("/orders", () => {
 if object initiated without assigning `var` variable, the runtime automatically assign `var` variable along with `id`
 
 ```javascript
-app.post("/test", () => new Order("SKU-123", 3));
+app.post("/test", () => new Order("ITEM-123", 3));
 ```
 
 ```json
 {
   "id": "order0",
-  "sku": "SKU-123",
+  "item": "ITEM-123",
   "qty": 1
 }
 ```
@@ -139,7 +139,7 @@ if object assigned to either `let` or `const`, the runtime will create `var` var
 
 ```javascript
 app.post("/orders", () => {
-  const order = new Order("SKU-123", 3);
+  const order = new Order("ITEM-123", 3);
   return order;
 });
 ```
@@ -147,7 +147,7 @@ app.post("/orders", () => {
 ```json
 {
   "id": "order1",
-  "sku": "SKU-123",
+  "sku": "ITEM-123",
   "qty": 1
 }
 ```
@@ -164,7 +164,7 @@ Properties can be defined as part of its `var`, and it will store along with obj
 
 ```javascript
 app.post("/test", () => {
-  var order = new Order("SKU-123", 3);
+  var order = new Order("ITEM-123", 3);
   order.details = "some details";
   return order;
 });
@@ -176,7 +176,7 @@ or it can be part of `let` or `const`
 
 ```javascript
 app.post("/test", () => {
-  const order = new Order("SKU-123", 3);
+  const order = new Order("ITEM-123", 3);
   order.details = "some details";
   return order;
 });
@@ -193,7 +193,7 @@ app.get("/test", () => order1);
 ```json
 {
   "id": "order1",
-  "sku": "SKU-123",
+  "item": "ITEM-123",
   "qty": 1,
   "details": "some details"
 }
@@ -203,14 +203,14 @@ or can be part of constructor as seen in previous examples
 
 ```javascript
 class Order {
-  constructor(sku, qty) {
-    this.sku = sku;
+  constructor(item, qty) {
+    this.item = item;
     this.qty = qty;
   }
 }
 nucleoid.register(Order);
 
-app.post("/test", () => new Order("SKU-123", 3));
+app.post("/test", () => new Order("ITEM-123", 3));
 ```
 
 ## Query
