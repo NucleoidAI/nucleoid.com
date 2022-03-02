@@ -147,7 +147,7 @@ app.post("/orders", () => {
 ```json
 {
   "id": "order1",
-  "sku": "ITEM-123",
+  "item": "ITEM-123",
   "qty": 1
 }
 ```
