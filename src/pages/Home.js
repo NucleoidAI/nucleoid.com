@@ -144,7 +144,7 @@ function Home() {
               <br />
               Framework
               <br />
-              for JavaScript
+              for Node.js
               <br />
               <img src={leafImage} alt={"Leaf"} height={100} />
             </Typography>
@@ -155,16 +155,13 @@ function Home() {
                 <Typography fontSize={48} textAlign={"center"} color={"white"}>
                   Low-code Framework
                   <br />
-                  for JavaScript
+                  for Node.js
                 </Typography>
               </Box>
             </Box>
             <Box width={75} />
             <Box sx={{ display: { xs: "none", lg: "block" } }}>
-              <img
-                src={promptImage}
-                alt={"Low-code Framework for JavaScript"}
-              />
+              <img src={promptImage} alt={"Low-code Framework for Node.js"} />
             </Box>
           </Box>
         </Container>
