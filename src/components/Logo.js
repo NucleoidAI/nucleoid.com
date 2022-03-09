@@ -20,6 +20,10 @@ function Logo(props) {
       <Typography fontSize={"22px"} color={"#28a745"}>
         Nucleoid
       </Typography>
+      &nbsp;
+      <Typography fontSize={"15px"} color={"#dfdfdf"} fontWeight={"lighter"}>
+        <sub>Beta</sub>
+      </Typography>
     </Box>
   );
 }
