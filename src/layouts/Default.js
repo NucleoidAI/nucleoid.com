@@ -11,13 +11,13 @@ import {
   AppBar,
   Box,
   Button,
-  Container,
   IconButton,
   Menu,
   MenuItem,
   Toolbar,
   Typography,
 } from "@mui/material";
+import { Link, Outlet } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   footer: {
@@ -50,12 +50,13 @@ const pages = [
   },
   {
     name: "Blog",
+    out: true,
     link: "https://dev.to/nucleoid",
   },
 ];
 
 function Default({ container, children }) {
-  container = container === undefined ? true : container;
+  //container = container === undefined ? true : container;
   const classes = useStyles();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -102,8 +103,10 @@ function Default({ container, children }) {
                 }}
               >
                 {pages.map(({ name, link }) => (
-                  <MenuItem key={name} onClick={() => (window.location = link)}>
-                    <Typography textAlign="center">{name}</Typography>
+                  <MenuItem key={name}>
+                    <Link to={link}>
+                      <Typography textAlign="center">{name}</Typography>
+                    </Link>
                   </MenuItem>
                 ))}
               </Menu>
@@ -118,15 +121,26 @@ function Default({ container, children }) {
               paddingLeft: 2,
             }}
           >
-            {pages.map(({ name, link }) => (
-              <Button
-                key={name}
-                onClick={() => (window.location = link)}
-                sx={{ my: 2, color: "#9a9da0", display: "block" }}
-              >
-                {name}
-              </Button>
-            ))}
+            {pages.map(({ name, link, out }) =>
+              out ? (
+                <Button
+                  key={name}
+                  sx={{ my: 2, color: "#9a9da0", display: "block" }}
+                  onClick={() => (window.location = link)}
+                >
+                  {name}
+                </Button>
+              ) : (
+                <Link to={link}>
+                  <Button
+                    key={name}
+                    sx={{ my: 2, color: "#9a9da0", display: "block" }}
+                  >
+                    {name}
+                  </Button>
+                </Link>
+              )
+            )}
           </Box>
           <Button
             startIcon={<StarBorderIcon />}
@@ -144,8 +158,9 @@ function Default({ container, children }) {
           </Button>
         </Toolbar>
       </AppBar>
-      {container && <Container>{children}</Container>}
-      {!container && <Box>{children}</Box>}
+
+      <Outlet />
+
       <footer>
         <Box className={classes.footer}>
           <WeekCalendar />

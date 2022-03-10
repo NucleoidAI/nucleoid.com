@@ -1,27 +1,26 @@
-import Default from "../layouts/Default";
 import Markdown from "../components/Markdown";
+
 import Space from "../components/Space";
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import getStartedMD from "!!raw-loader!../markdowns/get-started.md";
-import { Button, Grid } from "@mui/material";
+import { Button, Container, Grid } from "@mui/material";
+// eslint-disable-next-line
+import { Link } from "react-router-dom";
 
 function GetStarted() {
   return (
-    <Default>
+    <Container>
       <Markdown content={getStartedMD} />
       <Space />
       <Grid container item xs={12} justifyContent={"center"}>
-        <Button
-          size={"large"}
-          variant={"outlined"}
-          sx={{ p: 2 }}
-          onClick={() => (window.location = "/learn")}
-        >
-          Go to Tutorial Page
-        </Button>
+        <Link to={"/learn"}>
+          <Button size={"large"} variant={"outlined"} sx={{ p: 2 }}>
+            Go to Tutorial Page
+          </Button>
+        </Link>
       </Grid>
       <Space />
-    </Default>
+    </Container>
   );
 }
 

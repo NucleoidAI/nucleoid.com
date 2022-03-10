@@ -1,15 +1,14 @@
-import Default from "../layouts/Default";
 import { DiscussionEmbed } from "disqus-react";
 import Markdown from "../components/Markdown";
 import ReactMarkdownHeading from "react-markdown-heading";
 import Space from "../components/Space";
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import learnMD from "!!raw-loader!../markdowns/learn.md";
-import { Box, Button, Grid, Paper } from "@mui/material";
+import { Box, Button, Container, Grid, Paper } from "@mui/material";
 
 function Learn() {
   return (
-    <Default>
+    <Container>
       <Grid container>
         <Grid item xs={12} lg={9}>
           <Markdown content={learnMD} />
@@ -61,7 +60,7 @@ function Learn() {
           />
         </Box>
       </Paper>
-    </Default>
+    </Container>
   );
 }
 

@@ -1,13 +1,14 @@
-import Default from "../layouts/Default";
+import { Container } from "@mui/material";
 import Markdown from "../components/Markdown";
+
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import apiMD from "!!raw-loader!../markdowns/api.md";
 
 function API() {
   return (
-    <Default>
+    <Container>
       <Markdown content={apiMD} />
-    </Default>
+    </Container>
   );
 }
 

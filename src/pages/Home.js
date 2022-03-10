@@ -1,9 +1,9 @@
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
-import Default from "../layouts/Default";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Markdown from "../components/Markdown";
 import Space from "../components/Space";
+
 import aiImage from "../images/007-AI.png";
 import blockchainImage from "../images/blockchain.png";
 import codingImage from "../images/coding.png";
@@ -21,6 +21,8 @@ import nucleoidImage from "../images/113933331.png";
 import processingImage from "../images/processing.png";
 import promptImage from "../images/80553592.png";
 import transactionImage from "../images/cpu.png";
+// eslint-disable-next-line
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import {
   Box,
@@ -128,7 +130,7 @@ function Home() {
   const [copied, setCopied] = useState(false);
 
   return (
-    <Default container={false}>
+    <>
       <Box className={classes.banner}>
         <Container>
           <Box
@@ -293,12 +295,9 @@ function Home() {
             </Typography>
             <br />
             <Grid container item justifyContent={"center"}>
-              <Button
-                size={"large"}
-                onClick={() => (window.location = "/learn")}
-              >
-                Learn more
-              </Button>
+              <Link to={"/learn"}>
+                <Button size={"large"}>Learn more</Button>
+              </Link>
             </Grid>
           </Grid>
           <Space />
@@ -432,7 +431,7 @@ function Home() {
         </Grid>
         <Space />
       </Container>
-    </Default>
+    </>
   );
 }
 
