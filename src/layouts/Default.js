@@ -58,7 +58,6 @@ const pages = [
 function Default() {
   const navigate = useNavigate();
   const classes = useStyles();
-
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -103,7 +102,13 @@ function Default() {
                 }}
               >
                 {pages.map(({ name, link }) => (
-                  <MenuItem key={name} onClick={() => navigate(link)}>
+                  <MenuItem
+                    key={name}
+                    onClick={() => {
+                      handleCloseNavMenu();
+                      navigate(link);
+                    }}
+                  >
                     <Typography textAlign="center">{name}</Typography>
                   </MenuItem>
                 ))}
