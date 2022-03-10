@@ -21,8 +21,7 @@ import nucleoidImage from "../images/113933331.png";
 import processingImage from "../images/processing.png";
 import promptImage from "../images/80553592.png";
 import transactionImage from "../images/cpu.png";
-// eslint-disable-next-line
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import {
   Box,
@@ -128,6 +127,7 @@ function Step({ image, title, description, alt }) {
 function Home() {
   const classes = useStyles();
   const [copied, setCopied] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -295,9 +295,9 @@ function Home() {
             </Typography>
             <br />
             <Grid container item justifyContent={"center"}>
-              <Link to={"/learn"}>
-                <Button size={"large"}>Learn more</Button>
-              </Link>
+              <Button size={"large"} onClick={() => navigate("/learn")}>
+                Learn more
+              </Button>
             </Grid>
           </Grid>
           <Space />

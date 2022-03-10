@@ -17,7 +17,7 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
-import { Link, Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   footer: {
@@ -50,13 +50,13 @@ const pages = [
   },
   {
     name: "Blog",
-    out: true,
     link: "https://dev.to/nucleoid",
+    outLink: true,
   },
 ];
 
-function Default({ container, children }) {
-  //container = container === undefined ? true : container;
+function Default() {
+  const navigate = useNavigate();
   const classes = useStyles();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -103,10 +103,8 @@ function Default({ container, children }) {
                 }}
               >
                 {pages.map(({ name, link }) => (
-                  <MenuItem key={name}>
-                    <Link to={link}>
-                      <Typography textAlign="center">{name}</Typography>
-                    </Link>
+                  <MenuItem key={name} onClick={() => navigate(link)}>
+                    <Typography textAlign="center">{name}</Typography>
                   </MenuItem>
                 ))}
               </Menu>
@@ -121,8 +119,8 @@ function Default({ container, children }) {
               paddingLeft: 2,
             }}
           >
-            {pages.map(({ name, link, out }) =>
-              out ? (
+            {pages.map(({ name, link, outLink }) =>
+              outLink ? (
                 <Button
                   key={name}
                   sx={{ my: 2, color: "#9a9da0", display: "block" }}
@@ -131,14 +129,13 @@ function Default({ container, children }) {
                   {name}
                 </Button>
               ) : (
-                <Link to={link}>
-                  <Button
-                    key={name}
-                    sx={{ my: 2, color: "#9a9da0", display: "block" }}
-                  >
-                    {name}
-                  </Button>
-                </Link>
+                <Button
+                  key={name}
+                  sx={{ my: 2, color: "#9a9da0", display: "block" }}
+                  onClick={() => navigate(link)}
+                >
+                  {name}
+                </Button>
               )
             )}
           </Box>
