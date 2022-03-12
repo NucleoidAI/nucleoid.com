@@ -4,9 +4,36 @@ import ReactMarkdownHeading from "react-markdown-heading";
 import Space from "../components/Space";
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import learnMD from "!!raw-loader!../markdowns/learn.md";
-import { Box, Button, Container, Grid, Paper } from "@mui/material";
+import lifeguardImage from "../images/lifeguard.png";
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  Paper,
+  Typography,
+  Zoom,
+} from "@mui/material";
+import React, { useEffect, useState } from "react";
 
 function Learn() {
+  const [checked, setChecked] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      const visited = localStorage.getItem("visited");
+
+      if (visited === null) {
+        localStorage.setItem("visited", "first_time");
+        setChecked(true);
+      }
+
+      if (visited === "first_time") {
+        localStorage.setItem("visited", "true");
+        setTimeout(() => setChecked(true), 8000);
+      }
+    }, 8000);
+  }, []);
   return (
     <Container>
       <Grid container>
@@ -40,16 +67,16 @@ function Learn() {
       <Paper
         sx={{
           position: "fixed",
-          top: 200,
+          top: "calc(50% - 200px)",
           right: 15,
-          width: 350,
+          width: 300,
           display: {
             xs: "none",
             lg: "block",
           },
         }}
       >
-        <Box sx={{ margin: 5 }}>
+        <Box sx={{ margin: 2 }}>
           Contents
           <ReactMarkdownHeading
             markdown={learnMD}
@@ -60,6 +87,43 @@ function Learn() {
           />
         </Box>
       </Paper>
+      <Box
+        sx={{
+          position: "fixed",
+          bottom: 25,
+          right: 25,
+          display: {
+            xs: "none",
+            lg: "block",
+          },
+        }}
+      >
+        <div>
+          <Zoom in={checked} style={{ transitionDelay: "1000ms" }}>
+            <Box width={300}>
+              <Typography fontSize={14}>
+                <img
+                  src={lifeguardImage}
+                  alt={"Lifeguard"}
+                  width={25}
+                  style={{ float: "left", margin: 8 }}
+                />
+                Nucleoid is fully open source project
+                <br />
+                Please star us on{" "}
+                <a
+                  href={"https://github.com/NucleoidJS/Nucleoid"}
+                  target={"_blank"}
+                  rel="noreferrer"
+                >
+                  GitHub
+                </a>{" "}
+                for the support.
+              </Typography>
+            </Box>
+          </Zoom>
+        </div>
+      </Box>
     </Container>
   );
 }
