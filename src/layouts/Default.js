@@ -6,6 +6,7 @@ import React from "react";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import WeekCalendar from "../components/WeekCalendar";
+import gtag from "../gtag";
 import { makeStyles } from "@mui/styles";
 import {
   AppBar,
@@ -129,7 +130,13 @@ function Default() {
                 <Button
                   key={name}
                   sx={{ my: 2, color: "#9a9da0", display: "block" }}
-                  onClick={() => (window.location = link)}
+                  onClick={() => {
+                    gtag("event", "click_blog", {
+                      page_location: window.location.href,
+                      page_path: window.location.pathname,
+                    });
+                    window.location = link;
+                  }}
                 >
                   {name}
                 </Button>
@@ -152,9 +159,13 @@ function Default() {
               color: "white",
               textTransform: "none",
             }}
-            onClick={() =>
-              window.open("https://github.com/NucleoidJS/Nucleoid", "_blank")
-            }
+            onClick={() => {
+              gtag("event", "click_github", {
+                page_location: window.location.href,
+                page_path: window.location.pathname,
+              });
+              window.open("https://github.com/NucleoidJS/Nucleoid", "_blank");
+            }}
           >
             Star us on GitHub
           </Button>

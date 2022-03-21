@@ -14,8 +14,11 @@
       function gtag() {
         dataLayer.push(arguments);
       }
+      window.gtag = gtag;
       gtag("js", new Date());
-      gtag("config", "G-L9H12K94J4");
+      gtag("config", "G-L9H12K94J4", {
+        send_page_view: false,
+      });
     </script>
   </head>
   <body>

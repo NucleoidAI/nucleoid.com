@@ -2,6 +2,7 @@ import { DiscussionEmbed } from "disqus-react";
 import Markdown from "../components/Markdown";
 import ReactMarkdownHeading from "react-markdown-heading";
 import Space from "../components/Space";
+import gtag from "../gtag";
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import learnMD from "!!raw-loader!../markdowns/learn.md";
 import lifeguardImage from "../images/lifeguard.png";
@@ -17,6 +18,11 @@ import {
 import React, { useEffect, useState } from "react";
 
 function Learn() {
+  gtag("event", "page_view", {
+    page_title: "Learn",
+    page_location: window.location.href,
+    page_path: window.location.pathname,
+  });
   const [checked, setChecked] = useState(false);
 
   useEffect(() => {
@@ -24,11 +30,11 @@ function Learn() {
       const visited = localStorage.getItem("visited");
 
       if (visited === null) {
-        localStorage.setItem("visited", "first_time");
+        localStorage.setItem("visited", "first_visit");
         setChecked(true);
       }
 
-      if (visited === "first_time") {
+      if (visited === "first_visit") {
         localStorage.setItem("visited", "true");
         setTimeout(() => setChecked(true), 8000);
       }

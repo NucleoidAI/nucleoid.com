@@ -3,7 +3,6 @@ import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Markdown from "../components/Markdown";
 import Space from "../components/Space";
-
 import aiImage from "../images/007-AI.png";
 import blockchainImage from "../images/blockchain.png";
 import codingImage from "../images/coding.png";
@@ -11,6 +10,7 @@ import consoleImage from "../images/console.png";
 import cubeImage from "../images/019-cube.png";
 import cylinderImage from "../images/database.png";
 import databaseImage from "../images/019-database-5.png";
+import gtag from "../gtag";
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import helloWorldMD from "!!raw-loader!../markdowns/hello-world.md";
 import leafImage from "../images/leaf.png";
@@ -125,6 +125,11 @@ function Step({ image, title, description, alt }) {
 }
 
 function Home() {
+  gtag("event", "page_view", {
+    page_title: "Home",
+    page_location: window.location.href,
+    page_path: window.location.pathname,
+  });
   const classes = useStyles();
   const [copied, setCopied] = useState(false);
   const navigate = useNavigate();

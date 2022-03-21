@@ -3,12 +3,17 @@ import Markdown from "../components/Markdown";
 import Space from "../components/Space";
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import getStartedMD from "!!raw-loader!../markdowns/get-started.md";
+import gtag from "../gtag";
 import { useNavigate } from "react-router-dom";
 import { Button, Container, Grid } from "@mui/material";
 
 function GetStarted() {
+  gtag("event", "page_view", {
+    page_title: "Get Started",
+    page_location: window.location.href,
+    page_path: window.location.pathname,
+  });
   const navigate = useNavigate();
-
   return (
     <Container>
       <Markdown content={getStartedMD} />
