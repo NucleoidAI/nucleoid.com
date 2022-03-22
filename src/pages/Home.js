@@ -22,7 +22,6 @@ import processingImage from "../images/processing.png";
 import promptImage from "../images/80553592.png";
 import transactionImage from "../images/cpu.png";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 import {
   Box,
   Button,
@@ -34,6 +33,7 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material";
+import { useEffect, useState } from "react";
 
 export const useStyles = makeStyles((theme) => ({
   banner: {
@@ -125,14 +125,17 @@ function Step({ image, title, description, alt }) {
 }
 
 function Home() {
-  gtag("event", "page_view", {
-    page_title: "Home",
-    page_location: window.location.href,
-    page_path: window.location.pathname,
-  });
   const classes = useStyles();
   const [copied, setCopied] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    gtag("event", "page_view", {
+      page_title: "Home",
+      page_location: window.location.href,
+      page_path: window.location.pathname,
+    });
+  });
 
   return (
     <>

@@ -18,14 +18,15 @@ import {
 import React, { useEffect, useState } from "react";
 
 function Learn() {
-  gtag("event", "page_view", {
-    page_title: "Learn",
-    page_location: window.location.href,
-    page_path: window.location.pathname,
-  });
   const [checked, setChecked] = useState(false);
 
   useEffect(() => {
+    gtag("event", "page_view", {
+      page_title: "Learn",
+      page_location: window.location.href,
+      page_path: window.location.pathname,
+    });
+
     setTimeout(() => {
       const visited = localStorage.getItem("visited");
 
@@ -40,6 +41,7 @@ function Learn() {
       }
     }, 8000);
   }, []);
+
   return (
     <Container>
       <Grid container>
