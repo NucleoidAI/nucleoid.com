@@ -19,6 +19,13 @@ function App() {
             <Route path={"/get-started"} element={<GetStarted />} />
             <Route path={"/learn"} element={<Learn />} />
             <Route path={"/api"} element={<API />} />
+            <Route
+              path={"/survey"}
+              component={() => {
+                window.location.href = "https://bit.ly/nuc-survey";
+                return null;
+              }}
+            />
           </Route>
         </Routes>
       </ThemeProvider>
