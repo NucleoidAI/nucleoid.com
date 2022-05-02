@@ -9,6 +9,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 
 function App() {
+  if (window.location.pathname === "/survey") {
+    window.location.href = "https://bit.ly/nuc-survey";
+  }
+
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
@@ -19,13 +23,6 @@ function App() {
             <Route path={"/get-started"} element={<GetStarted />} />
             <Route path={"/learn"} element={<Learn />} />
             <Route path={"/api"} element={<API />} />
-            <Route
-              path={"/survey"}
-              component={() => {
-                window.location.href = "https://bit.ly/nuc-survey";
-                return null;
-              }}
-            />
           </Route>
         </Routes>
       </ThemeProvider>
