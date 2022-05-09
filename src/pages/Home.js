@@ -244,11 +244,11 @@ function Home() {
           <Grid container item xs={12} lg={4} justifyContent={"center"}>
             <Column
               image={databaseImage}
-              title={"Persistence"}
+              title={"Built-in Datastore"}
               description={
                 "The runtime tracks and persists each statement so that it doesn't require external data storage like relational DB or NoSQL."
               }
-              alt={"Database"}
+              alt={"Datastore"}
             />
           </Grid>
           <Space />
@@ -267,7 +267,7 @@ function Home() {
             />
             <Step
               image={processingImage}
-              title={"Nucleoid renders your codes"}
+              title={"Nucleoid renders your codes with AI"}
               description={
                 "The runtime renders the JavaScript codes just-in-time and makes the necessary adjustments."
               }
@@ -275,7 +275,7 @@ function Home() {
             />
             <Step
               image={consoleImage}
-              title={"Provides API and data storage"}
+              title={"Creates APIs with built-in datastore"}
               description={
                 "As a result, Nucleoid creates endpoints and runs business logic as well a stores all your statements/data on the disk out-of-box."
               }
