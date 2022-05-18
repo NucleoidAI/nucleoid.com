@@ -259,7 +259,7 @@ function Home() {
           <Grid container item xs={12} justifyContent={"center"}>
             <Step
               image={codingImage}
-              title={"Write your business logic in JavaScript"}
+              title={"Write pure business logic in JavaScript"}
               description={
                 "Nucleoid runtime accepts business logic in vanilla JS just like any other codes in Node.js but without requiring to install database or anything else."
               }
