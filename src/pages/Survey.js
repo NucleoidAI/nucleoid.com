@@ -8,6 +8,7 @@ const mdForm =
   '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd_fnncoeGr4V_f-ayWqelfMGMUCUPd39RJ9ls0_FN-TurDXQ/viewform?embedded=true" width="100%" height="1925" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" >Loading…</iframe>';
 
 function Survey() {
+  window.history.pushState("Nucleoid", "", "/");
   return (
     <Container>
       <Grid container>

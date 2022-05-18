@@ -164,7 +164,7 @@ function Default() {
                 page_location: window.location.href,
                 page_path: window.location.pathname,
               });
-              window.history.pushState("Nucleoid", "", "/");
+
               window.open("https://github.com/NucleoidJS/Nucleoid");
             }}
           >
