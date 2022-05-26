@@ -21,7 +21,6 @@ import nucleoidImage from "../images/113933331.png";
 import processingImage from "../images/processing.png";
 import promptImage from "../images/80553592.png";
 import transactionImage from "../images/cpu.png";
-import { useNavigate } from "react-router-dom";
 import {
   Box,
   Button,
@@ -127,7 +126,7 @@ function Step({ image, title, description, alt }) {
 function Home() {
   const classes = useStyles();
   const [copied, setCopied] = useState(false);
-  const navigate = useNavigate();
+  const navigate = () => {};
 
   useEffect(() => {
     gtag("event", "page_view", {

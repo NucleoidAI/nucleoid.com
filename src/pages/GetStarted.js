@@ -5,11 +5,10 @@ import Space from "../components/Space";
 import getStartedMD from "!!raw-loader!../markdowns/get-started.md";
 import gtag from "../gtag";
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import { Button, Container, Grid } from "@mui/material";
 
 function GetStarted() {
-  const navigate = useNavigate();
+  const navigate = () => {};
 
   useEffect(() => {
     gtag("event", "page_view", {

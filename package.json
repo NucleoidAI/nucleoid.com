@@ -33,7 +33,6 @@
     "react-gist": "^1.2.4",
     "react-markdown": "^7.1.2",
     "react-markdown-heading": "^1.4.0",
-    "react-router-dom": "^6.2.2",
     "react-syntax-highlighter": "^15.4.5",
     "rehype-raw": "^6.1.1",
     "remark-gfm": "^3.0.1"
@@ -43,17 +42,5 @@
     "eslint": "^7.28.0",
     "eslint-config-prettier": "^8.3.0",
     "prettier": "^2.3.1"
-  },
-  "browserslist": {
-    "production": [
-      ">0.5%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   }
 }

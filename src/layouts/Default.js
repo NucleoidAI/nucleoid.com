@@ -1,11 +1,7 @@
-import { ReactComponent as DiscordIcon } from "../images/discord.svg";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import Logo from "../components/Logo";
 import MenuIcon from "@mui/icons-material/Menu";
 import React from "react";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import WeekCalendar from "../components/WeekCalendar";
 import gtag from "../gtag";
 import { makeStyles } from "@mui/styles";
 import {
@@ -18,7 +14,6 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
-import { Outlet, useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   footer: {
@@ -57,7 +52,7 @@ const pages = [
 ];
 
 function Default() {
-  const navigate = useNavigate();
+  const navigate = () => {};
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -172,38 +167,6 @@ function Default() {
           </Button>
         </Toolbar>
       </AppBar>
-
-      <Outlet />
-
-      <footer>
-        <Box className={classes.footer}>
-          <WeekCalendar />
-          Nucleoid
-          <Box>
-            <IconButton
-              onClick={() =>
-                window.open("https://discord.gg/eWXFCCuU5y", "_blank")
-              }
-            >
-              <DiscordIcon />
-            </IconButton>
-            <IconButton
-              onClick={() =>
-                window.open("https://twitter.com/NucleoidJS", "_blank")
-              }
-            >
-              <TwitterIcon style={{ fill: "#ffffff" }} />
-            </IconButton>
-            <IconButton
-              onClick={() =>
-                window.open("https://github.com/NucleoidJS/Nucleoid", "_blank")
-              }
-            >
-              <GitHubIcon style={{ fill: "#ffffff" }} />
-            </IconButton>
-          </Box>
-        </Box>
-      </footer>
     </>
   );
 }
