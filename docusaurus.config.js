@@ -5,9 +5,9 @@ const lightCodeTheme = require("prism-react-renderer/themes/github");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
-  url: "https://your-docusaurus-test-site.com",
+  title: "Nucleoid",
+  tagline: "Low-code Framework for Node.js",
+  url: "https://nucleoid.com/",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -15,8 +15,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "NucleoidJS", // Usually your GitHub org/user name.
+  projectName: "Nucleoid", // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -25,7 +25,16 @@ const config = {
     defaultLocale: "en",
     locales: ["en"],
   },
-
+  scripts: [
+    {
+      src: "https://www.googletagmanager.com/gtag/js?id=G-L9H12K94J4",
+      async: true,
+    },
+    "/gtag.js",
+  ],
+  stylesheets: [
+    "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap",
+  ],
   presets: [
     [
       "classic",

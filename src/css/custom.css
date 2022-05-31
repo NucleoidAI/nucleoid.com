@@ -1,10 +1,12 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
-
 :root {
   --ifm-font-family-base: Roboto;
 }
 
 .navbar {
+  background: #323a40;
+}
+
+.navbar-sidebar {
   background: #323a40;
 }
 

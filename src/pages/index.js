@@ -10,8 +10,8 @@ function App() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      title={`${siteConfig.title} - Low-code Framework for Node.js`}
+      description="Nucleoid is an open source (Apache 2.0), low-code framework for Node.js that AI-powered runtime creates fully working application with API endpoints based on business logic in vanilla JavaScript and built-in datastore."
     >
       <ThemeProvider theme={theme}>
         <main>
