@@ -1,11 +1,7 @@
-import { ReactComponent as DiscordIcon } from "../images/discord.svg";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import Logo from "../components/Logo";
 import MenuIcon from "@mui/icons-material/Menu";
 import React from "react";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import WeekCalendar from "../components/WeekCalendar";
 import gtag from "../gtag";
 import { makeStyles } from "@mui/styles";
 import {
@@ -18,19 +14,6 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
-import { Outlet, useNavigate } from "react-router-dom";
-
-const useStyles = makeStyles((theme) => ({
-  footer: {
-    color: "#a9a9a9",
-    fontSize: 16,
-    padding: theme.spacing(2),
-    background: "#343e48",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-  },
-}));
 
 const pages = [
   {
@@ -57,8 +40,7 @@ const pages = [
 ];
 
 function Default() {
-  const navigate = useNavigate();
-  const classes = useStyles();
+  const navigate = () => {};
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -70,7 +52,7 @@ function Default() {
   };
 
   return (
-    <>
+    <span className={"navbar"}>
       <AppBar position="static" sx={{ background: "#323a40" }}>
         <Toolbar
           sx={{ display: { display: "flex", justifyContent: "space-between" } }}
@@ -172,39 +154,7 @@ function Default() {
           </Button>
         </Toolbar>
       </AppBar>
-
-      <Outlet />
-
-      <footer>
-        <Box className={classes.footer}>
-          <WeekCalendar />
-          Nucleoid
-          <Box>
-            <IconButton
-              onClick={() =>
-                window.open("https://discord.gg/eWXFCCuU5y", "_blank")
-              }
-            >
-              <DiscordIcon />
-            </IconButton>
-            <IconButton
-              onClick={() =>
-                window.open("https://twitter.com/NucleoidJS", "_blank")
-              }
-            >
-              <TwitterIcon style={{ fill: "#ffffff" }} />
-            </IconButton>
-            <IconButton
-              onClick={() =>
-                window.open("https://github.com/NucleoidJS/Nucleoid", "_blank")
-              }
-            >
-              <GitHubIcon style={{ fill: "#ffffff" }} />
-            </IconButton>
-          </Box>
-        </Box>
-      </footer>
-    </>
+    </span>
   );
 }
 

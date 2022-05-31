@@ -1,0 +1,16 @@
+:root {
+  --ifm-font-family-base: Roboto;
+}
+
+.navbar {
+  background: #323a40;
+}
+
+.navbar-sidebar {
+  background: #323a40;
+}
+
+.navbar__item {
+  color: #9a9da0;
+  font-size: 14px;
+}
