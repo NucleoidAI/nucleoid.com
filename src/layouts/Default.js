@@ -15,18 +15,6 @@ import {
   Typography,
 } from "@mui/material";
 
-const useStyles = makeStyles((theme) => ({
-  footer: {
-    color: "#a9a9a9",
-    fontSize: 16,
-    padding: theme.spacing(2),
-    background: "#343e48",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-  },
-}));
-
 const pages = [
   {
     name: "Home",
@@ -53,7 +41,6 @@ const pages = [
 
 function Default() {
   const navigate = () => {};
-  const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -65,7 +52,7 @@ function Default() {
   };
 
   return (
-    <>
+    <span className={"navbar"}>
       <AppBar position="static" sx={{ background: "#323a40" }}>
         <Toolbar
           sx={{ display: { display: "flex", justifyContent: "space-between" } }}
@@ -167,7 +154,7 @@ function Default() {
           </Button>
         </Toolbar>
       </AppBar>
-    </>
+    </span>
   );
 }
 

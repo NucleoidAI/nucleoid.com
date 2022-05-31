@@ -12,7 +12,7 @@ import cylinderImage from "../images/database.png";
 import databaseImage from "../images/019-database-5.png";
 import gtag from "../gtag";
 // eslint-disable-next-line import/no-webpack-loader-syntax
-import helloWorldMD from "!!raw-loader!../markdowns/hello-world.md";
+import helloWorldMD from "!!raw-loader!./hello-world.md";
 import leafImage from "../images/leaf.png";
 import logicalDiagramImage from "../images/logical-diagram.png";
 import { makeStyles } from "@mui/styles";
@@ -32,7 +32,7 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export const useStyles = makeStyles((theme) => ({
   banner: {

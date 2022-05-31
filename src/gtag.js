@@ -1,1 +1,1 @@
-export default window.gtag;
+export default () => {};
