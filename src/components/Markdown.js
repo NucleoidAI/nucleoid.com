@@ -5,7 +5,6 @@ import { rainbow as hljs } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 import { Children, createElement } from "react";
-import React from "react";
 
 function flatten(text, child) {
   return typeof child === "string"

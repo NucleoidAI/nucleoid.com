@@ -20,8 +20,6 @@
 .env.development.local
 .env.test.local
 .env.production.local
-.docusaurus
-.cache-loader
 
 npm-debug.log*
 yarn-debug.log*

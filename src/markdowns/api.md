@@ -1,7 +1,3 @@
-import PageView from '../components/PageView';
-
-<PageView title={"API"}/>
-
 # API
 
 ## `const app = nucleoid ( )`

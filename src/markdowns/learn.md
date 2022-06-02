@@ -1,7 +1,3 @@
-import PageView from '../components/PageView';
-
-<PageView title={"Learn"}/>
-
 # Nucleoid [![NPM](https://img.shields.io/npm/l/nucleoidjs)](https://www.apache.org/licenses/LICENSE-2.0) [![npm](https://img.shields.io/npm/v/nucleoidjs)](https://www.npmjs.com/package/nucleoidjs)
 
 ## What is Nucleoid?
