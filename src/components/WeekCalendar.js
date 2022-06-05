@@ -1,5 +1,3 @@
-import React from "react";
-
 function WeekCalendar() {
   const start = new Date(1970, 0, 1);
   const today = new Date();

@@ -10,8 +10,9 @@ import consoleImage from "../images/console.png";
 import cubeImage from "../images/019-cube.png";
 import cylinderImage from "../images/database.png";
 import databaseImage from "../images/019-database-5.png";
+import gtag from "../gtag";
 // eslint-disable-next-line import/no-webpack-loader-syntax
-import helloWorldMD from "!!raw-loader!./hello-world.md";
+import helloWorldMD from "!!raw-loader!../markdowns/hello-world.md";
 import leafImage from "../images/leaf.png";
 import logicalDiagramImage from "../images/logical-diagram.png";
 import { makeStyles } from "@mui/styles";
@@ -20,6 +21,7 @@ import nucleoidImage from "../images/113933331.png";
 import processingImage from "../images/processing.png";
 import promptImage from "../images/80553592.png";
 import transactionImage from "../images/cpu.png";
+import { useNavigate } from "react-router-dom";
 import {
   Box,
   Button,
@@ -31,8 +33,7 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material";
-import React, { useEffect, useState } from "react";
-import PageView from "../components/PageView";
+import { useEffect, useState } from "react";
 
 export const useStyles = makeStyles((theme) => ({
   banner: {
@@ -126,11 +127,18 @@ function Step({ image, title, description, alt }) {
 function Home() {
   const classes = useStyles();
   const [copied, setCopied] = useState(false);
-  const navigate = () => {};
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    gtag("event", "page_view", {
+      page_title: "Home",
+      page_location: window.location.href,
+      page_path: window.location.pathname,
+    });
+  });
 
   return (
     <>
-      <PageView title={"Home"} />
       <Box className={classes.banner}>
         <Container>
           <Box
