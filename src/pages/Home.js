@@ -17,7 +17,7 @@ import leafImage from "../images/leaf.png";
 import logicalDiagramImage from "../images/logical-diagram.png";
 import { makeStyles } from "@mui/styles";
 import networkingImage from "../images/networking.png";
-import nucleoidImage from "../images/113933331.png";
+import nucleoidImage from "../images/113933331-sm.png";
 import processingImage from "../images/processing.png";
 import promptImage from "../images/80553592.png";
 import transactionImage from "../images/cpu.png";
