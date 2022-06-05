@@ -40,14 +40,17 @@ const pages = [
   {
     name: "Get Started",
     link: "/docs/get-started",
+    outLink: true,
   },
   {
     name: "Learn",
     link: "/docs/learn",
+    outLink: true,
   },
   {
     name: "API",
     link: "/docs/api",
+    outLink: true,
   },
   {
     name: "Blog",
@@ -131,10 +134,6 @@ function Default() {
                   key={name}
                   sx={{ my: 2, color: "#9a9da0", display: "block" }}
                   onClick={() => {
-                    gtag("event", "click_blog", {
-                      page_location: window.location.href,
-                      page_path: window.location.pathname,
-                    });
                     window.location = link;
                   }}
                 >
