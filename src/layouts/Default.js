@@ -39,15 +39,15 @@ const pages = [
   },
   {
     name: "Get Started",
-    link: "/get-started",
+    link: "/docs/get-started",
   },
   {
     name: "Learn",
-    link: "/learn",
+    link: "/docs/learn",
   },
   {
     name: "API",
-    link: "/api",
+    link: "/docs/api",
   },
   {
     name: "Blog",
