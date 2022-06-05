@@ -105,12 +105,12 @@ function Default() {
                   display: { xs: "block", md: "none" },
                 }}
               >
-                {pages.map(({ name, link }) => (
+                {pages.map(({ name, link, outLink }) => (
                   <MenuItem
                     key={name}
                     onClick={() => {
                       handleCloseNavMenu();
-                      navigate(link);
+                      outLink ? (window.location = link) : navigate(link);
                     }}
                   >
                     <Typography textAlign="center">{name}</Typography>
@@ -128,27 +128,17 @@ function Default() {
               paddingLeft: 2,
             }}
           >
-            {pages.map(({ name, link, outLink }) =>
-              outLink ? (
-                <Button
-                  key={name}
-                  sx={{ my: 2, color: "#9a9da0", display: "block" }}
-                  onClick={() => {
-                    window.location = link;
-                  }}
-                >
-                  {name}
-                </Button>
-              ) : (
-                <Button
-                  key={name}
-                  sx={{ my: 2, color: "#9a9da0", display: "block" }}
-                  onClick={() => navigate(link)}
-                >
-                  {name}
-                </Button>
-              )
-            )}
+            {pages.map(({ name, link, outLink }) => (
+              <Button
+                key={name}
+                sx={{ my: 2, color: "#9a9da0", display: "block" }}
+                onClick={() =>
+                  outLink ? (window.location = link) : navigate(link)
+                }
+              >
+                {name}
+              </Button>
+            ))}
           </Box>
           <Button
             startIcon={<StarBorderIcon />}
