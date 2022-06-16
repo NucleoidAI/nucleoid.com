@@ -9,19 +9,26 @@
     "format": "prettier --check {**/*,*}.{js,json,yml,html,css}"
   },
   "dependencies": {
-    "@emotion/react": "^11.9.3",
-    "@emotion/styled": "^11.9.3",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
     "@mui/icons-material": "^5.3.1",
     "@mui/material": "^5.4.0",
     "@mui/styles": "^5.3.0",
     "clsx": "^1.1.1",
+    "disqus-react": "^1.1.2",
+    "emojione": "^4.5.0",
     "raw-loader": "^4.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-emojione": "^5.0.1",
+    "react-gist": "^1.2.4",
     "react-markdown": "^7.1.2",
+    "react-markdown-heading": "^1.4.0",
     "react-router-dom": "^6.2.2",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "4.0.3",
+    "react-syntax-highlighter": "^15.4.5",
+    "rehype-raw": "^6.1.1",
+    "remark-gfm": "^3.0.1"
   },
   "devDependencies": {
     "eslint": "^7.28.0",
