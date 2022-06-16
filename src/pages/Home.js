@@ -10,7 +10,6 @@ import consoleImage from "../images/console.png";
 import cubeImage from "../images/019-cube.png";
 import cylinderImage from "../images/database.png";
 import databaseImage from "../images/019-database-5.png";
-import frameImage from "../images/frame.png";
 import gtag from "../gtag";
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import helloWorldMD from "!!raw-loader!../markdowns/hello-world.md";
@@ -20,7 +19,9 @@ import { makeStyles } from "@mui/styles";
 import networkingImage from "../images/networking.png";
 import nucleoidImage from "../images/113933331-sm.png";
 import processingImage from "../images/processing.png";
+import frameImage from "../images/frame.png";
 import transactionImage from "../images/cpu.png";
+import { useNavigate } from "react-router-dom";
 import {
   Box,
   Button,
@@ -127,6 +128,7 @@ function Step({ image, title, description, alt }) {
 function Home() {
   const classes = useStyles();
   const [copied, setCopied] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     gtag("event", "page_view", {
@@ -338,7 +340,9 @@ function Home() {
             </Typography>
             <br />
             <Grid container item justifyContent={"center"}>
-              <Button size={"large"}>Learn more</Button>
+              <Button size={"large"} onClick={() => navigate("/learn")}>
+                Learn more
+              </Button>
             </Grid>
           </Grid>
           <Space />
