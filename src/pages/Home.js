@@ -10,6 +10,7 @@ import consoleImage from "../images/console.png";
 import cubeImage from "../images/019-cube.png";
 import cylinderImage from "../images/database.png";
 import databaseImage from "../images/019-database-5.png";
+import frameImage from "../images/frame.png";
 import gtag from "../gtag";
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import helloWorldMD from "!!raw-loader!../markdowns/hello-world.md";
@@ -19,7 +20,6 @@ import { makeStyles } from "@mui/styles";
 import networkingImage from "../images/networking.png";
 import nucleoidImage from "../images/113933331-sm.png";
 import processingImage from "../images/processing.png";
-import frameImage from "../images/frame.png";
 import transactionImage from "../images/cpu.png";
 import {
   Box,
