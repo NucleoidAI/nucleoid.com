@@ -20,7 +20,6 @@
     "raw-loader": "^4.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-emojione": "^5.0.1",
     "react-gist": "^1.2.4",
     "react-markdown": "^7.1.2",
     "react-markdown-heading": "^1.4.0",
