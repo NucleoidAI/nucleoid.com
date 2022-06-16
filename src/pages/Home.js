@@ -19,7 +19,7 @@ import { makeStyles } from "@mui/styles";
 import networkingImage from "../images/networking.png";
 import nucleoidImage from "../images/113933331-sm.png";
 import processingImage from "../images/processing.png";
-import promptImage from "../images/80553592.png";
+import frameImage from "../images/frame.png";
 import transactionImage from "../images/cpu.png";
 import { useNavigate } from "react-router-dom";
 import {
@@ -37,7 +37,8 @@ import { useEffect, useState } from "react";
 
 export const useStyles = makeStyles((theme) => ({
   banner: {
-    background: "#0094ab", //#008ba4
+    background: "#313a40",
+    minHeight: 500,
   },
   install: {
     padding: theme.spacing(2),
@@ -140,6 +141,8 @@ function Home() {
   return (
     <>
       <Box className={classes.banner}>
+        <br />
+        <br />
         <Container>
           <Box
             sx={{
@@ -149,7 +152,7 @@ function Home() {
               height: 400,
             }}
           >
-            <Typography fontSize={48} textAlign={"center"} color={"white"}>
+            <Typography fontSize={36} textAlign={"center"} color={"white"}>
               Low-code
               <br />
               Framework
@@ -162,23 +165,57 @@ function Home() {
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Box sx={{ display: "flex", alignItems: "center" }}>
               <Box sx={{ display: { xs: "none", lg: "block" } }}>
-                <Typography fontSize={48} textAlign={"center"} color={"white"}>
+                <Typography fontSize={42} textAlign={"center"} color={"white"}>
                   Low-code Framework
                   <br />
                   for Node.js
                 </Typography>
+                <Typography
+                  fontSize={28}
+                  textAlign={"center"}
+                  color={"#9b9b9b"}
+                >
+                  with built-in datastore
+                </Typography>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <Button
+                  variant={"contained"}
+                  onClick={() =>
+                    window.open("https://nucleoid.com/ide/", "_blank").focus()
+                  }
+                  color={"inherit"}
+                  sx={{
+                    margin: 1,
+                  }}
+                >
+                  Learn more
+                </Button>
               </Box>
             </Box>
             <Box width={75} />
             <Box sx={{ display: { xs: "none", lg: "block" } }}>
-              <img src={promptImage} alt={"Low-code Framework for Node.js"} />
+              <img
+                style={{ display: "block" }}
+                src={frameImage}
+                alt={"Low-code Framework for Node.js"}
+                width={550}
+              />
+              <img
+                style={{
+                  display: "block",
+                  border: "1px solid #4b4b4b",
+                }}
+                src={"https://cdn.nucleoid.com/media/prompt-1.gif"}
+                alt={"Low-code Framework for Node.js"}
+                width={550}
+              />
             </Box>
           </Box>
         </Container>
       </Box>
       <Container>
         <Grid container spacing={2}>
-          <Space height={25} />
+          <Space height={20} />
           <Grid
             container
             item
@@ -220,7 +257,7 @@ function Home() {
               </Box>
             </Paper>
           </Grid>
-          <Space />
+          <Space height={20} />
           <Grid container item xs={12} lg={4} justifyContent={"center"}>
             <Column
               image={cubeImage}

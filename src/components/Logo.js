@@ -9,10 +9,6 @@ function Logo(props) {
       sx={{
         display: "flex",
         alignItems: "center",
-        paddingBottom: {
-          xs: 0,
-          md: 0.5,
-        },
         cursor: "pointer",
       }}
       onClick={() => navigate("/")}
@@ -21,7 +17,7 @@ function Logo(props) {
         Nucleoid
       </Typography>
       &nbsp;
-      <Typography fontSize={"15px"} color={"#dfdfdf"} fontWeight={"lighter"}>
+      <Typography fontSize={"16px"} color={"#dfdfdf"} fontWeight={"lighter"}>
         <sub>Beta</sub>
       </Typography>
     </Box>
