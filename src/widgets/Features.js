@@ -1,8 +1,4 @@
 import Feature from "../components/Feature";
-import blockchainImage from "../images/blockchain.png";
-import cylinderImage from "../images/database.png";
-import networkingImage from "../images/networking.png";
-import transactionImage from "../images/cpu.png";
 import { Grid, Typography } from "@mui/material";
 
 function Features() {
@@ -11,7 +7,12 @@ function Features() {
       <Grid container item xs={12} justifyContent={"center"}>
         <Typography variant={"h2"}>Features</Typography>
       </Grid>
-      <Feature image={networkingImage} justify={"end"} xs lg />
+      <Feature
+        image={"https://cdn.nucleoid.com/media/networking.png"}
+        justify={"end"}
+        xs
+        lg
+      />
       <Feature
         primary={"Immediately start writing business logic"}
         secondary={
@@ -21,7 +22,11 @@ function Features() {
         lg
         justify={"start"}
       />
-      <Feature image={cylinderImage} justify={"start"} xs />
+      <Feature
+        image={"https://cdn.nucleoid.com/media/database.png"}
+        justify={"start"}
+        xs
+      />
       <Feature
         primary={"Internal Data Management"}
         secondary={
@@ -31,8 +36,17 @@ function Features() {
         xs
         lg
       />
-      <Feature image={cylinderImage} justify={"start"} lg />
-      <Feature image={blockchainImage} justify={"end"} xs lg />
+      <Feature
+        image={"https://cdn.nucleoid.com/media/database.png"}
+        justify={"start"}
+        lg
+      />
+      <Feature
+        image={"https://cdn.nucleoid.com/media/blockchain.png"}
+        justify={"end"}
+        xs
+        lg
+      />
       <Feature
         primary={"All you need is JavaScript"}
         secondary={
@@ -42,7 +56,11 @@ function Features() {
         xs
         lg
       />
-      <Feature image={transactionImage} justify={"start"} xs />
+      <Feature
+        image={"https://cdn.nucleoid.com/media/cpu.png"}
+        justify={"start"}
+        xs
+      />
       <Feature
         primary={"Lighting fast"}
         secondary={
@@ -52,7 +70,11 @@ function Features() {
         xs
         lg
       />
-      <Feature image={transactionImage} justify={"start"} lg />
+      <Feature
+        image={"https://cdn.nucleoid.com/media/cpu.png"}
+        justify={"start"}
+        lg
+      />
     </Grid>
   );
 }

@@ -1,5 +1,3 @@
-import logicalDiagramImage from "../images/logical-diagram.png";
-import nucleoidImage from "../images/113933331-sm.png";
 import { Box, Grid, Typography } from "@mui/material";
 
 function Bulletin() {
@@ -10,7 +8,7 @@ function Bulletin() {
           Under the hood: Declarative Runtime Environment
         </Typography>
         <img
-          src={nucleoidImage}
+          src={"https://cdn.nucleoid.com/media/113933331-sm.png"}
           alt={"Nucleoid"}
           style={{ float: "left", margin: 10 }}
           width={150}
@@ -26,7 +24,7 @@ function Bulletin() {
           configuring, restarting as a result of plasticity.
         </p>
         <img
-          src={logicalDiagramImage}
+          src={"https://cdn.nucleoid.com/media/logical-diagram.png"}
           alt={"Logical Diagram"}
           style={{
             float: "right",

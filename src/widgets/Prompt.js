@@ -1,6 +1,4 @@
-import frameImage from "../images/frame.png";
 import { makeStyles } from "@mui/styles";
-import promptImage from "../images/prompt-2.gif";
 import { Box, Button, Grid, Typography } from "@mui/material";
 
 const useStyles = makeStyles((theme) => ({
@@ -64,7 +62,7 @@ function Prompt() {
             maxWidth: 550,
             borderRadius: "3px 3px 0px 0px",
           }}
-          src={frameImage}
+          src={"https://cdn.nucleoid.com/media/frame.png"}
           alt={"Prompt"}
         />
         <img
@@ -76,7 +74,7 @@ function Prompt() {
             borderStyle: "solid",
             borderWidth: "0px 1px 1px 2px",
           }}
-          src={promptImage}
+          src={"https://cdn.nucleoid.com/media/prompt-2.gif"}
           alt={"Low-code Framework for Node.js"}
         />
       </Grid>

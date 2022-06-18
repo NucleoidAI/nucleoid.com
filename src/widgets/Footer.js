@@ -1,4 +1,3 @@
-import { ReactComponent as DiscordIcon } from "../images/discord.svg";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import React from "react";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -32,7 +31,10 @@ function Footer() {
               window.open("https://discord.gg/eWXFCCuU5y", "_blank")
             }
           >
-            <DiscordIcon />
+            <img
+              src={"https://cdn.nucleoid.com/media/discord.svg"}
+              alt={"Discord"}
+            />
           </IconButton>
           <IconButton
             onClick={() =>
