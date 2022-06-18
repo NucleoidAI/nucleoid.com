@@ -14,12 +14,12 @@ import frameImage from "../images/frame.png";
 import gtag from "../gtag";
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import helloWorldMD from "!!raw-loader!../markdowns/hello-world.md";
-import leafImage from "../images/leaf.png";
 import logicalDiagramImage from "../images/logical-diagram.png";
 import { makeStyles } from "@mui/styles";
 import networkingImage from "../images/networking.png";
 import nucleoidImage from "../images/113933331-sm.png";
 import processingImage from "../images/processing.png";
+import promptImage from "../images/prompt-2.gif";
 import transactionImage from "../images/cpu.png";
 import {
   Box,
@@ -36,6 +36,7 @@ import { useEffect, useState } from "react";
 
 export const useStyles = makeStyles((theme) => ({
   banner: {
+    paddingTop: theme.spacing(8),
     background: "#313a40",
     minHeight: 500,
   },
@@ -139,31 +140,22 @@ function Home() {
   return (
     <>
       <Box className={classes.banner}>
-        <br />
-        <br />
         <Container>
-          <Box
-            sx={{
-              display: { xs: "flex", lg: "none" },
-              justifyContent: "center",
-              alignItems: "center",
-              height: 400,
-            }}
-          >
-            <Typography fontSize={36} textAlign={"center"} color={"white"}>
-              Low-code
-              <br />
-              Framework
-              <br />
-              for Node.js
-              <br />
-              <img src={leafImage} alt={"Leaf"} height={100} />
-            </Typography>
-          </Box>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Box sx={{ display: "flex", alignItems: "center" }}>
-              <Box sx={{ display: { xs: "none", lg: "block" } }}>
-                <Typography fontSize={42} textAlign={"center"} color={"white"}>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Typography
+                  fontSize={42}
+                  textAlign={"center"}
+                  color={"#e5e5e5"}
+                >
                   Low-code Framework
                   <br />
                   for Node.js
@@ -175,7 +167,6 @@ function Home() {
                 >
                   with built-in datastore
                 </Typography>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <Button
                   variant={"contained"}
                   onClick={() =>
@@ -190,20 +181,22 @@ function Home() {
                 </Button>
               </Box>
             </Box>
-            <Box width={75} />
-            <Box sx={{ display: { xs: "none", lg: "block" } }}>
+            <Box width={100} />
+            <Box>
               <img
-                style={{ display: "block" }}
+                style={{ display: "block", borderRadius: "3px 3px 0px 0px" }}
                 src={frameImage}
-                alt={"Low-code Framework for Node.js"}
                 width={550}
+                alt={"Prompt"}
               />
               <img
                 style={{
                   display: "block",
-                  border: "1px solid #4b4b4b",
+                  borderColor: "#464646",
+                  borderStyle: "solid",
+                  borderWidth: "0px 1px 1px 2px",
                 }}
-                src={"https://cdn.nucleoid.com/media/prompt-1.gif"}
+                src={promptImage}
                 alt={"Low-code Framework for Node.js"}
                 width={550}
               />
