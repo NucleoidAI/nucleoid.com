@@ -7,7 +7,6 @@ import { Box, Fab, Grid, Paper, Tooltip, Typography } from "@mui/material";
 const useStyles = makeStyles((theme) => ({
   install: {
     padding: theme.spacing(2),
-    backgroundColor: "red",
   },
 }));
 

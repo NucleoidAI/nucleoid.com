@@ -45,8 +45,9 @@ function Prompt() {
                 window.open("https://nucleoid.com/ide/", "_blank").focus()
               }
               color={"inherit"}
+              size={"large"}
               sx={{
-                margin: 1,
+                my: 4,
               }}
             >
               Learn more

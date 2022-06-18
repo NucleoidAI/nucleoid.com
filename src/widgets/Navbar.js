@@ -121,7 +121,18 @@ function Navbar() {
             </Button>
           ))}
         </Box>
-
+        <Button
+          variant={"contained"}
+          onClick={() => window.location.assign("/ide/")}
+          color={"success"}
+          sx={{
+            mx: 1,
+            textTransform: "none",
+            display: { xs: "none", md: "block" },
+          }}
+        >
+          Go to Nucleoid IDE
+        </Button>
         <Button
           startIcon={<StarBorderIcon />}
           size={"large"}
