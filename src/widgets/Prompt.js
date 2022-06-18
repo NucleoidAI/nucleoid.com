@@ -1,15 +1,23 @@
 import { makeStyles } from "@mui/styles";
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+import { Box, Button, Grid, Typography, useMediaQuery } from "@mui/material";
 
 const useStyles = makeStyles((theme) => ({
   banner: {
     background: "#313a40",
     minHeight: 500,
   },
+  space: {
+    [theme.breakpoints.down("lg")]: {
+      display: "none",
+    },
+  },
 }));
 
 function Prompt() {
   const classes = useStyles();
+  const theme = useTheme();
+  const breakpoint = useMediaQuery(theme.breakpoints.up("sm"));
 
   return (
     <Grid
@@ -40,12 +48,14 @@ function Prompt() {
             <Button
               variant={"contained"}
               onClick={() =>
-                window.open("https://nucleoid.com/ide/", "_blank").focus()
+                breakpoint
+                  ? window.open("https://nucleoid.com/ide/", "_blank").focus()
+                  : window.location.assign("/docs/")
               }
               color={"inherit"}
               size={"large"}
               sx={{
-                my: 4,
+                my: 3,
               }}
             >
               Learn more
@@ -53,7 +63,7 @@ function Prompt() {
           </Box>
         </Box>
       </Grid>
-      <Box width={75} sx={{ display: { xs: "none", md: "block" } }} />
+      <Box width={75} className={classes.space} />
       <Grid item sx={{ padding: 2 }}>
         <img
           style={{
