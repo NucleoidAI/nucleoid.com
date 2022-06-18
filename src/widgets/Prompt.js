@@ -53,11 +53,12 @@ function Prompt() {
             </Typography>
             <Button
               variant={"contained"}
-              onClick={() =>
-                breakpoint
-                  ? window.open("https://nucleoid.com/ide/", "_blank").focus()
-                  : window.location.assign("/docs/")
-              }
+              onClick={() => {
+                if (breakpoint)
+                  window.open("https://nucleoid.com/ide/", "_blank").focus();
+
+                window.location.assign("/docs/");
+              }}
               color={"inherit"}
               size={"large"}
               sx={{
