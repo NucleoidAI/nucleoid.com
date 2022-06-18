@@ -71,7 +71,7 @@ function Prompt() {
             display: "block",
             width: "100%",
             maxWidth: 550,
-            borderColor: "#464646",
+            borderColor: "#464646 #868686 #464646 #464646",
             borderStyle: "solid",
             borderWidth: "0px 1px 1px 2px",
           }}
