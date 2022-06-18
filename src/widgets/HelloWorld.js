@@ -25,7 +25,12 @@ function HelloWorld() {
         </Typography>
         <br />
         <Grid container item justifyContent={"center"}>
-          <Button size={"large"}>Learn more</Button>
+          <Button
+            size={"large"}
+            onClick={() => window.location.assign("/docs/")}
+          >
+            Learn more
+          </Button>
         </Grid>
       </Grid>
     </>
