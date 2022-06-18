@@ -1,6 +1,12 @@
 import { makeStyles } from "@mui/styles";
-import { useTheme } from "@mui/material/styles";
-import { Box, Button, Grid, Typography, useMediaQuery } from "@mui/material";
+import {
+  Box,
+  Button,
+  Grid,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 
 const useStyles = makeStyles((theme) => ({
   banner: {
