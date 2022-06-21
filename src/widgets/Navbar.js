@@ -124,10 +124,11 @@ function Navbar() {
         <Button
           variant={"contained"}
           onClick={() => window.location.assign("/ide/")}
-          color={"success"}
           sx={{
             mx: 1,
             textTransform: "none",
+            background:
+              "linear-gradient(90deg, rgba(32,153,88,1) 0%, rgba(32,153,88,0.75) 100%)",
             display: { xs: "none", md: "block" },
           }}
         >

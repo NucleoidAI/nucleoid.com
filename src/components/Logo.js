@@ -13,12 +13,8 @@ function Logo(props) {
       }}
       onClick={() => navigate("/")}
     >
-      <Typography fontSize={"22px"} color={"#28a745"}>
+      <Typography fontSize={"24px"} color={"#209958"}>
         Nucleoid
-      </Typography>
-      &nbsp;
-      <Typography fontSize={"16px"} color={"#dfdfdf"} fontWeight={"lighter"}>
-        <sub>Beta</sub>
       </Typography>
     </Box>
   );
