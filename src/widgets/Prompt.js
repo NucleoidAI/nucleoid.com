@@ -54,8 +54,9 @@ function Prompt() {
             <Button
               variant={"contained"}
               onClick={() => {
-                if (breakpoint)
+                if (breakpoint) {
                   window.open("https://nucleoid.com/ide/", "_blank").focus();
+                }
 
                 window.location.assign("/docs/");
               }}

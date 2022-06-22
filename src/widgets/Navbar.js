@@ -128,7 +128,7 @@ function Navbar() {
             mx: 1,
             textTransform: "none",
             background:
-              "linear-gradient(90deg, rgba(32,153,88,1) 0%, rgba(32,153,88,0.75) 100%)",
+              "linear-gradient(135deg, rgba(0,141,114,1) 0%, rgba(32,153,88,1) 100%)",
             display: { xs: "none", md: "block" },
           }}
         >

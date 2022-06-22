@@ -13,7 +13,19 @@ function Logo(props) {
       }}
       onClick={() => navigate("/")}
     >
-      <Typography fontSize={"24px"} color={"#209958"}>
+      <Typography
+        fontSize={"26px"}
+        fontWeight={400}
+        sx={{
+          background:
+            "linear-gradient(135deg, rgba(32,153,88,1) 0%, rgba(0,141,114,1) 100%)",
+          backgroundClip: "text",
+          "-webkit-background-clip": "text",
+          "-moz-background-clip": "text",
+          "-webkit-text-fill-color": "transparent",
+          "-moz-text-fill-color": "transparent",
+        }}
+      >
         Nucleoid
       </Typography>
     </Box>
