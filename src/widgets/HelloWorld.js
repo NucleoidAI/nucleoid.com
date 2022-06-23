@@ -1,7 +1,8 @@
 import Markdown from "../components/Markdown";
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import helloWorldMD from "!!raw-loader!../markdowns/hello-world.md";
-import { Button, Grid, Typography } from "@mui/material";
+import typescriptImage from "../images/typescript.png";
+import { Box, Button, Grid, Paper, Typography } from "@mui/material";
 
 function HelloWorld() {
   return (
@@ -32,6 +33,21 @@ function HelloWorld() {
             Learn more
           </Button>
         </Grid>
+        <br />
+        <Paper sx={{ p: 2 }}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img src={typescriptImage} alt={"TypeScript"} width={25} />
+            <Typography sx={{ marginLeft: 1 }}>
+              TypeScript support coming soon
+            </Typography>
+          </Box>
+        </Paper>
       </Grid>
     </>
   );

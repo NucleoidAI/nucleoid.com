@@ -1,17 +1,9 @@
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
-import { makeStyles } from "@mui/styles";
 import { useState } from "react";
 import { Box, Fab, Grid, Paper, Tooltip, Typography } from "@mui/material";
 
-const useStyles = makeStyles((theme) => ({
-  install: {
-    padding: theme.spacing(2),
-  },
-}));
-
 function Install() {
-  const classes = useStyles();
   const [copied, setCopied] = useState(false);
 
   return (
@@ -23,7 +15,7 @@ function Install() {
       alignItems={"center"}
       height={150}
     >
-      <Paper className={classes.install}>
+      <Paper sx={{ p: 2 }}>
         <Box
           sx={{
             display: "flex",
