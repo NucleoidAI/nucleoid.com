@@ -35,6 +35,7 @@ function Home() {
           </Grid>
           <Space height={25} />
           <Steps />
+          <Space height={75} mobile={false} />
           <HelloWorld />
           <Space />
           <Features />

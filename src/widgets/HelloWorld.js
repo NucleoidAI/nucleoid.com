@@ -44,7 +44,7 @@ function HelloWorld() {
           >
             <img src={typescriptImage} alt={"TypeScript"} width={25} />
             <Typography sx={{ marginLeft: 1 }}>
-              TypeScript support coming soon
+              TypeScript support coming soon...
             </Typography>
           </Box>
         </Paper>
