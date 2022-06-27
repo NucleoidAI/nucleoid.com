@@ -57,9 +57,23 @@ function Prompt() {
               textAlign={"center"}
               color={"#9b9b9b"}
             >
-              Build your APIs with the help of AI
+              Build your APIs with the help of&nbsp;
+              <span
+                style={{
+                  background:
+                    "linear-gradient(135deg, hotpink 0%, rgba(0,141,114,1) 100%)",
+                  backgroundClip: "text",
+                  WebkitBackgroundClip: "text",
+                  MozBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  MozTextFillColor: "transparent",
+                  fontSize: 28,
+                }}
+              >
+                AI
+              </span>
               <br />
-              and built-in datastore
+              ..and built-in datastore
             </Typography>
             <Button
               variant={"contained"}
