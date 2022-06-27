@@ -48,8 +48,10 @@ function Prompt() {
               <br />
               for Node.js
             </Typography>
-            <Typography fontSize={28} textAlign={"center"} color={"#9b9b9b"}>
-              with built-in datastore
+            <Typography fontSize={24} textAlign={"center"} color={"#9b9b9b"}>
+              Build your APIs with help of AI
+              <br />
+              and built-in datastore
             </Typography>
             <Button
               variant={"contained"}

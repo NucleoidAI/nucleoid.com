@@ -47,10 +47,11 @@ function Bulletin() {
         <p>
           As a part of plasticity, all types of statements including business
           rules are considered as data so that statements can be added without
-          requiring any further actions such as recompiling, restarting etc.
-          Learn more at <a href={"https://nucleoid.org/"}>nucleoid.org</a>
+          requiring any further actions such as recompiling, restarting
+          etc.&nbsp;
+          <a href={"/docs/runtime/"}>Learn more</a>
         </p>
-        <Box sx={{ marginTop: 10 }}>
+        <Box>
           <blockquote>
             Origin of name, Nucleoid comes from latin word nucleus-like, which
             is the region in prokaryotic organisms and makes living things, a

@@ -25,9 +25,9 @@ function Home() {
       <Prompt />
       <Container>
         <Grid container spacing={2}>
-          <Space height={20} />
+          <Space height={35} />
           <Install />
-          <Space height={20} />
+          <Space height={35} />
           <Columns />
           <Space />
           <Grid container item xs={12} justifyContent={"center"}>
@@ -35,7 +35,7 @@ function Home() {
           </Grid>
           <Space height={25} />
           <Steps />
-          <Space height={75} mobile={false} />
+          <Space mobile={false} />
           <HelloWorld />
           <Space />
           <Features />

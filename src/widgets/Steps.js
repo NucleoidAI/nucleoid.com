@@ -6,7 +6,7 @@ function Steps() {
     <Grid container item xs={12} justifyContent={"center"}>
       <Step
         image={"https://cdn.nucleoid.com/media/coding.png"}
-        title={"Write pure business logic in JavaScript"}
+        title={"I. Write pure business logic in JavaScript"}
         description={
           "Nucleoid runtime accepts business logic in vanilla JS just like any other codes in Node.js but without requiring to install database or anything else."
         }
@@ -14,7 +14,7 @@ function Steps() {
       />
       <Step
         image={"https://cdn.nucleoid.com/media/processing.png"}
-        title={"Nucleoid renders your codes with AI"}
+        title={"II. Nucleoid renders your codes with AI"}
         description={
           "The runtime renders the JavaScript codes just-in-time and makes the necessary adjustments."
         }
@@ -22,7 +22,7 @@ function Steps() {
       />
       <Step
         image={"https://cdn.nucleoid.com/media/console.png"}
-        title={"Creates APIs with built-in datastore"}
+        title={"III. Creates APIs with built-in datastore"}
         description={
           "As a result, Nucleoid creates endpoints and runs business logic as well a stores all your statements/data on the disk out-of-box."
         }

@@ -4,12 +4,12 @@
         <loc>https://nucleoid.com/</loc>
     </url>
     <url>
-        <loc>https://nucleoid.com/get-started/</loc>
+        <loc>https://nucleoid.com/docs/get-started/</loc>
     </url>
     <url>
-        <loc>https://nucleoid.com/learn/</loc>
+        <loc>https://nucleoid.com/docs/learn/</loc>
     </url>
     <url>
-        <loc>https://nucleoid.com/api/</loc>
+        <loc>https://nucleoid.com/docs/api/</loc>
     </url>
 </urlset>
