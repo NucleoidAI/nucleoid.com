@@ -43,13 +43,21 @@ function Prompt() {
               justifyContent: "center",
             }}
           >
-            <Typography fontSize={42} textAlign={"center"} color={"#e5e5e5"}>
+            <Typography
+              sx={{ fontSize: { xs: 38, md: 42 } }}
+              textAlign={"center"}
+              color={"#e5e5e5"}
+            >
               Low-code Framework
               <br />
               for Node.js
             </Typography>
-            <Typography fontSize={24} textAlign={"center"} color={"#9b9b9b"}>
-              Build your APIs with help of AI
+            <Typography
+              sx={{ fontSize: { xs: 22, md: 24 } }}
+              textAlign={"center"}
+              color={"#9b9b9b"}
+            >
+              Build your APIs with the help of AI
               <br />
               and built-in datastore
             </Typography>
@@ -57,7 +65,7 @@ function Prompt() {
               variant={"contained"}
               onClick={() => {
                 if (breakpoint) {
-                  window.open("https://nucleoid.com/ide/", "_blank").focus();
+                  window.open("/ide/", "_blank").focus();
                 }
 
                 window.location.assign("/docs/");
