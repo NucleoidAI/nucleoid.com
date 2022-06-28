@@ -7,7 +7,7 @@ function Steps() {
       <Step
         image={"https://cdn.nucleoid.com/media/coding.png"}
         bullet={"I."}
-        title={"Write pure business logic in JavaScript"}
+        title={"Write your business logic in JavaScript"}
         description={
           "Nucleoid runtime accepts business logic in vanilla JS just like any other codes in Node.js but without requiring to install database or anything else."
         }
