@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 
-function Step({ image, title, description, alt }) {
+function Step({ image, bullet, title, description, alt }) {
   return (
     <>
       <Box
@@ -20,7 +20,15 @@ function Step({ image, title, description, alt }) {
           <img src={image} width={150} alt={alt} />
         </Box>
         <Box>
-          <Typography fontSize={28}>{title}</Typography>
+          <Box flex flexDirection={"row"}>
+            <Typography display={"inline"} fontSize={24}>
+              {bullet}
+            </Typography>
+            &nbsp;
+            <Typography display={"inline"} fontSize={28}>
+              {title}
+            </Typography>
+          </Box>
           <Typography>{description}</Typography>
           <br />
           <br />
