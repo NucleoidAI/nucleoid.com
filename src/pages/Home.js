@@ -25,7 +25,7 @@ function Home() {
       <Prompt />
       <Container>
         <Grid container spacing={2}>
-          <Space height={35} />
+          <Space height={30} />
           <Install />
           <Space height={35} />
           <Columns />

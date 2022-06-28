@@ -6,7 +6,7 @@ function Columns() {
     <>
       <Grid container item xs={12} lg={4} justifyContent={"center"}>
         <Column
-          image={"https://cdn.nucleoid.com/media/019-cube.png"}
+          image={"https://cdn.nucleoid.com/media/028-network.png"}
           title={"Declarative"}
           description={
             "Nucleoid is embedded inside Node.js and renders the very same JavaScript codes and makes the necessary adjustments in the state."

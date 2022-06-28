@@ -59,6 +59,12 @@ function Prompt() {
             >
               Build your APIs with the help of AI
             </Typography>
+            <img
+              style={{ margin: 16 }}
+              src={"https://cdn.nucleoid.com/media/019-cube.png"}
+              alt={"AI"}
+              width={100}
+            />
             <Button
               variant={"contained"}
               onClick={() => {
