@@ -58,13 +58,9 @@ function Prompt() {
               color={"#9b9b9b"}
             >
               Build your APIs with the help of AI
+              <br />
+              and built-in datastore
             </Typography>
-            <img
-              style={{ margin: 16 }}
-              src={"https://cdn.nucleoid.com/media/019-cube.png"}
-              alt={"AI"}
-              width={100}
-            />
             <Button
               variant={"contained"}
               onClick={() => {

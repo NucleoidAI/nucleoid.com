@@ -1,4 +1,5 @@
 import Bulletin from "../widgets/Bulletin";
+import CleanCode from "../widgets/CleanCode";
 import Columns from "../widgets/Columns";
 import Features from "../widgets/Features";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -37,6 +38,8 @@ function Home() {
           <Steps />
           <Space mobile={false} />
           <HelloWorld />
+          <Space />
+          <CleanCode />
           <Space />
           <Features />
         </Grid>
