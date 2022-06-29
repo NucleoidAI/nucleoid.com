@@ -10,7 +10,7 @@ function CleanCode() {
         src={cleanCodeImage}
         alt={"Clean Code"}
         width={300}
-        style={{ boxShadow: "10px 10px #474949" }}
+        style={{ boxShadow: "10px 10px #d3d3d3" }}
       />
       <Grid
         container
@@ -22,14 +22,15 @@ function CleanCode() {
         alignItems={"center"}
       >
         <Typography variant={"h4"} sx={{ my: 1 }} textAlign={"center"}>
-          Join us to fight <br />
-          against Spaghetti Code!
+          Join us to fight against
+          <br />
+          Spaghetti Code!
         </Typography>
         <Typography width={325} sx={{ my: 1 }}>
           You surely witness bad code around you, we are working what is next
           for coding!
         </Typography>
-        <img src={capeImage} alt={"Cape"} width={75} />
+        <img src={capeImage} alt={"Cape"} width={75} style={{ margin: 8 }} />
         <Button
           startIcon={<GitHubIcon />}
           size={"small"}
