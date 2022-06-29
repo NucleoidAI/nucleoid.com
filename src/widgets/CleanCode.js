@@ -10,7 +10,7 @@ function CleanCode() {
         src={cleanCodeImage}
         alt={"Clean Code"}
         width={300}
-        style={{ boxShadow: "10px 10px #d3d3d3" }}
+        style={{ border: "4px solid #d3d3d3" }}
       />
       <Grid
         container
