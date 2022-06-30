@@ -28,8 +28,8 @@ function Install() {
           }}
         >
           <ArrowForwardIosIcon />
-          <Typography fontFamily={"Trebuchet MS"} variant={"h5"}>
-            npm install nucleoidjs
+          <Typography fontFamily={"Trebuchet MS"} fontSize={26}>
+            npm i nucleoidjs
           </Typography>
           <Tooltip
             title={copied ? "Copied" : ""}
@@ -38,7 +38,7 @@ function Install() {
           >
             <Fab
               onClick={() => {
-                navigator.clipboard.writeText("npm install nucleoidjs");
+                navigator.clipboard.writeText("npm i nucleoidjs");
                 setCopied(true);
               }}
             >
