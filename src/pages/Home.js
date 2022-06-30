@@ -6,6 +6,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import HelloWorld from "../widgets/HelloWorld";
 import Install from "../widgets/Install";
 import Prompt from "../widgets/Prompt";
+import Rocket from "../widgets/Rocket";
 import Space from "../components/Space";
 import Steps from "../widgets/Steps";
 import gtag from "../gtag";
@@ -59,6 +60,7 @@ function Home() {
             Star us on GitHub
           </Button>
         </Grid>
+        <Rocket />
         <Space />
         <Divider />
         <Space />
