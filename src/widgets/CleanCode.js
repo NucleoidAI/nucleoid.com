@@ -26,7 +26,7 @@ function CleanCode() {
           <br />
           Spaghetti Code!
         </Typography>
-        <Typography width={325} sx={{ my: 1 }}>
+        <Typography width={325} sx={{ my: 1 }} textAlign={"center"}>
           You surely witness bad code around you, we are working what is next
           for coding!
         </Typography>
@@ -40,7 +40,10 @@ function CleanCode() {
             m: 1,
           }}
           onClick={() =>
-            window.open("https://github.com/NucleoidJS/Nucleoid", "_blank")
+            window.open(
+              "https://github.com/NucleoidJS/Nucleoid/discussions",
+              "_blank"
+            )
           }
         >
           Join Discussions

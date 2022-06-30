@@ -1,9 +1,7 @@
 ```javascript
-const nucleoid = require("nucleoidjs");
 const app = nucleoid();
 
-class User {constructor(name){this.name = name}}
-nucleoid.register(User);
+class User { constructor(name){ this.name = name }}
 
 // 👇 This is it!
 app.post("/users", () => new User("Daphne"));
