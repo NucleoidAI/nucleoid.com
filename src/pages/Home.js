@@ -2,7 +2,6 @@ import Bulletin from "../widgets/Bulletin";
 import CleanCode from "../widgets/CleanCode";
 import Columns from "../widgets/Columns";
 import Features from "../widgets/Features";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import HelloWorld from "../widgets/HelloWorld";
 import Install from "../widgets/Install";
 import Prompt from "../widgets/Prompt";
@@ -11,7 +10,7 @@ import Space from "../components/Space";
 import Steps from "../widgets/Steps";
 import gtag from "../gtag";
 import { useEffect } from "react";
-import { Button, Container, Divider, Grid, Typography } from "@mui/material";
+import { Container, Divider, Grid, Typography } from "@mui/material";
 
 function Home() {
   useEffect(() => {
@@ -45,21 +44,6 @@ function Home() {
           <Features />
         </Grid>
         <Space />
-        <Grid container item xs={12} justifyContent={"center"}>
-          <Button
-            startIcon={<GitHubIcon />}
-            size={"large"}
-            variant={"outlined"}
-            sx={{
-              p: 2,
-            }}
-            onClick={() =>
-              window.open("https://github.com/NucleoidJS/Nucleoid", "_blank")
-            }
-          >
-            Star us on GitHub
-          </Button>
-        </Grid>
         <Rocket />
         <Space />
         <Divider />

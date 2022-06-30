@@ -1,4 +1,5 @@
-import { Box, Grid, Typography } from "@mui/material";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import { Box, Button, Grid, Typography } from "@mui/material";
 
 function Rocket() {
   return (
@@ -13,12 +14,40 @@ function Rocket() {
         width={800}
         height={557}
       >
-        <Typography variant={"h4"} textAlign={"center"}>
-          Join what is next
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Typography variant={"h4"} textAlign={"center"}>
+            Join what is next
+            <br />
+            for coding! &#9889;
+            <br />
+          </Typography>
           <br />
-          for coding! &#9889;
-          <br />
-        </Typography>
+          <Button
+            startIcon={<GitHubIcon />}
+            size={"large"}
+            variant={"outlined"}
+            sx={{
+              px: 2,
+              py: 1,
+              textTransform: "none",
+            }}
+            onClick={() =>
+              window.open(
+                "https://github.com/NucleoidJS/Nucleoid/discussions/categories/thinkers-club",
+                "_blank"
+              )
+            }
+          >
+            Join Thinkers Club
+          </Button>
+        </Box>
       </Box>
     </Grid>
   );
