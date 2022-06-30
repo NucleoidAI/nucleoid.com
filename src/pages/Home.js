@@ -38,12 +38,12 @@ function Home() {
           <Steps />
           <Space mobile={false} />
           <HelloWorld />
-          <Space />
+          <Rocket />
+          <Space height={25} />
           <Features />
           <Space />
           <CleanCode />
           <Space />
-          <Rocket />
           <Space mobile={false} />
         </Grid>
         <Divider />
