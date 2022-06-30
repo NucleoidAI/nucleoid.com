@@ -39,13 +39,13 @@ function Home() {
           <Space mobile={false} />
           <HelloWorld />
           <Space />
+          <Features />
+          <Space />
           <CleanCode />
           <Space />
-          <Features />
+          <Rocket />
+          <Space mobile={false} />
         </Grid>
-        <Space />
-        <Rocket />
-        <Space />
         <Divider />
         <Space />
         <Bulletin />
