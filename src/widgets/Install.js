@@ -28,7 +28,7 @@ function Install() {
           }}
         >
           <ArrowForwardIosIcon />
-          <Typography fontFamily={"Trebuchet MS"} fontSize={26}>
+          <Typography fontFamily={"Trebuchet MS"} fontSize={25}>
             npm i nucleoidjs
           </Typography>
           <Tooltip
