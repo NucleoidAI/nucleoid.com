@@ -22,7 +22,7 @@ function CleanCode() {
         alignItems={"center"}
       >
         <Typography variant={"h4"} sx={{ my: 1 }} textAlign={"center"}>
-          Join us to fight against
+          Fight against
           <br />
           Spaghetti Code!
         </Typography>
