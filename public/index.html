@@ -20,6 +20,7 @@
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9H12K94J4"></script>
     <script>
+      const params = new URLSearchParams(window.location.search);
       window.dataLayer = window.dataLayer || [];
 
       function gtag() {
@@ -29,7 +30,7 @@
       window.gtag = gtag;
       gtag("js", new Date());
 
-      if (window.location.hostname === "nucleoid.com") {
+      if (window.location.hostname === "nucleoid.com" && params.get("gtag") !== "false") {
         gtag("config", "G-L9H12K94J4", {
           send_page_view: false,
         });
