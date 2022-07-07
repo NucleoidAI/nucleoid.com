@@ -1,5 +1,4 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
-import capeImage from "../images/cape.png";
 import cleanCodeImage from "../images/computing.gif";
 import { Button, Grid, Typography } from "@mui/material";
 
@@ -30,7 +29,11 @@ function CleanCode() {
           You surely witness bad code around you, we are working what is next
           for coding!
         </Typography>
-        <img src={capeImage} alt={"Cape"} width={75} style={{ margin: 8 }} />
+        <img
+          src={"https://cdn.nucleoid.com/media/cape.png"}
+          alt={"Cape"}
+          style={{ margin: 8 }}
+        />
         <Button
           startIcon={<GitHubIcon />}
           size={"small"}

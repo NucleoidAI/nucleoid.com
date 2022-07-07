@@ -38,7 +38,9 @@ function Home() {
           <Steps />
           <Space mobile={false} />
           <HelloWorld />
+          <Space mobile={false} />
           <Rocket />
+          <Space mobile={false} />
           <Space height={25} />
           <Features />
           <Space />
