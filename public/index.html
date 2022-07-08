@@ -9,10 +9,18 @@
     <meta name="description" content="Nucleoid is low-code framework for Node.js, lets you build your APIs with the help of AI and built-in datastore in declarative runtime engine." />
     <meta name="keywords" content="low-code,Node.js,node,ai,datastore,framework" />
 
-    <meta property="og:title" content="Nucleoid - Low-code Framework for Node.js" />
+    <meta property="og:url" content="https://nucleoid.com/" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://cdn.nucleoid.com/media/icon.png" />
-    <meta property="og:description" content="Nucleoid is low-code framework for Node.js, lets you build your APIs with the help of AI and built-in datastore in declarative runtime engine." />
+    <meta property="og:title" content="Nucleoid - Low-code Framework for Node.js" />
+    <meta property="og:description" content="Nucleoid low-code framework lets you build your APIs with the help of AI and built-in datastore." />
+    <meta property="og:image" content="https://cdn.nucleoid.com/media/og.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="nucleoid.com" />
+    <meta property="twitter:url" content="https://nucleoid.com/" />
+    <meta name="twitter:title" content="Nucleoid - Low-code Framework for Node.js" />
+    <meta name="twitter:description" content="Nucleoid is low-code framework for Node.js, lets you build your APIs with the help of AI and built-in datastore in declarative runtime engine." />
+    <meta name="twitter:image" content="https://cdn.nucleoid.com/media/og.png" />
 
     <link rel="icon" type="image/png" href="https://cdn.nucleoid.com/media/icon.png" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
@@ -21,21 +29,23 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9H12K94J4"></script>
     <script>
       const params = new URLSearchParams(window.location.search);
+
+      if (window.location.hostname !== "nucleoid.com" || params.get("gtag") === "false") {
+        window["ga-disable-GA_MEASUREMENT_ID"] = true;
+      }
+
       window.dataLayer = window.dataLayer || [];
 
       function gtag() {
         dataLayer.push(arguments);
       }
-      window.gtag = gtag;
 
       gtag("js", new Date());
       gtag("config", "G-L9H12K94J4", {
         send_page_view: false,
       });
 
-      if (window.location.hostname !== "nucleoid.com" || params.get("gtag") === "false") {
-        window["ga-disable-GA_MEASUREMENT_ID"] = true;
-      }
+      window.gtag = gtag;
     </script>
   </head>
   <body>
