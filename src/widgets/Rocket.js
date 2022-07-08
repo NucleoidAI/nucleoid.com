@@ -41,6 +41,14 @@ function Rocket() {
               />
             </a>
             <br />
+            <br />
+            <strong>
+              <img
+                src={"https://cdn.nucleoid.com/media/pin.png"}
+                alt={"Pin"}
+                width={25}
+              />
+            </strong>
             <a href={"https://github.com/NucleoidJS/Nucleoid/discussions/25"}>
               <img
                 src={"https://cdn.nucleoid.com/media/discussion-25x500.png"}
