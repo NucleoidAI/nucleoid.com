@@ -1,4 +1,5 @@
 import { makeStyles } from "@mui/styles";
+import thumbnailImage from "../images/thumbnail.png";
 import {
   Box,
   Button,
@@ -105,6 +106,7 @@ function Prompt() {
             borderStyle: "solid",
             borderWidth: "0px 1px 1px 2px",
           }}
+          placeholder={thumbnailImage}
         >
           <source src={"https://cdn.nucleoid.com/media/prompt.webm"} />
         </video>
