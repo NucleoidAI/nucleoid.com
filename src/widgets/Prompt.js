@@ -93,7 +93,10 @@ function Prompt() {
           src={"https://cdn.nucleoid.com/media/frame.png"}
           alt={"Prompt"}
         />
-        <img
+        <video
+          loop
+          autoPlay
+          muted
           style={{
             display: "block",
             width: "100%",
@@ -102,9 +105,9 @@ function Prompt() {
             borderStyle: "solid",
             borderWidth: "0px 1px 1px 2px",
           }}
-          src={"https://cdn.nucleoid.com/media/prompt-2.gif"}
-          alt={"Low-code Framework for Node.js"}
-        />
+        >
+          <source src={"https://cdn.nucleoid.com/media/prompt.webm"} />
+        </video>
       </Grid>
     </Grid>
   );
