@@ -1,4 +1,5 @@
 import { makeStyles } from "@mui/styles";
+import promptVideo from "../images/prompt-1.webm";
 import thumbnailImage from "../images/thumbnail.png";
 import {
   Box,
@@ -88,11 +89,11 @@ function Prompt() {
           style={{
             display: "block",
             width: "100%",
-            maxWidth: 550,
+            maxWidth: 600,
             borderRadius: "3px 3px 0px 0px",
           }}
           src={"https://cdn.nucleoid.com/media/frame.png"}
-          alt={"Prompt"}
+          alt={"Frame"}
         />
         <video
           loop
@@ -101,14 +102,14 @@ function Prompt() {
           style={{
             display: "block",
             width: "100%",
-            maxWidth: 550,
+            maxWidth: 600,
             borderColor: "#464646 #868686 #464646 #464646",
             borderStyle: "solid",
             borderWidth: "0px 1px 1px 2px",
           }}
           poster={thumbnailImage}
         >
-          <source src={"https://cdn.nucleoid.com/media/prompt.webm"} />
+          <source src={promptVideo} />
         </video>
       </Grid>
     </Grid>
