@@ -1,12 +1,11 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
-import cleanCodeImage from "../images/computing.gif";
 import { Button, Grid, Typography } from "@mui/material";
 
 function CleanCode() {
   return (
     <Grid container item alignItems={"center"} justifyContent={"center"}>
       <img
-        src={cleanCodeImage}
+        src={"https://cdn.nucleoid.com/media/computing.gif"}
         alt={"Clean Code"}
         width={300}
         style={{ border: "4px solid #d3d3d3" }}

@@ -1,6 +1,4 @@
 import { makeStyles } from "@mui/styles";
-import promptVideo from "../images/prompt-1.webm";
-import thumbnailImage from "../images/thumbnail.png";
 import {
   Box,
   Button,
@@ -107,9 +105,9 @@ function Prompt() {
             borderStyle: "solid",
             borderWidth: "0px 1px 1px 2px",
           }}
-          poster={thumbnailImage}
+          poster={"https://cdn.nucleoid.com/media/thumbnail.png"}
         >
-          <source src={promptVideo} />
+          <source src={"https://cdn.nucleoid.com/media/prompt-1.webm"} />
         </video>
       </Grid>
     </Grid>

@@ -1,7 +1,6 @@
 import Markdown from "../components/Markdown";
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import helloWorldMD from "!!raw-loader!../markdowns/hello-world.md";
-import typescriptImage from "../images/typescript.png";
 import { Box, Button, Grid, Paper, Typography } from "@mui/material";
 
 function HelloWorld() {
@@ -42,7 +41,11 @@ function HelloWorld() {
               alignItems: "center",
             }}
           >
-            <img src={typescriptImage} alt={"TypeScript"} width={25} />
+            <img
+              src={"https://cdn.nucleoid.com/media/typescript.png"}
+              alt={"TypeScript"}
+              width={25}
+            />
             <Typography sx={{ marginLeft: 1 }}>
               &nbsp;TypeScript support coming soon..
             </Typography>
