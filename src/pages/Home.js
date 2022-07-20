@@ -5,9 +5,9 @@ import Features from "../widgets/Features";
 import HelloWorld from "../widgets/HelloWorld";
 import Install from "../widgets/Install";
 import Prompt from "../widgets/Prompt";
-import Rocket from "../widgets/Rocket";
 import Space from "../components/Space";
 import Steps from "../widgets/Steps";
+import ThinkersClub from "../widgets/ThinkersClub";
 import gtag from "../gtag";
 import { useEffect } from "react";
 import { Container, Divider, Grid, Typography } from "@mui/material";
@@ -36,15 +36,15 @@ function Home() {
           </Grid>
           <Space height={25} />
           <Steps />
-          <Space mobile={false} />
+          <Space height={100} mobile={false} />
           <HelloWorld />
-          <Space mobile={false} />
-          <Rocket />
           <Space mobile={false} />
           <Space height={25} />
           <Features />
-          <Space />
+          <Space height={100} />
           <CleanCode />
+          <Space height={100} />
+          <ThinkersClub />
           <Space />
           <Space mobile={false} />
         </Grid>
