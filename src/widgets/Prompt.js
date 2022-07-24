@@ -105,7 +105,7 @@ function Prompt() {
             borderStyle: "solid",
             borderWidth: "0px 1px 1px 2px",
           }}
-          poster={"https://cdn.nucleoid.com/media/thumbnail.png"}
+          poster={"https://cdn.nucleoid.com/media/thumbnail-1.png"}
         >
           <source src={"https://cdn.nucleoid.com/media/prompt-1.webm"} />
         </video>
