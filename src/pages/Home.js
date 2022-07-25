@@ -36,10 +36,10 @@ function Home() {
           </Grid>
           <Space height={25} />
           <Steps />
-          <Space height={100} mobile={false} />
+          <Space height={125} mobile={false} />
           <HelloWorld />
-          <Space mobile={false} />
-          <Space height={25} />
+          <Space height={50} />
+          <Space height={100} mobile={false} />
           <Features />
           <Space height={100} />
           <CleanCode />

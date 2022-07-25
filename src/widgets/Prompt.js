@@ -88,6 +88,7 @@ function Prompt() {
             display: "block",
             width: "100%",
             maxWidth: 600,
+            height: "11px",
             borderRadius: "3px 3px 0px 0px",
           }}
           src={"https://cdn.nucleoid.com/media/frame.png"}
@@ -101,9 +102,12 @@ function Prompt() {
             display: "block",
             width: "100%",
             maxWidth: 600,
+            height: "100%",
+            maxHeight: 360,
             borderColor: "#464646 #868686 #464646 #464646",
             borderStyle: "solid",
             borderWidth: "0px 1px 1px 2px",
+            background: "white",
           }}
           poster={"https://cdn.nucleoid.com/media/thumbnail-1.png"}
         >
