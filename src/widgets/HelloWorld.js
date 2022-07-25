@@ -8,7 +8,7 @@ function HelloWorld() {
   return (
     <>
       <Grid item xs={12} lg={6} sx={{ padding: { lg: 5 } }}>
-        <Typography variant={"h3"}>Hello World&nbsp;&#9889;</Typography>
+        <Typography fontSize={42}>Hello World&nbsp;&#9889;</Typography>
         <Markdown content={helloWorldMD} />
       </Grid>
       <Grid
