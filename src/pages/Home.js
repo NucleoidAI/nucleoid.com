@@ -41,9 +41,10 @@ function Home() {
           <Space height={50} />
           <Space height={100} mobile={false} />
           <Features />
-          <Space height={100} />
+          <Space height={50} />
+          <Space height={100} mobile={false} />
           <CleanCode />
-          <Space height={100} />
+          <Space height={150} />
           <ThinkersClub />
           <Space />
           <Space mobile={false} />
