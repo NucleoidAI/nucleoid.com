@@ -27,7 +27,7 @@ function Steps() {
         bullet={"III."}
         title={"Creates APIs with built-in datastore"}
         description={
-          "As a result, Nucleoid creates endpoints and runs business logic as well a stores all your statements/data on the disk out-of-box."
+          "As a result, Nucleoid creates endpoints and runs business logic as well as stores all your statements/data on the disk out-of-box."
         }
         alt={"Console"}
       />
