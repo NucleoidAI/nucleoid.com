@@ -1,12 +1,5 @@
 import { makeStyles } from "@mui/styles";
-import {
-  Box,
-  Button,
-  Grid,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 
 const useStyles = makeStyles((theme) => ({
   banner: {
@@ -22,8 +15,6 @@ const useStyles = makeStyles((theme) => ({
 
 function Prompt() {
   const classes = useStyles();
-  const theme = useTheme();
-  const breakpoint = useMediaQuery(theme.breakpoints.up("sm"));
 
   return (
     <Grid
@@ -63,13 +54,7 @@ function Prompt() {
             </Typography>
             <Button
               variant={"contained"}
-              onClick={() => {
-                if (breakpoint) {
-                  window.open("/ide/", "_blank").focus();
-                }
-
-                window.location.assign("/docs/");
-              }}
+              onClick={() => window.location.assign("/docs/")}
               color={"inherit"}
               size={"large"}
               sx={{
