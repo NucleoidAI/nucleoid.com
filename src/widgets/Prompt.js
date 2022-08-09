@@ -89,10 +89,10 @@ function Prompt() {
             maxWidth: 600,
             height: "100%",
             maxHeight: 360,
-            borderColor: "#464646 #868686 #464646 #464646",
+            borderColor: "#464646",
             borderStyle: "solid",
             borderWidth: "0px 1px 1px 2px",
-            background: "white",
+            background: "#464646",
           }}
           poster={"https://cdn.nucleoid.com/media/thumbnail-1.png"}
         >
