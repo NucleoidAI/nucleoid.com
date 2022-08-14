@@ -1,25 +1,13 @@
-import { makeStyles } from "@mui/styles";
 import { Box, Button, Grid, Typography } from "@mui/material";
 
-const useStyles = makeStyles((theme) => ({
-  banner: {
-    background: "#313a40",
-    minHeight: 500,
-  },
-  space: {
-    [theme.breakpoints.down("lg")]: {
-      display: "none",
-    },
-  },
-}));
-
 function Prompt() {
-  const classes = useStyles();
-
   return (
     <Grid
       container
-      className={classes.banner}
+      sx={{
+        background: "#313a40",
+        minHeight: 500,
+      }}
       alignItems="center"
       justifyContent="center"
     >
@@ -66,7 +54,15 @@ function Prompt() {
           </Box>
         </Box>
       </Grid>
-      <Box width={75} className={classes.space} />
+      <Box
+        width={75}
+        sx={{
+          display: {
+            xs: "none",
+            lg: "block",
+          },
+        }}
+      />
       <Grid item sx={{ padding: 2 }}>
         <img
           style={{

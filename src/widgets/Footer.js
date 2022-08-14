@@ -2,27 +2,22 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import React from "react";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import WeekCalendar from "../components/WeekCalendar";
-import { makeStyles } from "@mui/styles";
 import { Box, IconButton } from "@mui/material";
 
-const useStyles = makeStyles((theme) => ({
-  footer: {
-    color: "#a9a9a9",
-    fontSize: 16,
-    padding: theme.spacing(2),
-    background: "#343e48",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-  },
-}));
-
 function Footer() {
-  const classes = useStyles();
-
   return (
     <footer>
-      <Box className={classes.footer}>
+      <Box
+        sx={{
+          color: "#a9a9a9",
+          fontSize: 16,
+          p: 2,
+          background: "#343e48",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
         <WeekCalendar />
         Nucleoid
         <Box>
