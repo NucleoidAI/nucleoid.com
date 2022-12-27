@@ -20,4 +20,3 @@ jobs:
       - run: docker build . -t 533052815932.dkr.ecr.us-east-1.amazonaws.com/nuc:nucleoid-com
       - run: aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 533052815932.dkr.ecr.us-east-1.amazonaws.com
       - run: docker push 533052815932.dkr.ecr.us-east-1.amazonaws.com/nuc:nucleoid-com
-      - run: aws ecs update-service --cluster nuc-cluster --service nucleoid-com-service --force-new-deployment
