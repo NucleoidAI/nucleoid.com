@@ -29,7 +29,7 @@ function Columns() {
           image={"https://cdn.nucleoid.com/media/019-database-5.png"}
           title={"Built-in Datastore"}
           description={
-            "The runtime tracks and persists each statement so that it doesn't require external data storage like relational DB or NoSQL."
+            "The runtime tracks and persists each statement in on-chain data store so that it doesn't require any external data storage like relational DB or NoSQL."
           }
           alt={"Datastore"}
         />

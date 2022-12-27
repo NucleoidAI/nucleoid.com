@@ -5,7 +5,7 @@ function Bulletin() {
     <Grid container item justifyContent={"center"}>
       <Box maxWidth={625} bgcolor={"#f9f9f9"} padding={2}>
         <Typography variant={"h6"}>
-          Under the hood: Declarative Runtime Engine
+          Under the hood: Declarative Runtime Environment
         </Typography>
         <img
           src={"https://cdn.nucleoid.com/media/113933331-sm.png"}
@@ -14,14 +14,14 @@ function Bulletin() {
           width={150}
         />
         <p>
-          The declarative runtime engine isolates a behavior definition of a
-          program from its technical instructions and executes declarative
-          statements, which represent logical intention without carrying any
-          technical details. In this paradigm, there is no segregation regarding
-          what data is or not, instead approaches how data is related with
-          others so that any type of data including business rules can be added
-          without requiring any additional actions such as compiling,
-          configuring, restarting as a result of plasticity.
+          The declarative runtime isolates a behavior definition of a program
+          from its technical instructions and executes declarative statements,
+          which represent logical intention without carrying any technical
+          details. In this paradigm, there is no segregation regarding what data
+          is or not, instead approaches how data is related with others so that
+          any type of data including business rules can be added without
+          requiring any additional actions such as compiling, configuring,
+          restarting as a result of plasticity.
         </p>
         <img
           src={"https://cdn.nucleoid.com/media/logical-diagram.png"}
