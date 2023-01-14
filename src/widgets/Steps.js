@@ -16,9 +16,9 @@ function Steps() {
       <Step
         image={"https://cdn.nucleoid.com/media/processing.png"}
         bullet={"II."}
-        title={"Nucleoid renders your codes with AI"}
+        title={"Nucleoid renders your codes with the AI engine"}
         description={
-          "The runtime renders the JavaScript codes just-in-time and makes the necessary adjustments."
+          "The runtime renders the JavaScript codes based on the logical graph and makes the necessary adjustments in JS state."
         }
         alt={"Processing"}
       />

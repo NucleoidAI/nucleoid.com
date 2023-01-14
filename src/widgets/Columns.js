@@ -17,9 +17,9 @@ function Columns() {
       <Grid container item xs={12} lg={4} justifyContent={"center"}>
         <Column
           image={"https://cdn.nucleoid.com/media/007-AI.png"}
-          title={"AI-powered"}
+          title={"AI-managed"}
           description={
-            "Nucleoid runtime builds the network of statements and adjusts connections as receives more entries so that it lowers number of codes needed."
+            "Nucleoid uses deterministic AI in the runtime; the runtime rerenders the very same JavaScript codes and builds the logical dependency graph."
           }
           alt={"AI"}
         />

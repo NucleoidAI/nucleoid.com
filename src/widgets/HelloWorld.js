@@ -1,8 +1,21 @@
 import Markdown from "../components/Markdown";
 import React from "react";
-// eslint-disable-next-line import/no-webpack-loader-syntax
-import helloWorldMD from "!!raw-loader!../markdowns/hello-world.md";
 import { Box, Button, Grid, Paper, Typography } from "@mui/material";
+
+const helloWorldMD = `
+\`\`\`javascript
+const app = nucleoid();
+
+class User { constructor(name) { this.name = name }}
+
+// 👇 This is it!
+app.post("/users", () => {
+  new User("Daphne")
+});
+
+app.listen(3000);
+\`\`\`
+`;
 
 function HelloWorld() {
   return (

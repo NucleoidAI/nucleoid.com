@@ -15,7 +15,6 @@
     "@mui/material": "^5.2.7",
     "clsx": "^1.1.1",
     "emojione": "^4.5.0",
-    "raw-loader": "^4.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^7.1.2",
