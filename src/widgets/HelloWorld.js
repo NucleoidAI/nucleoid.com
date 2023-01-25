@@ -4,16 +4,25 @@ import { Box, Button, Grid, Paper, Typography } from "@mui/material";
 
 const helloWorldMD = `
 \`\`\`javascript
-const app = nucleoid();
-
-class User { constructor(name) { this.name = name }}
+class Item {
+  constructor(name, barcode) {
+    this.name = name;
+    this.barcode = barcode;
+  }
+}
 
 // 👇 This is it!
-app.post("/users", () => {
-  new User("Daphne")
-});
+app.post("/items", (req) => {
+  const barcode = req.body.barcode;
+  
+  const check = Item.find(i => i.barcode === barcode);
 
-app.listen(3000);
+  if(check) {
+    throw "DUPLICATE_BARCODE";
+  }
+
+  return new Item(name, barcode);
+});
 \`\`\`
 `;
 
@@ -22,6 +31,11 @@ function HelloWorld() {
     <>
       <Grid item xs={12} lg={6} sx={{ padding: { lg: 5 } }}>
         <Typography fontSize={42}>Hello World&nbsp;&#9889;</Typography>
+        <Typography fontSize={20}>
+          ChatGPT: "Create an item with given name and barcode, but the barcode
+          must be unique"&nbsp;
+          <span className={"blink"}>&nbsp;</span>
+        </Typography>
         <Markdown content={helloWorldMD} />
       </Grid>
       <Grid
@@ -34,8 +48,9 @@ function HelloWorld() {
         alignItems={"center"}
       >
         <Typography fontSize={22}>
-          &#128077; This is pretty much it, you successfully saved your first
-          object without installing <u>external database</u> or anything else!
+          &#128077; This is pretty much it, you successfully saved your object
+          with the business logic without installing &nbsp;
+          <u>external database</u> or anything else!
         </Typography>
         <br />
         <Grid container item justifyContent={"center"}>

@@ -74,3 +74,17 @@ pre {
   background: #474949;
   max-width: 800px;
 }
+
+.blink {
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+  from,
+  to {
+    background: transparent;
+  }
+  50% {
+    background: #3f3f3f;
+  }
+}
