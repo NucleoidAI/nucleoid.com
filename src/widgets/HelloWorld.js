@@ -11,7 +11,7 @@ class Item {
   }
 }
 
-// 👇 This is it!
+// 👇 Only needed a business logic and 💖
 app.post("/items", (req) => {
   const barcode = req.body.barcode;
   
@@ -32,9 +32,9 @@ function HelloWorld() {
       <Grid item xs={12} lg={6} sx={{ padding: { lg: 5 } }}>
         <Typography fontSize={42}>Hello World&nbsp;&#9889;</Typography>
         <Typography fontSize={20}>
-          ChatGPT: "Create an item with given name and barcode, but the barcode
-          must be unique"&nbsp;
-          <span className={"blink"}>&nbsp;</span>
+          ChatGPT: Create an item with given name and barcode, but the barcode
+          must be unique...&nbsp;
+          <span style={{ background: "#3f3f3f" }}>&nbsp;</span>
         </Typography>
         <Markdown content={helloWorldMD} />
       </Grid>
