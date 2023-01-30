@@ -4,6 +4,7 @@ import Columns from "../widgets/Columns";
 import Features from "../widgets/Features";
 import HelloWorld from "../widgets/HelloWorld";
 import Install from "../widgets/Install";
+import OpenAPIIntegration from "../widgets/OpenAPIIntegration";
 import Prompt from "../widgets/Prompt";
 import Space from "../components/Space";
 import Steps from "../widgets/Steps";
@@ -38,6 +39,8 @@ function Home() {
           <Steps />
           <Space height={125} mobile={false} />
           <HelloWorld />
+          <Space height={150} mobile={false} />
+          <OpenAPIIntegration />
           <Space height={50} />
           <Space height={100} mobile={false} />
           <Features />
