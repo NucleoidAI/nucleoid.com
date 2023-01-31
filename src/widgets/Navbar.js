@@ -123,7 +123,13 @@ function Navbar() {
         </Box>
         <Button
           variant={"contained"}
-          onClick={() => window.location.assign("/ide/")}
+          onClick={() => {
+            gtag("event", "click_ide", {
+              page_location: window.location.href,
+              page_path: window.location.pathname,
+            });
+            window.location.assign("/ide/");
+          }}
           sx={{
             mx: 1,
             textTransform: "none",
