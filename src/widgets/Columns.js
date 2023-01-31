@@ -19,7 +19,7 @@ function Columns() {
           image={"https://cdn.nucleoid.com/media/007-AI.png"}
           title={"AI-managed"}
           description={
-            "Nucleoid uses deterministic AI in the runtime; the runtime rerenders the very same JavaScript codes and builds the logical dependency graph."
+            "Nucleoid uses logic-based AI in the runtime; the runtime rerenders the very same JavaScript codes and builds the logical dependency graph."
           }
           alt={"AI"}
         />
