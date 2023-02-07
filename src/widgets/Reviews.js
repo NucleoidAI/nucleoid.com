@@ -2,7 +2,14 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { useRef } from "react";
-import { Box, Button, IconButton, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  IconButton,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 
 const list = [
   {
@@ -48,6 +55,8 @@ const width = 375;
 const gap = 20;
 
 function Reviews() {
+  const theme = useTheme();
+  const breakpoint = useMediaQuery(theme.breakpoints.up("md"));
   const ref = useRef();
 
   return (
@@ -64,7 +73,7 @@ function Reviews() {
         <Box>
           <Typography variant={"h4"}>Join the Community</Typography>
         </Box>
-        <Box width={500}>
+        <Box width={breakpoint ? 600 : "100%"}>
           Thanks to declarative programming, we have a brand-new approach to
           data and logic. As we are still discovering what we can do with this
           powerful programming model, please join us with any types of
