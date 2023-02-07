@@ -1,7 +1,8 @@
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import { useRef } from "react";
-import { Box, IconButton } from "@mui/material";
+import { Box, Button, IconButton, Typography } from "@mui/material";
 
 const list = [
   {
@@ -53,12 +54,45 @@ function Reviews() {
     <>
       <Box
         sx={{
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Box>
+          <Typography variant={"h4"}>Join the Community</Typography>
+        </Box>
+        <Box width={500}>
+          Thanks to declarative programming, we have a brand-new approach to
+          data and logic. As we are still discovering what we can do with this
+          powerful programming model, please join us with any types of
+          contribution!
+        </Box>
+        <Button
+          startIcon={<GitHubIcon />}
+          size={"large"}
+          variant={"outlined"}
+          sx={{
+            textTransform: "none",
+          }}
+          onClick={() =>
+            window.open("https://github.com/NucleoidJS/Nucleoid", "_blank")
+          }
+        >
+          Go to GitHub
+        </Button>
+      </Box>
+      <Box
+        sx={{
           display: "flex",
           flexDirection: "row",
           justifyContent: "flex-start",
           alignItems: "flex-start",
           flexWrap: "nowrap",
           overflow: "hidden",
+          mt: 3,
         }}
         ref={ref}
       >

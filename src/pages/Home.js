@@ -6,6 +6,7 @@ import HelloWorld from "../widgets/HelloWorld";
 import Install from "../widgets/Install";
 import OpenAPIIntegration from "../widgets/OpenAPIIntegration";
 import Prompt from "../widgets/Prompt";
+import Reviews from "../widgets/Reviews";
 import Space from "../components/Space";
 import Steps from "../widgets/Steps";
 import ThinkersClub from "../widgets/ThinkersClub";
@@ -39,6 +40,8 @@ function Home() {
           <Steps />
           <Space height={125} mobile={false} />
           <HelloWorld />
+          <Space height={50} />
+          <Reviews />
           <Space height={150} mobile={false} />
           <OpenAPIIntegration />
           <Space height={50} />
