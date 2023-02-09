@@ -1,6 +1,7 @@
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import gtag from "../gtag";
 import { useRef } from "react";
 import {
   Box,
@@ -81,9 +82,14 @@ function Reviews() {
           sx={{
             textTransform: "none",
           }}
-          onClick={() =>
-            window.open("https://github.com/NucleoidJS/Nucleoid", "_blank")
-          }
+          onClick={() => {
+            gtag("event", "click_reviews", {
+              page_location: window.location.href,
+              page_path: window.location.pathname,
+            });
+
+            window.open("https://github.com/NucleoidJS/Nucleoid", "_blank");
+          }}
         >
           Go to GitHub
         </Button>
