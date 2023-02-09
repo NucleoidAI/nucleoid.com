@@ -1,7 +1,7 @@
 import Logo from "../components/Logo";
 import MenuIcon from "@mui/icons-material/Menu";
-import React from "react";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
+import axios from "axios";
 import gtag from "../gtag";
 import { useNavigate } from "react-router-dom";
 import {
@@ -14,6 +14,7 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
+import React, { useEffect } from "react";
 
 const pages = [
   {
@@ -45,6 +46,13 @@ const pages = [
 function Navbar() {
   const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [config, setConfig] = React.useState({});
+
+  useEffect(() => {
+    axios.get("https://nucleoid.com/config").then(({ data }) => {
+      setConfig(data);
+    });
+  }, []);
 
   const handleOpenNavMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -120,6 +128,17 @@ function Navbar() {
               {name}
             </Button>
           ))}
+          {config.ribbon && (
+            <Box sx={{ ml: 2 }}>
+              <a href={config.ribbon} target="_blank" rel="noreferrer">
+                <img
+                  src={"https://cdn.nucleoid.com/media/ribbon.png"}
+                  alt={"Black Ribbon"}
+                  width={25}
+                />
+              </a>
+            </Box>
+          )}
         </Box>
         <Button
           variant={"contained"}
