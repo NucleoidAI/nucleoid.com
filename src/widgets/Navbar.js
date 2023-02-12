@@ -129,7 +129,7 @@ function Navbar() {
             </Button>
           ))}
           {config.ribbon && (
-            <Box sx={{ ml: 2 }}>
+            <Box sx={{ ml: 2, mt: 1 }}>
               <a href={config.ribbon} target="_blank" rel="noreferrer">
                 <img
                   src={"https://cdn.nucleoid.com/media/ribbon.png"}

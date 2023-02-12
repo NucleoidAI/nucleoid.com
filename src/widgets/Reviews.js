@@ -69,7 +69,7 @@ function Reviews() {
         <Box>
           <Typography variant={"h4"}>Join the Community</Typography>
         </Box>
-        <Box width={breakpoint ? 600 : "100%"}>
+        <Box sx={{ mb: 4 }} width={breakpoint ? 600 : "100%"}>
           Thanks to declarative programming, we have a brand-new approach to
           data and logic. As we are still discovering what we can do with this
           powerful programming model, please join us with any types of
