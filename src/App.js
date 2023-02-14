@@ -1,3 +1,4 @@
+import Calendar from "./pages/Calendar";
 import Default from "./layouts/Default";
 import Home from "./pages/Home";
 import React from "react";
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Default />}>
             <Route index element={<Home />} />
           </Route>
+          <Route path={"/calendar"} element={<Calendar />} />
         </Routes>
       </ThemeProvider>
     </BrowserRouter>
