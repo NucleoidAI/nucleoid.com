@@ -42,7 +42,14 @@ function Prompt() {
             </Typography>
             <Button
               variant={"contained"}
-              onClick={() => window.location.assign("/docs/")}
+              onClick={() => {
+                gtag("event", "click_prompt", {
+                  page_location: window.location.href,
+                  page_path: window.location.pathname,
+                });
+
+                window.location.assign("/ide/");
+              }}
               color={"inherit"}
               size={"large"}
               sx={{
