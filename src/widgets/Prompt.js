@@ -1,3 +1,4 @@
+import gtag from "../gtag";
 import { Box, Button, Grid, Typography } from "@mui/material";
 
 function Prompt() {
