@@ -13,6 +13,7 @@ class Item {
 
 // 👇 Only needed a business logic and 💖
 app.post("/items", (req) => {
+  const name = req.body.name;
   const barcode = req.body.barcode;
   
   const check = Item.find(i => i.barcode === barcode);
