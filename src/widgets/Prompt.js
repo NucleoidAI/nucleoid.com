@@ -1,3 +1,4 @@
+import TerminalIcon from "@mui/icons-material/Terminal";
 import gtag from "../gtag";
 import { Box, Button, Grid, Typography } from "@mui/material";
 
@@ -37,9 +38,9 @@ function Prompt() {
               textAlign={"center"}
               color={"#9b9b9b"}
             >
-              Build your APIs with the help of AI
+              Turn your business logic to fully functional
               <br />
-              and built-in datastore
+              application with deterministic AI
             </Typography>
             <Button
               variant={"contained"}
@@ -57,7 +58,8 @@ function Prompt() {
                 my: 3,
               }}
             >
-              Learn more
+              <TerminalIcon />
+              &nbsp;&nbsp;Try it out!
             </Button>
           </Box>
         </Box>

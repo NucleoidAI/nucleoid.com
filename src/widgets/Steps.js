@@ -18,7 +18,7 @@ function Steps() {
         bullet={"II."}
         title={"Nucleoid renders your codes"}
         description={
-          "Deterministic AI in the runtime renders the JavaScript codes based on the logical graph and makes the necessary adjustments in JS state."
+          "Symbolic AI in the runtime renders the JavaScript codes based on the logical graph and makes the necessary adjustments in JS state."
         }
         alt={"Processing"}
       />
