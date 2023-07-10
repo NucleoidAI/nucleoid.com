@@ -14,6 +14,7 @@ import gtag from "../gtag";
 import { useEffect } from "react";
 import { Container, Divider, Grid, Typography } from "@mui/material";
 
+
 function Home() {
   useEffect(() => {
     gtag("event", "page_view", {
