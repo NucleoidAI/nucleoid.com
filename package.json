@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "vite",
+    "test": "jest",
+    "dev": "vite",
     "build": "vite build",
     "lint": "eslint --max-warnings 0 --ext .js .",
     "format": "prettier --check {**/*,*}.{js,json,yml,html,css}"

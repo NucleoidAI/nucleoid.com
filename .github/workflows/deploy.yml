@@ -7,8 +7,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: aws-actions/configure-aws-credentials@v1
+      - uses: actions/checkout@v3
+      - uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -17,6 +17,5 @@ jobs:
       - run: npm run lint
       - run: npm run format
       - run: npm run build
-      - run: docker build . -t 533052815932.dkr.ecr.us-east-1.amazonaws.com/nuc:nucleoid-com
-      - run: aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 533052815932.dkr.ecr.us-east-1.amazonaws.com
-      - run: docker push 533052815932.dkr.ecr.us-east-1.amazonaws.com/nuc:nucleoid-com
+      - run: aws s3 rm s3://nucleoid.com --recursive
+      - run: aws s3 cp dist s3://nucleoid.com --recursive
