@@ -40,7 +40,7 @@ function Prompt() {
             >
               Turn your business logic to fully functional
               <br />
-              application with deterministic AI
+              application with symbolic AI
             </Typography>
             <Button
               variant={"contained"}
