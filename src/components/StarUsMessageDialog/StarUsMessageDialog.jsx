@@ -2,7 +2,7 @@ import { Box, IconButton, Paper, Typography } from "@mui/material";
 
 import Close from "@mui/icons-material/Close";
 import React from "react";
-import Settings from "../../settings"
+import Settings from "../../settings";
 import Snackbar from "@mui/material/Snackbar";
 import StarUsOnGithub from "../StarUsOnGithub";
 import styles from "./styles";
