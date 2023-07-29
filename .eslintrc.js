@@ -2,12 +2,12 @@ module.exports = {
   env: {
     es6: true,
     node: true,
-    mocha: true,
+    mocha: true
   },
-  extends: ["eslint:recommended", "react-app", "react-app/jest", "prettier"],
+  extends: ["eslint:recommended", "react-app", "react-app/jest", "prettier", "plugin:storybook/recommended"],
   parserOptions: {
     ecmaVersion: 2018,
-    sourceType: "module",
+    sourceType: "module"
   },
   ignorePatterns: ["/node_modules", "/build"],
   rules: {
@@ -16,11 +16,8 @@ module.exports = {
     "no-eval": "error",
     "no-var": "error",
     "prefer-const": "error",
-    "sort-imports": [
-      "warn",
-      {
-        memberSyntaxSortOrder: ["none", "single", "multiple", "all"],
-      },
-    ],
-  },
+    "sort-imports": ["warn", {
+      memberSyntaxSortOrder: ["none", "single", "multiple", "all"]
+    }]
+  }
 };
