@@ -7,7 +7,7 @@ import Snackbar from "@mui/material/Snackbar";
 import StarUsOnGithub from "../StarUsOnGithub";
 import styles from "./styles";
 
-const StarUsMessageDialog = ({ openTime }) => {
+const StarUsMessageDialog = ({ openTime, level }) => {
   const [open, setOpen] = React.useState(false);
 
   const handleClose = () => {
@@ -16,8 +16,8 @@ const StarUsMessageDialog = ({ openTime }) => {
 
   React.useEffect(() => {
     const timer = setTimeout(() => {
+      Settings.landing({ level: level + 1 });
       setOpen(true);
-      Settings.landing(true);
     }, openTime);
     return () => clearTimeout(timer);
   }, [openTime]);

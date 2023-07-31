@@ -10,7 +10,6 @@ import Onboard from "../components/Onboard/Onboard";
 import OpenAPIIntegration from "../widgets/OpenAPIIntegration";
 import Prompt from "../widgets/Prompt";
 import Reviews from "../widgets/Reviews";
-import Settings from "../settings";
 import Space from "../components/Space";
 import Steps from "../widgets/Steps";
 import ThinkersClub from "../widgets/ThinkersClub";
@@ -24,10 +23,6 @@ function Home() {
       page_location: window.location.href,
       page_path: window.location.pathname,
     });
-
-    if (!Settings.landing()) {
-      Settings.landing(false);
-    }
   });
 
   return (

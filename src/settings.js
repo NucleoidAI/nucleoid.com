@@ -3,11 +3,11 @@ import { storage } from "@nucleoidjs/webstorage";
 const Settings = {
   projects: [],
   dialog: {},
-  landing: (status) => {
-    if (status !== undefined && status !== null) {
-      storage.set("nucleoid", "landing", status);
+  landing: (data) => {
+    if (data !== undefined && data !== null) {
+      storage.set("nucleoid.com", "landing", data);
     } else {
-      return storage.get("nucleoid", "landing") === true;
+      return storage.get("nucleoid.com", "landing");
     }
   },
 };
