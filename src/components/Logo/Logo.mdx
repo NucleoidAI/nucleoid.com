@@ -1,0 +1,17 @@
+import { Canvas, Meta } from "@storybook/blocks";
+
+import * as Logo from "./Logo.stories.jsx";
+
+<Meta of={Logo} />  
+
+# Logo
+
+The Logo is a reusable React component that takes two props: title and large. It renders a title with the specified size.
+
+title: This prop represents the text content of the title and is required. It should be a string.
+
+large: This prop determines the size of the title.
+
+To use the Logo, import it into your desired file and include it in your JSX, passing the required props.
+
+<Canvas of={Logo.Normal} />
