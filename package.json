@@ -8,7 +8,9 @@
     "test": "exit 0",
     "build": "vite build",
     "lint": "eslint --max-warnings 0 --ext .js .",
-    "format": "prettier --check {**/*,*}.{js,json,yml,html,css}"
+    "format": "prettier --check {**/*,*}.{js,json,yml,html,css}",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@emotion/react": "^11.7.1",
@@ -32,10 +34,25 @@
   },
   "devDependencies": {
     "@nucleoidjs/webstorage": "github:nucleoidjs/webstorage",
+    "@storybook/addon-essentials": "^7.1.0",
+    "@storybook/addon-interactions": "^7.1.0",
+    "@storybook/addon-links": "^7.1.0",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/blocks": "^7.1.0",
+    "@storybook/react": "^7.1.0",
+    "@storybook/react-vite": "^7.1.0",
+    "@storybook/testing-library": "^0.2.0",
     "@vitejs/plugin-react": "^4.0.1",
     "eslint": "^8.17.0",
-    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-config-react-app": "^7.0.1",
-    "prettier": "^2.6.2"
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.6.13",
+    "prettier": "^2.6.2",
+    "prop-types": "^15.8.1",
+    "storybook": "^7.1.0",
+    "storybook-addon-react-router-v6": "^1.0.2"
   }
 }
