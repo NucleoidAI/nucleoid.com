@@ -5,9 +5,9 @@ const Settings = {
   dialog: {},
   landing: (data) => {
     if (data !== undefined && data !== null) {
-      storage.set("nucleoid.com", "landing", data);
+      storage.set("nucleoidcom", "landing", data);
     } else {
-      return storage.get("nucleoid.com", "landing");
+      return storage.get("nucleoidcom", "landing");
     }
   },
 };
