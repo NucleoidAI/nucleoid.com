@@ -1,9 +1,12 @@
+import { Container, Divider, Grid, Typography } from "@mui/material";
+
 import Bulletin from "../widgets/Bulletin";
 import CleanCode from "../widgets/CleanCode";
 import Columns from "../widgets/Columns";
 import Features from "../widgets/Features";
 import HelloWorld from "../widgets/HelloWorld";
 import Install from "../widgets/Install";
+import Onboard from "../components/Onboard/Onboard";
 import OpenAPIIntegration from "../widgets/OpenAPIIntegration";
 import Prompt from "../widgets/Prompt";
 import Reviews from "../widgets/Reviews";
@@ -12,8 +15,6 @@ import Steps from "../widgets/Steps";
 import ThinkersClub from "../widgets/ThinkersClub";
 import gtag from "../gtag";
 import { useEffect } from "react";
-import { Container, Divider, Grid, Typography } from "@mui/material";
-
 
 function Home() {
   useEffect(() => {
@@ -37,6 +38,7 @@ function Home() {
           <Grid container item xs={12} justifyContent={"center"}>
             <Typography variant={"h2"}>How it works</Typography>
           </Grid>
+          <Onboard />
           <Space height={25} />
           <Steps />
           <Space height={125} mobile={false} />
