@@ -4,7 +4,7 @@
   "private": true,
   "type":"module",
   "scripts": {
-    "prepare": "node prepare.js",
+    "prepare": "node prepare.cjs",
     "dev": "vite",
     "test": "exit 0",
     "build": "vite build",
