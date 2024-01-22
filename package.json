@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "prepare": "node prepare.js",
+    "prepare": "node prepare.cjs",
     "dev": "vite",
     "test": "exit 0",
     "build": "vite build",
