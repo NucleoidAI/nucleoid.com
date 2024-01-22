@@ -2,9 +2,9 @@ import React from "react";
 import Settings from "../../settings";
 import StarUsMessageDialog from "../StarUsMessageDialog/StarUsMessageDialog";
 import { v4 as uuid } from "uuid";
-//TODO: MOVE WIDGET 
+//TODO: MOVE WIDGET
 const Onboard = () => {
-  const [state, ] = React.useState(Settings.landing());
+  const [state] = React.useState(Settings.landing());
 
   console.debug(state.level); //shows the value of the level state.
 
