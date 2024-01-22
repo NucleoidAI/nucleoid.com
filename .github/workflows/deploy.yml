@@ -1,21 +1,8 @@
 name: Deploy
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 jobs:
   deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: aws-actions/configure-aws-credentials@v2
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ secrets.AWS_REGION }}
-      - run: npm ci
-      - run: npm run lint
-      - run: npm run format
-      - run: npm run build
-      - run: aws s3 rm s3://nucleoid.com --recursive
-      - run: aws s3 cp dist s3://nucleoid.com --recursive
+    uses: NucleoidJS/actions/.github/workflows/deploy.yml@main
+    secrets: inherit
