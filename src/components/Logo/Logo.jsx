@@ -1,9 +1,9 @@
-import { Box, Typography } from "@mui/material";
-
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-function Logo(props) {
+import { Box, Typography } from "@mui/material";
+
+function Logo() {
   const navigate = useNavigate();
   return (
     <Box

@@ -1,5 +1,3 @@
-import { Container, Divider, Grid, Typography } from "@mui/material";
-
 import Bulletin from "../widgets/Bulletin";
 import CleanCode from "../widgets/CleanCode";
 import Columns from "../widgets/Columns";
@@ -15,6 +13,8 @@ import Steps from "../widgets/Steps";
 import ThinkersClub from "../widgets/ThinkersClub";
 import gtag from "../gtag";
 import { useEffect } from "react";
+
+import { Container, Divider, Grid, Typography } from "@mui/material";
 
 function Home() {
   useEffect(() => {
