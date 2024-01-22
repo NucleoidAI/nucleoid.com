@@ -1,5 +1,5 @@
 const config = {
-  name: 'nucleoid.com',
+  name: "nucleoid.com",
 };
 
 export default config;
