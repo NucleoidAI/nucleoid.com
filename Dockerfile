@@ -1,7 +1,10 @@
-FROM node:16
+FROM node:18
 
-COPY build /app
+WORKDIR /app
 
-EXPOSE 80
+COPY dist dist
+COPY config.js config.mjs
 
-ENTRYPOINT npx -y serve -n -p 80 /app
+EXPOSE 3000
+
+ENTRYPOINT npx http-server-deneme start
