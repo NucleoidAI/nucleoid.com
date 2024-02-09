@@ -7,4 +7,4 @@ COPY config.js config.mjs
 
 EXPOSE 3000
 
-ENTRYPOINT npx http-server-deneme start
+ENTRYPOINT npx @nucleoidjs/http-server start
