@@ -19,6 +19,8 @@ export default function MarketingLandingPage() {
 
       <MarketingServicesInclude />
 
+      <Steps />
+
       <MarketingServices />
 
       <MarketingServicesHowItWorks />
