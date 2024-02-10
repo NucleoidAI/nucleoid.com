@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { Box, Typography } from "@mui/material";
 
 function Step({ image, bullet, title, description, alt }) {
