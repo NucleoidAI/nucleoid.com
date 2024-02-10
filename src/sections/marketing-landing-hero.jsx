@@ -14,7 +14,6 @@ import { useResponsive } from "src/hooks/use-responsive";
 
 import { bgGradient } from "src/theme/css";
 
-import Image from "src/components/image";
 import Iconify from "src/components/iconify";
 
 // ----------------------------------------------------------------------
@@ -36,7 +35,6 @@ export default function MarketingLandingHero() {
     >
       <Container
         sx={{
-          mt: 8,
           py: 15,
           display: { md: "flex" },
           alignItems: { md: "center" },
@@ -53,17 +51,16 @@ export default function MarketingLandingHero() {
             }}
           >
             <Typography variant="overline" sx={{ color: "secondary.main" }}>
-              Reasoning Engine
+              Natural Language
             </Typography>
 
             <Typography variant="h2" sx={{ my: 2 }}>
-              Neuro-Symbolic&nbsp;AI with&nbsp;Declarative&nbsp;Logic
+              Low-code&nbsp;Platform for&nbsp;Node.js
             </Typography>
 
             <Typography sx={{ color: "text.secondary" }}>
-              Reasoning engine with{" "}
-              <Link href="https://nucleoid.com/docs">D(L)RE</Link> in JavaScript
-              syntax
+              Turn your business logic to fully functional application with{" "}
+              <Link href="https://nucleoid.com/docs">Neuro-Symbolic AI</Link>
             </Typography>
 
             <Stack
@@ -77,10 +74,10 @@ export default function MarketingLandingHero() {
                 variant="contained"
                 color="inherit"
                 size="large"
-                startIcon={<Iconify width={24} icon="carbon:terminal" />}
+                startIcon={<Iconify width={24} icon="carbon:document" />}
                 href="https://nucleoid.com/ide/"
               >
-                Try it out
+                Go to Docs
               </Button>
 
               <Stack
@@ -91,30 +88,45 @@ export default function MarketingLandingHero() {
                 <Fab size="medium" sx={{ mr: 1 }}>
                   <Iconify width={24} icon="carbon:play" />
                 </Fab>
-                See Our Work
+                Try it out
               </Stack>
             </Stack>
           </Grid>
 
           {mdUp && (
             <Grid xs={12} md={6} lg={7}>
-              <Image
-                visibleByDefault
-                disabledEffect
-                alt="marketing market"
-                src="https://cdn.nucleoid.com/media/6ccfe678-176b-4b5b-ae3c-0e506bdc94ba.png"
-                width={958}
-                height={615}
-                sx={{
-                  ml: {
-                    xs: "-50%",
-                    sm: "-50%",
-                    md: "-50%",
-                    lg: "-50%",
-                    xl: "-30%",
-                  },
-                }}
-              />
+              <Grid item>
+                <img
+                  style={{
+                    display: "block",
+                    width: "100%",
+                    maxWidth: 600,
+                    height: "11px",
+                    borderRadius: "3px 3px 0px 0px",
+                  }}
+                  src="https://cdn.nucleoid.com/media/frame.png"
+                  alt="Frame"
+                />
+                <video
+                  loop
+                  autoPlay
+                  muted
+                  style={{
+                    display: "block",
+                    width: "100%",
+                    maxWidth: 600,
+                    height: "100%",
+                    maxHeight: 360,
+                    borderColor: "#464646",
+                    borderStyle: "solid",
+                    borderWidth: "0px 1px 1px 2px",
+                    background: "#464646",
+                  }}
+                  poster="https://cdn.nucleoid.com/media/thumbnail-1.png"
+                >
+                  <source src="https://cdn.nucleoid.com/media/prompt-1.webm" />
+                </video>
+              </Grid>
             </Grid>
           )}
         </Grid>

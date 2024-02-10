@@ -10,38 +10,20 @@ const SERVICES = [
   {
     title: "Declarative",
     description:
-      "Define application goals without specifying the procedures, simplifying development and maintenance.",
+      "Nucleoid is embedded inside Node.js and renders the very same JavaScript codes and makes the necessary adjustments in the state.",
     icon: "https://cdn.nucleoid.com/media/019-cube.png",
   },
   {
-    title: "Reasoning",
+    title: "AI-managed",
     description:
       "Our runtime environment automatically deduces and infers solutions based on the given logic, enhancing decision-making.",
     icon: "https://cdn.nucleoid.com/media/007-AI.png",
   },
   {
-    title: "Logic Programming",
+    title: "Built-in Datastore",
     description:
       "Write code that mirrors human reasoning, making complex problem-solving more intuitive and efficient.",
-    icon: "https://cdn.nucleoid.com/media/015-code.png",
-  },
-  {
-    title: "Contextual",
-    description:
-      "Applications understand and react to their context, offering smarter, situation-aware responses.",
-    icon: "https://cdn.nucleoid.com/media/028-network.png",
-  },
-  {
-    title: "Persistent",
-    description:
-      "Data persists in its natural logical form, streamlining management and ensuring integrity without manual database handling.",
     icon: "https://cdn.nucleoid.com/media/019-database-5.png",
-  },
-  {
-    title: "JavaScript Syntax",
-    description:
-      "Utilize the widely understood JavaScript syntax to seamlessly define logic, ensuring easy adoption and efficient development.",
-    icon: "https://cdn.nucleoid.com/media/leaf.png",
   },
 ];
 
