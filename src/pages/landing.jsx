@@ -8,6 +8,7 @@ import MarketingLandingHero from "../sections/marketing-landing-hero";
 import MarketingLandingFaqs from "../sections/marketing-landing-faqs";
 import MarketingServicesInclude from "../sections/marketing-services-include";
 import MarketingCaseStudyDetails from "../sections/marketing-case-study-details";
+import MarketingCaseStudyDetailsGallery from "../sections/marketing-case-study-details-gallery";
 
 export default function MarketingLandingPage() {
   return (
@@ -23,6 +24,8 @@ export default function MarketingLandingPage() {
       <Steps />
 
       <HelloWorld />
+
+      <MarketingCaseStudyDetailsGallery />
 
       <MarketingServices />
 
