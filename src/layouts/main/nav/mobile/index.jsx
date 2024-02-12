@@ -2,12 +2,9 @@ import { useEffect } from "react";
 import PropTypes from "prop-types";
 
 import List from "@mui/material/List";
-import Stack from "@mui/material/Stack";
-import Button from "@mui/material/Button";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 
-import { paths } from "src/routes/paths";
 import { usePathname } from "src/routes/hooks";
 
 import { useBoolean } from "src/hooks/use-boolean";
@@ -57,19 +54,6 @@ export default function NavMobile({ data }) {
               <NavList key={list.title} data={list} />
             ))}
           </List>
-
-          <Stack spacing={1.5} sx={{ p: 3 }}>
-            <Button
-              fullWidth
-              variant="contained"
-              color="inherit"
-              href={paths.zoneStore}
-              target="_blank"
-              rel="noopener"
-            >
-              Buy Now
-            </Button>
-          </Stack>
         </Scrollbar>
       </Drawer>
     </>
