@@ -75,7 +75,9 @@ export default function MarketingLandingHero() {
                 color="inherit"
                 size="large"
                 startIcon={<Iconify width={24} icon="carbon:document" />}
-                href="https://nucleoid.com/ide/"
+                onClick={() =>
+                  window.location.assign("https://nucleoid.com/docs/")
+                }
               >
                 Go to Docs
               </Button>
@@ -84,6 +86,9 @@ export default function MarketingLandingHero() {
                 direction="row"
                 alignItems="center"
                 sx={{ typography: "h6" }}
+                onClick={() =>
+                  window.location.assign("https://nucleoid.com/ide/")
+                }
               >
                 <Fab size="medium" sx={{ mr: 1 }}>
                   <Iconify width={24} icon="carbon:play" />
