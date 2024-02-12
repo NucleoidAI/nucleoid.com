@@ -16,10 +16,10 @@ function Step({ image, bullet, title, description, alt }) {
         alignItems: "center",
       }}
     >
-      <Box sx={{ marginRight: 3 }}>
-        <img src={image} width={225} alt={alt} />
+      <Box sx={{ mr: 5, pt: 3 }}>
+        <img src={image} width={110} alt={alt} />
       </Box>
-      <Box>
+      <Box sx={{ maxWidth: 500 }}>
         <Box flex flexDirection="row">
           <Typography display="inline" fontSize={24}>
             {bullet}
@@ -30,8 +30,6 @@ function Step({ image, bullet, title, description, alt }) {
           </Typography>
         </Box>
         <Typography>{description}</Typography>
-        <br />
-        <br />
       </Box>
     </Box>
   );

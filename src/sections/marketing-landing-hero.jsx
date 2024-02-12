@@ -121,6 +121,7 @@ export default function MarketingLandingHero() {
                     borderStyle: "solid",
                     borderWidth: "0px 1px 1px 2px",
                     background: "#464646",
+                    boxShadow: "12px 12px 8px rgba(0, 0, 0, 0.3)",
                   }}
                   poster="https://cdn.nucleoid.com/media/thumbnail-1.png"
                 >
