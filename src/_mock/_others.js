@@ -35,10 +35,17 @@ export const _socials = [
   },
   {
     value: "x",
-    label: "x",
+    label: "X",
     icon: "carbon:logo-x",
     color: "white",
     url: "https://twitter.com/NucleoidJS",
+  },
+  {
+    value: "discord",
+    label: "Discord",
+    icon: "carbon:logo-discord",
+    color: "white",
+    url: "https://discord.gg/wN49SNssUw",
   },
 ];
 
