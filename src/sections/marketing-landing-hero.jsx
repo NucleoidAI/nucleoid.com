@@ -59,7 +59,9 @@ export default function MarketingLandingHero() {
             </Typography>
 
             <Typography sx={{ color: "text.secondary" }}>
-              Turn your business logic to fully functional application with{" "}
+              Turn your business logic to fully functional application
+              <br />
+              with{" "}
               <Link href="https://nucleoid.com/docs">Neuro-Symbolic AI</Link>
             </Typography>
 

@@ -40,7 +40,9 @@ function HelloWorld() {
             must be unique...&nbsp;
             <span style={{ background: "#3f3f3f" }}>&nbsp;</span>
           </Typography>
-          <Markdown content={helloWorldMD} />
+          <Box style={{ boxShadow: "12px 12px 8px rgba(0, 0, 0, 0.3)" }}>
+            <Markdown content={helloWorldMD} sx={{ borderRadius: "2px" }} />
+          </Box>
         </Grid>
         <Grid
           container
