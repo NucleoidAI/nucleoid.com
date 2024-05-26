@@ -4,5 +4,5 @@ on:
     branches: [main]
 jobs:
   deploy:
-    uses: NucleoidJS/actions/.github/workflows/deploy.yml@main
+    uses: NucleoidAI/actions/.github/workflows/deploy.yml@main
     secrets: inherit
