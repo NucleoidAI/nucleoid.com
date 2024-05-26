@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 
 import gtag from "../gtag";
+import Chat from "../sections/Chat";
 import Steps from "../sections/Steps";
 import HelloWorld from "../sections/HelloWorld";
 import MarketingServices from "../sections/marketing-services";
@@ -30,6 +31,8 @@ export default function MarketingLandingPage() {
       <MarketingLandingHero />
 
       <MarketingServicesInclude />
+
+      <Chat />
 
       <Steps />
 

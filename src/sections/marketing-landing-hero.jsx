@@ -89,13 +89,13 @@ export default function MarketingLandingHero() {
                 alignItems="center"
                 sx={{ typography: "h6" }}
                 onClick={() =>
-                  window.location.assign("https://nucleoid.com/ide/")
+                  window.location.assign("https://nucleoid.com/ide/chat")
                 }
               >
                 <Fab size="medium" sx={{ mr: 1 }}>
                   <Iconify width={24} icon="carbon:play" />
                 </Fab>
-                Try it out
+                Nucleoid Chat
               </Stack>
             </Stack>
           </Grid>
