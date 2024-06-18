@@ -61,7 +61,9 @@ export default function Header({ headerOnDark }) {
         <Stack spacing={1} direction="row" alignItems="center">
           <Button
             variant="contained"
-            onClick={() => window.location.assign("https://nucleoid.com/ide/")}
+            onClick={() =>
+              window.location.assign("https://nucleoid.com/ide/sample")
+            }
             sx={{
               mx: 1,
               color: "white",
