@@ -27,7 +27,7 @@ export default function Chat() {
         {mdUp && (
           // eslint-disable-next-line jsx-a11y/media-has-caption
           <video
-            src="https://cdn.nucleoid.com/media/a229559c-ef13-40d2-b188-5ff2451ccbee.mp4"
+            src="https://cdn.nucleoid.com/media/af35074b-dbfa-448f-ae18-c6f41441f2ea.mp4"
             controls
           />
         )}
@@ -36,7 +36,7 @@ export default function Chat() {
           <video
             width="100%"
             height="auto"
-            src="https://cdn.nucleoid.com/media/a229559c-ef13-40d2-b188-5ff2451ccbee.mp4"
+            src="https://cdn.nucleoid.com/media/af35074b-dbfa-448f-ae18-c6f41441f2ea.mp4"
             controls
           />
         )}
