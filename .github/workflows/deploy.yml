@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  greycollar_ai:
+  nucleoid:
     uses: GreyCollar/GreyCollar/.github/workflows/deploy.yml@main
     with:
       service_name: 'nucleoid.com'
